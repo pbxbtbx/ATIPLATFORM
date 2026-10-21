@@ -84,3 +84,7 @@ class EditUserForm(forms.Form):
     active=forms.BooleanField(label='Cuenta activa',required=False)
     sensitive_access=forms.BooleanField(label='Permiso específico de información restringida',required=False)
     development_access=forms.BooleanField(label='Permiso específico de desarrollo',required=False)
+
+
+class AppearanceForm(forms.Form):
+    theme=forms.ChoiceField(label='Elige tu estilo',choices=Profile._meta.get_field('theme').choices,widget=forms.RadioSelect)

@@ -6,6 +6,8 @@ Plataforma interna de gestión educativa en español. Django 5.2 LTS, SQLite con
 
 - [Cómo entrar paso a paso](docs/ACCESO.md).
 - [Prueba guiada con dos alumnos ficticios](docs/PRUEBA_DOS_ALUMNOS.md).
+- [Personalización y colores del aprendizaje](docs/PERSONALIZACION.md).
+- [Actualizar PythonAnywhere](docs/ACTUALIZAR_PYTHONANYWHERE.md).
 - [Índice de documentación](docs/README.md).
 
 ## Instalación y primera cuenta

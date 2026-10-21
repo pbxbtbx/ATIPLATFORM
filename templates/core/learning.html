@@ -1,3 +1,4 @@
+{% load learning_theme %}
 <section class="card learning-history">
   <div class="section-head">
     <div>
@@ -6,8 +7,9 @@
     </div>
   </div>
   <p class="muted">Cada tarjeta corresponde a un registro de clase. Completar una actividad no equivale a demostrar el aprendizaje.</p>
+  {% include "core/rarity_legend.html" %}
   {% for l in learning %}
-  <article class="learning-entry progress-{{ l.learning_status }}" aria-labelledby="learning-{{ l.pk }}">
+  <article class="learning-entry progress-{{ l.learning_status }} rarity-{{ l.learning_status|learning_rarity }}" aria-labelledby="learning-{{ l.pk }}">
     <header class="learning-entry-header">
       <div class="learning-date">
         <strong>{{ l.session.start|date:'d' }}</strong>
@@ -21,10 +23,11 @@
       <a class="learning-open" href="{% url 'session' l.session.pk %}">Ver clase →</a>
     </header>
     <div class="learning-entry-body">
+      {% if l.learning_status == "autonomous" %}<p class="legendary-caption"><span aria-hidden="true">◆</span> Legendario · objetivo completado con autonomía</p>{% endif %}
       <div class="learning-challenge"><span class="eyebrow">RETO TRABAJADO</span><h4>{{ l.challenge }}</h4></div>
       <div class="actions learning-statuses">
-        <span class="tag progress-badge progress-{{ l.activity_status }}">Actividad: {{ l.get_activity_status_display }}</span>
-        <span class="tag progress-badge progress-{{ l.learning_status }}">Aprendizaje: {{ l.get_learning_status_display }}</span>
+        <span class="tag progress-badge progress-{{ l.activity_status }} rarity-{{ l.activity_status|learning_rarity }}">Actividad: {{ l.get_activity_status_display }}</span>
+        <span class="tag progress-badge progress-{{ l.learning_status }} rarity-{{ l.learning_status|learning_rarity }}">Aprendizaje: {{ l.get_learning_status_display }}</span>
         {% if l.supersedes %}<span class="tag revision-badge">Revisión · versión previa conservada</span>{% endif %}
       </div>
       <div class="learning-content-grid">

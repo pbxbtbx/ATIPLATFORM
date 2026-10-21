@@ -258,3 +258,40 @@ class BootstrapTests(TestCase):
         self.assertTrue(user.profile.development_access);self.assertFalse(user.profile.sensitive_access)
         self.assertNotIn('Example-bootstrap',output.getvalue())
         with self.assertRaises(CommandError): call_command('init_admin',username='duplicate')
+
+class AppearanceTests(TestCase):
+    def setUp(self):
+        self.user=User.objects.create_user('appearance.teacher',password='Example-appearance-948!')
+        self.other=User.objects.create_user('other.teacher',password='Example-appearance-948!')
+        Profile.objects.create(user=self.user,role='teacher')
+        Profile.objects.create(user=self.other,role='teacher')
+        self.client.force_login(self.user)
+    def test_preference_is_personal_and_persists_after_login(self):
+        response=self.client.post('/appearance/',{'theme':'classic'},follow=True)
+        self.assertEqual(response.status_code,200)
+        self.assertContains(response,'<body class="theme-classic">',html=False)
+        self.user.profile.refresh_from_db();self.other.profile.refresh_from_db()
+        self.assertEqual(self.user.profile.theme,'classic');self.assertEqual(self.other.profile.theme,'rpg')
+        self.client.logout();self.client.force_login(self.user)
+        self.assertContains(self.client.get('/'),'theme-classic')
+        self.assertFalse(Learning.objects.exists());self.assertFalse(ConfigVersion.objects.exists())
+    def test_all_styles_render_and_invalid_style_is_rejected(self):
+        for theme in ['rpg','classic','night']:
+            with self.subTest(theme=theme):
+                self.assertContains(self.client.post('/appearance/',{'theme':theme},follow=True),'class="theme-'+theme+'"')
+        self.client.post('/appearance/',{'theme':'not-a-theme'})
+        self.user.profile.refresh_from_db();self.assertEqual(self.user.profile.theme,'night')
+    def test_login_and_csrf_required_for_changes(self):
+        self.client.logout();self.assertEqual(self.client.get('/appearance/').status_code,302)
+        secure=Client(enforce_csrf_checks=True);secure.force_login(self.user)
+        self.assertEqual(secure.post('/appearance/',{'theme':'night'}).status_code,403)
+    def test_palette_does_not_rank_resume_or_modify_educational_states(self):
+        from core.templatetags.learning_theme import learning_rarity
+        self.assertEqual(learning_rarity('new'),'common')
+        self.assertEqual(learning_rarity('progress'),'uncommon')
+        self.assertEqual(learning_rarity('supported'),'rare')
+        self.assertEqual(learning_rarity('consolidated'),'epic')
+        self.assertEqual(learning_rarity('autonomous'),'legendary')
+        self.assertEqual(learning_rarity('resume'),'paused')
+        self.assertEqual(learning_rarity('custom-state'),'common')
+        self.assertNotIn('consolidated',dict(Learning.STATES))

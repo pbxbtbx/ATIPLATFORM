@@ -17,6 +17,7 @@ class Profile(models.Model):
     role = models.CharField(max_length=20,choices=ROLES,default='teacher')
     sensitive_access = models.BooleanField(default=False)
     development_access = models.BooleanField(default=False)
+    theme = models.CharField('Estilo visual',max_length=16,choices=[('rpg','Fantasía RPG'),('classic','Atigra claro'),('night','Noche tranquila')],default='rpg')
 
 class AcademicYear(Record):
     name = models.CharField('Nombre',max_length=100)

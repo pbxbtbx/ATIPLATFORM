@@ -385,7 +385,7 @@ def developer_view(request):
             audit(request.user,'config:draft',version); return redirect('config_preview',pk=version.pk)
         except (ValidationError,json.JSONDecodeError) as e: error=' '.join(e.messages) if isinstance(e,ValidationError) else 'JSON no válido.'
     with connection.cursor() as cursor: cursor.execute('SELECT 1'); db_ok=cursor.fetchone()[0]==1
-    return render(request,'core/developer.html',{'title':'Desarrollador','payload':payload,'error':error,'versions':ConfigVersion.objects.filter(environment=settings.ENVIRONMENT).select_related('author').order_by('-created_at'),'audits':Audit.objects.filter(action__startswith='config:').select_related('actor').order_by('-created_at')[:30],'db_ok':db_ok,'backup':BackupCheck.objects.order_by('-created_at').first(),'releases':Release.objects.order_by('-deployed_at'),'app_version':'0.1.0','technical_events':TechnicalEvent.objects.order_by('-created_at')[:20]})
+    return render(request,'core/developer.html',{'title':'Desarrollador','payload':payload,'error':error,'versions':ConfigVersion.objects.filter(environment=settings.ENVIRONMENT).select_related('author').order_by('-created_at'),'audits':Audit.objects.filter(action__startswith='config:').select_related('actor').order_by('-created_at')[:30],'db_ok':db_ok,'backup':BackupCheck.objects.order_by('-created_at').first(),'releases':Release.objects.order_by('-deployed_at'),'app_version':'0.2.0','technical_events':TechnicalEvent.objects.order_by('-created_at')[:20]})
 
 @login_required
 def config_preview(request,pk):
@@ -470,3 +470,16 @@ def student_export(request,pk):
         audit(request.user,'student:export',student)
         response=JsonResponse(data,json_dumps_params={'ensure_ascii':False,'indent':2});response['Content-Disposition']='attachment; filename="expediente.json"';response['Cache-Control']='no-store';return response
     return page(request,'Exportación administrativa',section='export',student=student,can_sensitive=profile(request.user).sensitive_access)
+
+
+@login_required
+def appearance(request):
+    user_profile=profile(request.user)
+    form=AppearanceForm(request.POST or None,initial={'theme':user_profile.theme})
+    if request.method=='POST' and form.is_valid():
+        user_profile.theme=form.cleaned_data['theme']
+        user_profile.save(update_fields=['theme'])
+        audit(request.user,'appearance:update',user_profile)
+        messages.success(request,'Tu estilo se ha guardado. Solo cambia la apariencia de tu cuenta.')
+        return redirect('appearance')
+    return render(request,'core/appearance.html',{'title':'Personalización','form':form})

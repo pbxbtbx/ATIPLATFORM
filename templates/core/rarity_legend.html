@@ -1,0 +1,5 @@
+<aside class="rarity-guide" aria-label="Colores del aprendizaje por objetivo">
+  <div class="rarity-guide-heading"><span aria-hidden="true">◇</span><strong>Colores del aprendizaje</strong><small>Por objetivo, a tu propio ritmo</small></div>
+  <ol class="rarity-scale">{% for tier in learning_rarities %}<li class="rarity-{{ tier.key }}"><span class="rarity-gem" aria-hidden="true">◆</span><span><strong>{{ tier.name }}</strong><small>{{ tier.color }}</small></span></li>{% endfor %}</ol>
+  <p>«Legendario» se refiere al objetivo de ese registro, no a todo el curso. Los estados los registra el docente.</p>
+</aside>
