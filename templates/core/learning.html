@@ -1,0 +1,57 @@
+<section class="card learning-history">
+  <div class="section-head">
+    <div>
+      <p class="eyebrow">HISTORIAL INDIVIDUAL</p>
+      <h2>Un proceso que deja huella</h2>
+    </div>
+  </div>
+  <p class="muted">Cada tarjeta corresponde a un registro de clase. Completar una actividad no equivale a demostrar el aprendizaje.</p>
+  {% for l in learning %}
+  <article class="learning-entry progress-{{ l.learning_status }}" aria-labelledby="learning-{{ l.pk }}">
+    <header class="learning-entry-header">
+      <div class="learning-date">
+        <strong>{{ l.session.start|date:'d' }}</strong>
+        <span>{{ l.session.start|date:'M Y' }}</span>
+      </div>
+      <div class="learning-session">
+        <p class="eyebrow">CLASE · SESIÓN {{ l.session.number }} · {{ l.session.start|date:'H:i' }}</p>
+        <h3 id="learning-{{ l.pk }}"><a href="{% url 'session' l.session.pk %}">{{ l.session.title }}</a></h3>
+        <p>{{ l.session.group.name }}</p>
+      </div>
+      <a class="learning-open" href="{% url 'session' l.session.pk %}">Ver clase →</a>
+    </header>
+    <div class="learning-entry-body">
+      <div class="learning-challenge"><span class="eyebrow">RETO TRABAJADO</span><h4>{{ l.challenge }}</h4></div>
+      <div class="actions learning-statuses">
+        <span class="tag progress-badge progress-{{ l.activity_status }}">Actividad: {{ l.get_activity_status_display }}</span>
+        <span class="tag progress-badge progress-{{ l.learning_status }}">Aprendizaje: {{ l.get_learning_status_display }}</span>
+        {% if l.supersedes %}<span class="tag revision-badge">Revisión · versión previa conservada</span>{% endif %}
+      </div>
+      <div class="learning-content-grid">
+        <section class="learning-block observation-block">
+          <h4>Observación y logros</h4>
+          <dl>
+            <dt>Objetivo</dt><dd>{{ l.objective|default:'Sin registrar.' }}</dd>
+            <dt>Evidencia observable</dt><dd>{{ l.evidence|default:'Sin registrar.' }}</dd>
+            <dt>Logros</dt><dd>{{ l.achievement|default:'Sin registrar.' }}</dd>
+          </dl>
+        </section>
+        <section class="learning-block support-block">
+          <h4>Acompañamiento</h4>
+          <dl>
+            <dt>Dificultades</dt><dd>{{ l.difficulty|default:'Sin registrar.' }}</dd>
+            <dt>Apoyos</dt><dd>{{ l.support|default:'Sin registrar.' }}</dd>
+            <dt>Voz del alumno</dt><dd>{{ l.student_comment|default:'Sin registrar.' }}</dd>
+          </dl>
+        </section>
+      </div>
+      <section class="learning-block next-step-block"><h4>Próximo paso</h4><p class="preserve">{{ l.next_step|default:'Sin registrar.' }}</p></section>
+      {% if l.internal_notes %}<section class="learning-block internal-block"><h4>Notas internas · uso del equipo</h4><p class="preserve">{{ l.internal_notes }}</p><small>Excluidas de los informes para familias.</small></section>{% endif %}
+      <details class="rubric-block"><summary>Observaciones de rúbrica</summary>{% for key,value in l.rubric.items %}{% if value %}<p><strong>{{ key }}:</strong> {{ value }}</p>{% endif %}{% endfor %}</details>
+    </div>
+    <footer class="learning-entry-footer">Registrado el {{ l.created_at|date:'d/m/Y H:i' }} · {{ l.author.get_full_name|default:l.author.username }}</footer>
+  </article>
+  {% empty %}
+  <div class="empty-state"><h3>El primer avance está por llegar</h3><p>Regístralo desde el modo clase de una sesión.</p></div>
+  {% endfor %}
+</section>

@@ -2,6 +2,7 @@
 
 | Documento | Para qué sirve |
 | --- | --- |
+| [Actualizar el diseño en PythonAnywhere](ACTUALIZAR_PYTHONANYWHERE.md) | Descargar cambios de GitHub, actualizar estáticos y recargar sin perder la prueba. |
 | [Acceder a la plataforma](ACCESO.md) | Distinguir servidor local y cloud, preparar la demo, elegir contraseña y entrar. |
 | [Prueba guiada con dos alumnos](PRUEBA_DOS_ALUMNOS.md) | Registrar una clase, observar ritmos distintos, comprobar historial y preparar informes. |
 | [Instalación general](../README.md) | Dependencias, migraciones, primera cuenta y comandos habituales. |
