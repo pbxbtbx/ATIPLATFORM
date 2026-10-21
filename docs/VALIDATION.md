@@ -1,6 +1,6 @@
 # Validación realizada · 21 de octubre de 2026
 
-- Suite inicial completa: 32 pruebas ejecutadas, 32 correctas; ninguna omitida. Después se añadió y ejecutó una prueba adicional de archivo PDF privado (subida real, descarga autenticada, denegación a docente ajeno y desarrollador), correcta. La suite actual contiene 33 pruebas.
+- Suite completa antes del envío a GitHub: 33 pruebas ejecutadas, 33 correctas; ninguna omitida. Incluye subida de PDF privado, descarga autenticada y denegación a docente ajeno y desarrollador.
 - `manage.py check`: sin incidencias; `makemigrations --check --dry-run`: sin migraciones pendientes; `pip check`: dependencias consistentes; `git diff --check`: sin errores de espacios.
 - Instalación repetida con `scripts/install.sh`: correcta, sin cambios pendientes de migración. Carga demo repetida: detecta datos ya creados y no los sobrescribe.
 - Chromium: siete secciones principales responden; diseño a 768 px sin desbordamiento; ningún error JavaScript. Flujo desde interfaz: crear sesión, asistencia, avance individual, cerrar sesión, vista previa de informe, descarga PDF y configuración borrador → validación de vista previa → publicación. Todo usando registros ficticios aislados en demo.
