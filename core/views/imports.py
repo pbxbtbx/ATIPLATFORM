@@ -40,7 +40,7 @@ def candidates(draft, options):
         else:
             if draft.kind=='word':
                 start=options['start']; duration=options['duration']; title=options['title']; number=options['number']
-                content={key:options[key] for key in ('goals','materials','planned')}
+                content={key:options[key] for key in ('goals','materials','diversity','planned')}
             else:
                 try:
                     start=datetime.fromisoformat(row['inicio'])
@@ -52,6 +52,9 @@ def candidates(draft, options):
             obj=Session(group=group,teacher=options['teacher'],title=title,number=number,start=start,end=start+timedelta(minutes=duration),**content)
             session_errors(obj)
             if any(s.start<obj.end and s.end>obj.start for s in result): raise ValidationError(_('Las sesiones del archivo se solapan entre sí.'))
+            from core.challenges import extract_challenges,validate_specs
+            obj.challenge_specs=extract_challenges(obj.planned) or extract_challenges(draft.payload.get('source',''))
+            validate_specs(obj.challenge_specs)
             obj.resource_snapshot={'import_draft':str(draft.pk),'source_text':draft.payload.get('source','')}
         obj.full_clean()
         result.append(obj)

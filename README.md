@@ -4,6 +4,7 @@ Plataforma interna de gestión educativa con interfaz en español e inglés. Dja
 
 ## Guías de uso
 
+- [Retos estructurados, adaptaciones y prueba de una clase](docs/RETOS_ADAPTACIONES.md).
 - [Importar Word, CSV y añadir varios alumnos](docs/IMPORTACIONES.md).
 
 - [Cómo entrar paso a paso](docs/ACCESO.md).
@@ -92,6 +93,7 @@ Las rutas se mantienen estables en `config/urls.py`. `core/views/` sustituye el 
 | `core/views/library.py` | Recursos y secuencias con copia histórica | `Resource`, `Sequence`, `snapshot()` |
 | `core/views/evidence.py` | Subidas privadas y descargas autorizadas | `Evidence`, validación de archivos y permisos |
 | `core/views/reports.py` | Informes familiares e internos, PDF y CSV | `templates/core/reports.html`, `templates/core/group_report.html` |
+| `core/challenges.py`, `core/views/planning.py` | Retos estructurados, progreso individual y eliminación protegida | `ChallengeProgress`, `SupportPlan`, `core/test_challenges.py`, [guía](docs/RETOS_ADAPTACIONES.md) |
 | `core/importing.py`, `core/import_forms.py`, `core/views/imports.py` | Importación revisable de Word/CSV y alta de alumnado por lotes | `ImportDraft`, `core/test_importing.py`, [guía](docs/IMPORTACIONES.md) |
 | `core/views/notifications.py` | Recordatorios privados, filtros y completar/reabrir | `Task`, `templates/core/notifications.html`, `notification_tray.html` |
 | `core/views/appearance.py` | Preferencia de estilo por cuenta | `Profile.theme`, `appearance.html`, `app.css`, `rpg.css`, `night.css` |

@@ -40,7 +40,7 @@ StudentForm=form_for(Student,['name','preferred_name','birth_date','joined','sta
 GuardianForm=form_for(Guardian,['name','phone','email'])
 LinkForm=form_for(GuardianLink,['guardian','relationship','priority','legal','emergency','pickup','notes'])
 ResourceForm=form_for(Resource,['title','kind','domain','description','goals','prerequisites','duration','materials','instructions','challenges','supports','criteria'])
-SessionForm=form_for(Session,['group','teacher','title','number','start','end','resource','goals','materials','planned','actual','pending','adaptations','notes','next_steps','status'])
+SessionForm=form_for(Session,['group','teacher','title','number','start','end','resource','goals','materials','diversity','planned','actual','pending','adaptations','notes','next_steps','status'])
 LearningForm=form_for(Learning,['challenge','objective','evidence','achievement','difficulty','support','student_comment','next_step','internal_notes','activity_status','learning_status'])
 RestrictedForm=form_for(RestrictedNote,['kind','content','source','relevance','support','review'])
 ConsentForm=form_for(Consent,['purpose','text_version','granted_at','withdrawn_at','image_use'])
@@ -90,3 +90,22 @@ class EditUserForm(forms.Form):
 class AppearanceForm(forms.Form):
     learning_palette=forms.ChoiceField(label=_("Colores del aprendizaje"),choices=Profile._meta.get_field("learning_palette").choices,required=False)
     theme=forms.ChoiceField(label=_('Elige tu estilo'),choices=Profile._meta.get_field('theme').choices,widget=forms.RadioSelect)
+
+
+class SupportPlanForm(forms.ModelForm):
+    previous=forms.CharField(widget=forms.HiddenInput,required=False)
+    class Meta:
+        model=SupportPlan
+        fields=['active','adaptation_kind','neae_reported','nature','source','relevance','support','review']
+        widgets={'review':forms.DateInput(format='%Y-%m-%d',attrs={'type':'date'})}
+    def clean(self):
+        data=super().clean()
+        if data.get('neae_reported') and data.get('nature')!='reported':
+            self.add_error('neae_reported',_('Una NEAE comunicada debe registrarse como hecho comunicado, no como una interpretación.'))
+        return data
+
+
+class ChallengeSpecForm(forms.Form):
+    title=forms.CharField(label=_('Consigna del reto'),max_length=500,required=False)
+    hint=forms.CharField(label=_('Pista docente'),max_length=2000,widget=forms.Textarea(attrs={'rows':2}),required=False)
+    criteria=forms.CharField(label=_('Qué observar'),max_length=2000,widget=forms.Textarea(attrs={'rows':2}),required=False)

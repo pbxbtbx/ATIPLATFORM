@@ -122,6 +122,8 @@ class Session(Record):
     goals = models.TextField(_('Objetivos'),blank=True)
     materials = models.TextField(_('Materiales y preparación'),blank=True)
     planned = models.TextField(_('Actividades previstas y retos de distintos niveles'),blank=True)
+    challenge_specs = models.JSONField(default=list,blank=True)
+    diversity = models.TextField(_('Atención a la diversidad · apoyos previstos'),blank=True)
     actual = models.TextField(_('Actividades realizadas y completadas'),blank=True)
     pending = models.TextField(_('Pendiente de retomar'),blank=True)
     adaptations = models.TextField(_('Adaptaciones aplicadas'),blank=True)
@@ -242,3 +244,27 @@ class ImportDraft(Record):
     payload = models.JSONField(default=dict)
     committed = models.BooleanField(default=False)
     results = models.JSONField(default=list)
+
+
+class ChallengeProgress(Record):
+    session = models.ForeignKey(Session,on_delete=models.PROTECT)
+    student = models.ForeignKey(Student,on_delete=models.PROTECT,related_name='challenge_progress')
+    author = models.ForeignKey(settings.AUTH_USER_MODEL,on_delete=models.PROTECT)
+    reached = models.JSONField(default=list)
+    specs = models.JSONField(default=list)
+    evidence = models.TextField(blank=True)
+    supersedes = models.ForeignKey('self',null=True,blank=True,on_delete=models.PROTECT)
+
+
+class SupportPlan(Record):
+    adaptation_kind = models.CharField(_('Tipo de adaptación'),max_length=20,choices=[('methodological',_('Metodológica')),('access',_('De acceso')),('curricular',_('Curricular')),('combined',_('Combinada'))],default='methodological')
+    student = models.ForeignKey(Student,on_delete=models.PROTECT,related_name='support_plans')
+    author = models.ForeignKey(settings.AUTH_USER_MODEL,on_delete=models.PROTECT)
+    active = models.BooleanField(_('Requiere adaptación educativa'),default=True)
+    neae_reported = models.BooleanField(_('NEAE comunicada por una fuente identificada'),default=False)
+    nature = models.CharField(_('Naturaleza'),max_length=20,choices=[('reported',_('Hecho comunicado')),('observation',_('Observación docente')),('unverified',_('Interpretación por contrastar'))])
+    source = models.CharField(_('Fuente'),max_length=150)
+    relevance = models.TextField(_('Finalidad y relevancia educativa u operativa'))
+    support = models.TextField(_('Apoyos acordados'))
+    review = models.DateField(_('Fecha de revisión'))
+    supersedes = models.ForeignKey('self',null=True,blank=True,on_delete=models.PROTECT)

@@ -71,4 +71,5 @@ def parse_docx(data):
             'duration':duration, 'goals':section('Ladrillos que trabajamos'),
             'materials':section('Preparar antes de la clase'),
             'planned':'\n\n'.join(h+'\n'+section(h) for h in headings if section(h)),
+            'diversity':section('Atención a la diversidad'),
             'source':'\n'.join(lines)}

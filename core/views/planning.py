@@ -1,5 +1,8 @@
 from django.utils.translation import gettext as _
 from .common import *
+from django.views.decorators.cache import never_cache
+from django.db import models
+from core.challenges import specs_for, diversity_for, progress_for, save_progress, sections, scale_for
 
 @login_required
 def calendar_view(request):
@@ -64,12 +67,26 @@ def session_edit(request,pk=None):
 
 
 @login_required
+@never_cache
 def session_detail(request,pk):
     obj=get_object_or_404(session_q(request.user),pk=pk)
     day=timezone.localtime(obj.start).date()
     roster=Student.objects.filter(enrollments__group=obj.group,enrollments__starts__lte=day).filter(Q(enrollments__ends=None)|Q(enrollments__ends__gte=day)).distinct().order_by('name')
+    specs=specs_for(obj)
     rows=[{'student':s,'attendance':Attendance.objects.filter(session=obj,student=s).first(),'learning':Learning.objects.filter(session=obj,student=s).order_by('-created_at').first()} for s in roster]
-    return render(request,'core/session.html',{'title':obj.title,'session':obj,'rows':rows,'attendance_states':Attendance.STATES,'learning_states':learning_states(),'rubrics':current()['rubrics'] if current()['flags'].get('rubrics',True) else [],'custom_fields':current()['custom_fields'],'draft_values':dict(request.POST.items()) if request.method=='POST' else {}})
+    for row in rows:
+        row['challenge_progress']=progress_for(obj,row['student'],specs)
+        if profile(request.user).sensitive_access:
+            row['support_plan']=row['student'].support_plans.order_by('-created_at','-id').first()
+            if row['support_plan']:audit(request.user,'support:read',row['student'])
+    outline=sections(obj.planned)
+    outline={k:v for k,v in outline.items() if k not in ('Retos desbloqueables','Atención a la diversidad','Preparar antes de la clase','Ladrillos que trabajamos')}
+    draft_values={k:request.POST.getlist(k) if k.startswith('reached_') else v for k,v in request.POST.items()} if request.method=='POST' else {}
+    if request.method=='POST':
+        for row in rows:
+            key=str(row['student'].pk)
+            if request.POST.get('track_'+key)=='1':draft_values['reached_'+key]=request.POST.getlist('reached_'+key)
+    return render(request,'core/session.html',{'challenge_scale':scale_for(len(specs)) if specs else [],'challenge_specs':specs,'diversity':diversity_for(obj),'outline':outline,'title':obj.title,'session':obj,'rows':rows,'attendance_states':Attendance.STATES,'learning_states':learning_states(),'rubrics':current()['rubrics'] if current()['flags'].get('rubrics',True) else [],'custom_fields':current()['custom_fields'],'draft_values':draft_values})
 
 
 @login_required
@@ -84,6 +101,7 @@ def class_save(request,pk):
             day=timezone.localtime(obj.start).date()
             roster=Student.objects.filter(enrollments__group=obj.group,enrollments__starts__lte=day).filter(Q(enrollments__ends=None)|Q(enrollments__ends__gte=day)).distinct()
             for student in roster:
+                save_progress(obj,student,request.user,request.POST)
                 key=str(student.pk)
                 status=request.POST.get('attendance_'+key,'')
                 if status:
@@ -113,12 +131,68 @@ def class_save(request,pk):
 def recover_session(request,pk):
     source=get_object_or_404(session_q(request.user),pk=pk)
     if source.status not in ('recover','cancelled'): return HttpResponse(_('Solo se recuperan sesiones canceladas o pendientes.'),status=400)
-    form=SessionForm(request.POST or None,initial={k:getattr(source,k) for k in ['group','teacher','title','number','resource','goals','materials','planned']})
+    form=SessionForm(request.POST or None,initial={k:getattr(source,k) for k in ['group','teacher','title','number','resource','goals','materials','planned','diversity']})
     form.fields['group'].queryset=groups(request.user)
     form.fields['teacher'].queryset=User.objects.filter(classgroup__in=groups(request.user)).distinct()
     if request.method=='POST' and form.is_valid():
         try:
             obj=form.save(commit=False); obj.recovery_of=source; obj.resource_snapshot=source.resource_snapshot
+            obj.challenge_specs=specs_for(source); obj.diversity=diversity_for(source)
             session_errors(obj); obj.save(); audit(request.user,'session:recover',obj); return redirect('session',pk=obj.pk)
         except ValidationError as e: fail(form,e)
     return render(request,'core/form.html',{'title':_('Recuperar sesión · se conserva la original'),'form':form})
+
+
+@login_required
+def challenge_edit(request,pk):
+    from django.forms import formset_factory
+    from core.challenges import specs_for,validate_specs
+    obj=get_object_or_404(session_q(request.user),pk=pk)
+    if not educational(request.user):raise PermissionDenied
+    Factory=formset_factory(ChallengeSpecForm,extra=2,max_num=30,validate_max=True,absolute_max=35)
+    specs=specs_for(obj)
+    formset=Factory(request.POST or None,initial=specs)
+    error=''
+    if request.method=='POST' and formset.is_valid():
+        try:
+            updated=[]
+            for values in formset.cleaned_data:
+                if not values or not values.get('title'):
+                    if values.get('hint') or values.get('criteria'):raise ValidationError(_('Indica la consigna de cada reto.'))
+                    continue
+                updated.append({'id':f'R{len(updated)+1}',**{k:values[k] for k in ('title','hint','criteria')}})
+            validate_specs(updated)
+            with transaction.atomic():
+                fresh=Session.objects.select_for_update().get(pk=obj.pk)
+                if ChallengeProgress.objects.filter(session=fresh).exists():raise ValidationError(_('Los retos ya tienen seguimiento. Conserva esta versión y prepara otra sesión para cambiarlos.'))
+                if not Session.objects.filter(pk=obj.pk,version=request.POST.get('version','0')).update(challenge_specs=updated,resource_snapshot={**fresh.resource_snapshot,'challenges_configured':True},version=models.F('version')+1,updated_at=timezone.now()):raise ValidationError(_('La sesión ha cambiado. Recarga antes de guardar.'))
+                audit(request.user,'challenge:configure',obj)
+            return redirect('session',pk=pk)
+        except (ValidationError,ValueError) as exc:error=' '.join(exc.messages) if isinstance(exc,ValidationError) else _('Versión no válida.')
+    return render(request,'core/challenge_edit.html',{'title':_('Organizar retos'),'session':obj,'formset':formset,'error':error,'locked':ChallengeProgress.objects.filter(session=obj).exists()})
+
+
+def deletion_blocked(obj):
+    return (obj.status!='planned' or any(getattr(obj,k).strip() for k in ('actual','pending','adaptations','notes','next_steps')) or
+            Attendance.objects.filter(session=obj).exists() or Learning.objects.filter(session=obj).exists() or
+            Evidence.objects.filter(session=obj).exists() or ChallengeProgress.objects.filter(session=obj).exists() or
+            Session.objects.filter(recovery_of=obj).exists() or bool(obj.recovery_of_id))
+
+
+@login_required
+def session_delete(request,pk):
+    require_admin(request.user)
+    obj=get_object_or_404(session_q(request.user),pk=pk)
+    blocked=deletion_blocked(obj);error=''
+    if request.method=='POST':
+        try:
+            with transaction.atomic():
+                fresh=Session.objects.select_for_update().get(pk=pk)
+                if deletion_blocked(fresh):raise ValidationError(_('Esta sesión tiene historial o ya no es un borrador vacío. Puedes cancelarla conservando sus registros.'))
+                if request.POST.get('confirm')!='ELIMINAR' or request.POST.get('version')!=str(fresh.version):raise ValidationError(_('Escribe ELIMINAR y comprueba que la sesión no ha cambiado.'))
+                audit(request.user,'session:delete',fresh)
+                fresh.delete()
+            messages.success(request,_('Sesión eliminada. El grupo, el alumnado y las demás sesiones se conservan.'))
+            return redirect('calendar')
+        except ValidationError as exc:error=' '.join(exc.messages)
+    return render(request,'core/session_delete.html',{'title':_('Eliminar sesión de prueba'),'session':obj,'blocked':blocked,'error':error})

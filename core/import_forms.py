@@ -27,14 +27,15 @@ class ImportOptionsForm(forms.Form):
     duration=forms.IntegerField(label=_('Duración en minutos'),min_value=1,max_value=720,required=False)
     goals=forms.CharField(label=_('Objetivos'),widget=forms.Textarea,required=False,max_length=100000)
     materials=forms.CharField(label=_('Materiales y preparación'),widget=forms.Textarea,required=False,max_length=100000)
+    diversity=forms.CharField(label=_('Atención a la diversidad · apoyos previstos'),widget=forms.Textarea,required=False,max_length=100000)
     planned=forms.CharField(label=_('Actividades previstas y apoyos'),widget=forms.Textarea,required=False,max_length=150000)
     def __init__(self,*args,user,kind,**kwargs):
         super().__init__(*args,**kwargs)
         from django.contrib.auth.models import User
         self.fields['group'].queryset=groups(user).filter(status='active')
         self.fields['teacher'].queryset=User.objects.filter(is_active=True,classgroup__in=groups(user)).distinct()
-        keep=['group','joined'] if kind=='students' else ['group','teacher'] if kind=='sessions' else ['group','teacher','title','number','start','duration','goals','materials','planned']
+        keep=['group','joined'] if kind=='students' else ['group','teacher'] if kind=='sessions' else ['group','teacher','title','number','start','duration','goals','materials','diversity','planned']
         for field in list(self.fields):
             if field not in keep: del self.fields[field]
         for name in keep:
-            if name not in ('goals','materials','planned'): self.fields[name].required=True
+            if name not in ('goals','materials','diversity','planned'): self.fields[name].required=True

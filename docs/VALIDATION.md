@@ -1,3 +1,17 @@
+# Validación de retos y adaptaciones · 0.5.0
+
+- Suite completa: 63 pruebas correctas, incluidas nueve de retos, adaptaciones y eliminación.
+- Ocho retos: límites 0–1 gris, 2–3 verde, 4–5 azul, 6–7 lila y 8 naranja. Dos alumnos avanzan a ritmos distintos sin generar evaluación automática de aprendizaje.
+- Revisiones de retos: historial preservado, selección inválida revierte el lote, edición concurrente rechazada y casillas vacías conservadas como borrador tras un error.
+- Importaciones anteriores: estructura recuperada desde su copia, sin reimportar. Al guardar seguimiento queda fijada la estructura de esa sesión. El editor no cambia consignas con seguimiento existente.
+- Adaptaciones: permiso adicional y ámbito de alumno exigidos en servidor; sin marca ni contenido para docente sin permiso o desarrollo; NEAE no inferida; revisiones y finalización conservan la historia; excluidas de informes y exportación administrativa sin selección expresa de información restringida.
+- Eliminación: Administración, confirmación literal y versión vigente; borra una sola sesión vacía y conserva alumnado, otras sesiones y auditoría. Asistencia o seguimiento bloquean el borrado.
+- Migraciones 0006/0007 aplicadas sobre demo tras copia verificada. Comparación con esa copia: alumnado, matrículas, aprendizaje, asistencia, vínculos de responsables y autorizaciones conservados sin cambios.
+
+- Prueba en Chromium con la ficha Word anterior: ocho tarjetas sin reimportación, materiales al principio, diversidad separada, colores 2/8 y 8/8 con guardado, plan curricular ficticio restringido y eliminación de sesión vacía. Tablet 768 px sin desbordamiento, español/inglés y sin errores JavaScript.
+
+## Validaciones anteriores
+
 # Validación de importaciones y paleta · 0.4.0
 
 - Suite completa: 54 pruebas, todas correctas. Incluye las pruebas anteriores y nueve nuevas de importación/paleta.

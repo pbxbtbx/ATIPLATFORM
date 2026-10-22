@@ -1,5 +1,6 @@
 from django.utils.translation import gettext as _
 from .common import *
+from django.views.decorators.cache import never_cache
 
 @login_required
 def student_list(request):
@@ -15,6 +16,7 @@ def student_edit(request,pk=None):
 
 
 @login_required
+@never_cache
 def student_detail(request,pk):
     student=get_object_or_404(students(request.user),pk=pk)
     tab=request.GET.get('tab','summary')
@@ -22,7 +24,12 @@ def student_detail(request,pk):
     if tab=='restricted':
         require_sensitive(request.user,student); audit(request.user,'restricted:read',student)
         ctx['restricted']=student.restricted_notes.order_by('-created_at')
+        ctx['support_plans']=student.support_plans.select_related('author').order_by('-created_at','-id')
+        audit(request.user,'support:read',student)
     if tab=='learning': ctx['learning']=student.learning.filter(session__group__in=groups(request.user)).select_related('session','author').order_by('-created_at')
+    if tab=='learning':
+        from core.challenges import tier_for
+        ctx['challenge_history']=[{'entry':entry,'count':len(entry.reached),'total':len(entry.specs),'tier':tier_for(len(entry.reached),len(entry.specs))} for entry in student.challenge_progress.filter(session__group__in=groups(request.user)).select_related('session','author').order_by('-created_at','-id')]
     if tab=='attendance': ctx['attendance']=Attendance.objects.filter(student=student,session__group__in=groups(request.user)).select_related('session').order_by('-session__start')
     if tab=='guardians': ctx['links']=student.guardians.select_related('guardian')
     if tab=='evidence': ctx['evidences']=student.evidences.filter(session__group__in=groups(request.user)).select_related('author')
@@ -82,8 +89,32 @@ def student_export(request,pk):
         if include_sensitive: require_sensitive(request.user,student)
         from django.forms.models import model_to_dict
         def values(query): return list(query.values())
-        data={'student':{f.name:getattr(student,f.name) for f in student._meta.fields},'enrollments':values(student.enrollments.all()),'responsible_links':[{**{f.name:getattr(link,f.attname) for f in link._meta.fields},'guardian':model_to_dict(link.guardian)} for link in student.guardians.select_related('guardian')],'consents':values(student.consents.all()),'learning':values(student.learning.all()),'attendance':values(Attendance.objects.filter(student=student)),'evidence_metadata':values(student.evidences.all())}
-        if include_sensitive: data['restricted']=values(student.restricted_notes.all()); audit(request.user,'restricted:export',student)
+        data={'student':{f.name:getattr(student,f.name) for f in student._meta.fields},'enrollments':values(student.enrollments.all()),'responsible_links':[{**{f.name:getattr(link,f.attname) for f in link._meta.fields},'guardian':model_to_dict(link.guardian)} for link in student.guardians.select_related('guardian')],'consents':values(student.consents.all()),'learning':values(student.learning.all()),'challenge_progress':values(student.challenge_progress.all()),'attendance':values(Attendance.objects.filter(student=student)),'evidence_metadata':values(student.evidences.all())}
+        if include_sensitive: data['restricted']=values(student.restricted_notes.all()); data['support_plans']=values(student.support_plans.all()); audit(request.user,'restricted:export',student)
         audit(request.user,'student:export',student)
         response=JsonResponse(data,json_dumps_params={'ensure_ascii':False,'indent':2});response['Content-Disposition']='attachment; filename="expediente.json"';response['Cache-Control']='no-store';return response
     return page(request,_('Exportación administrativa'),section='export',student=student,can_sensitive=profile(request.user).sensitive_access)
+
+
+@login_required
+def support_plan_edit(request,pk):
+    student=get_object_or_404(students(request.user),pk=pk)
+    require_sensitive(request.user,student)
+    latest=student.support_plans.order_by('-created_at','-id').first()
+    initial={key:getattr(latest,key) for key in ('active','adaptation_kind','neae_reported','nature','source','relevance','support','review')} if latest else {}
+    initial['previous']=str(latest.pk) if latest else ''
+    form=SupportPlanForm(request.POST or None,initial=initial)
+    if request.method=='POST' and form.is_valid():
+        try:
+            with transaction.atomic():
+                Student.objects.select_for_update().get(pk=student.pk)
+                last=student.support_plans.order_by('-created_at','-id').first()
+                if form.cleaned_data['previous']!=(str(last.pk) if last else ''):raise ValidationError(_('Otra persona ha modificado los apoyos. Recarga antes de guardar.'))
+                obj=form.save(commit=False);obj.student=student;obj.author=request.user;obj.supersedes=last;obj.save()
+                audit(request.user,'support:revision',obj)
+            return redirect(reverse('student',args=[pk])+'?tab=restricted')
+        except ValidationError as exc:fail(form,exc)
+    audit(request.user,'support:read',student)
+    response=render(request,'core/form.html',{'title':_('Adaptación educativa y NEAE comunicada'),'form':form,'hint':_('Registra apoyos necesarios, fuente y revisión. Esta marca no genera un diagnóstico. Desmarca la adaptación para finalizarla conservando el historial. Solo es visible con permiso de información restringida.')})
+    response['Cache-Control']='no-store'
+    return response

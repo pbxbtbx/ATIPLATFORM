@@ -1,0 +1,9 @@
+.challenge-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin:20px 0}
+.challenge-card{border:1px solid var(--ops-border);border-left:4px solid var(--ops-ink);border-radius:8px;padding:20px;background:var(--ops-panel);color:var(--ops-text);min-width:0}
+.challenge-card header{display:flex;gap:12px;align-items:flex-start}.challenge-card h3{margin:0;line-height:1.5;font-size:16px}.challenge-card h4{margin:18px 0 6px}.challenge-code{flex-shrink:0;border:1px solid var(--ops-border);padding:5px 8px;font-weight:800;color:var(--ops-ink);border-radius:5px}
+.challenge-card details{margin-top:16px}.challenge-card summary{cursor:pointer;font-weight:600}.challenge-scale{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0}.challenge-scale .progress-badge{padding:8px 12px;border:1px solid var(--progress-border);background:var(--progress-bg);color:var(--progress-color)}
+.challenge-checklist{padding:18px;border:1px solid var(--ops-border);border-radius:8px;margin:12px 0 24px;min-width:0}.challenge-checklist legend{padding:0 8px;font-weight:700}.challenge-check{padding:12px;border-bottom:1px solid var(--ops-border);align-items:flex-start;line-height:1.5}.challenge-check input{width:20px;min-width:20px;height:20px;accent-color:var(--ops-ink);margin-top:2px}.challenge-check span{overflow-wrap:anywhere}.diversity-panel{border-left:4px solid var(--ops-border)}
+body.learning-palette-basic .rpg-only{display:none}.challenge-card textarea{max-width:100%}
+@media(max-width:900px){.challenge-grid{grid-template-columns:1fr}.student-record summary{flex-wrap:wrap}}
+
+body.learning-palette-basic .challenge-scale{display:none}

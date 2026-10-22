@@ -1,6 +1,6 @@
-# Actualizar PythonAnywhere: importaciones y paleta básica (0.4.0)
+# Actualizar PythonAnywhere: retos, diversidad y adaptaciones (0.5.0)
 
-Esta entrega añade importación revisable de fichas Word y CSV, alta de varios alumnos y una paleta básica independiente del tema. Incluye también las mejoras anteriores de notificaciones e idiomas. No transforma los registros educativos existentes.
+Esta entrega añade tarjetas de retos y seguimiento individual, materiales al principio, atención a la diversidad, planes restringidos de adaptación y eliminación protegida de sesiones de prueba. Incluye las funciones anteriores de importación, colores, notificaciones e idiomas.
 
 ## 1. Copia de seguridad previa
 
@@ -27,7 +27,7 @@ Si Git indica cambios locales o no puede avanzar, detente y revisa el mensaje. N
 APP_ENV=demo .venv/bin/python manage.py migrate --noinput
 ```
 
-La migración nueva se llama `0005_profile_learning_palette_importdraft`. Añade la preferencia de colores y la tabla de borradores privados de importación. Si falta `0004_profile_language`, también se aplica. Las preferencias de estilo y los datos educativos se conservan. No recargues la web antes de completar la migración. Si aparece un error, detente y conserva la copia anterior.
+Las migraciones nuevas son `0006_session_challenge_specs_session_diversity_and_more` y `0007_supportplan_adaptation_kind`. Añaden estructura de retos, atención a la diversidad y tablas de revisiones individuales. También se aplicarán automáticamente las migraciones anteriores que falten. Las preferencias de estilo y los datos educativos se conservan. No recargues la web antes de completar la migración. Si aparece un error, detente y conserva la copia anterior.
 
 ## 4. Actualizar los archivos de diseño
 
@@ -42,8 +42,9 @@ Actualiza `staticfiles/`. No borra la base de datos ni los archivos privados. No
 1. Entra en la pestaña **Web** de PythonAnywhere.
 2. Pulsa el botón verde **Reload**.
 3. Abre la plataforma con HTTPS y pulsa **Ctrl+F5**.
-4. Comprueba que el pie muestra **v0.4.0**, que Calendario muestra **Importar sesiones / Word** y que Personalización permite **Básicos** o **RPG**.
-5. Sigue [la prueba de importación de tu Word](IMPORTACIONES.md). No se crea ninguna clase hasta confirmar.
+4. Comprueba que el pie muestra **v0.5.0**, que Calendario muestra **Importar sesiones / Word** y que Personalización permite **Básicos** o **RPG**.
+5. Abre la ficha Word ya importada: debe mostrar tarjetas de retos sin tener que importarla otra vez.
+6. Sigue [la prueba de retos, adaptación y eliminación](RETOS_ADAPTACIONES.md).
 
 ## 6. Comprobar y continuar la prueba
 

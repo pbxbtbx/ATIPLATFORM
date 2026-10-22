@@ -6,7 +6,7 @@
  const paintProgress=select=>{select.dataset.rarity=rarityMap[select.value]||'common';};
  document.querySelectorAll('[data-progress-select]').forEach(select=>{paintProgress(select);select.addEventListener('change',()=>paintProgress(select));});
  const retained=document.getElementById('retained-draft');
- if(retained){const values=JSON.parse(retained.textContent);document.querySelectorAll('form[data-dirty]').forEach(form=>{for(const [key,value] of Object.entries(values)){const field=form.elements.namedItem(key);if(!field||key==='csrfmiddlewaretoken')continue;if(field.type==='checkbox')field.checked=!!value;else{field.value=value;if(field.hasAttribute('data-progress-select'))paintProgress(field);}}if(Object.keys(values).length)form.dataset.restored='true';});}
+ if(retained){const values=JSON.parse(retained.textContent);document.querySelectorAll('form[data-dirty]').forEach(form=>{for(const [key,value] of Object.entries(values)){if(Array.isArray(value)){Array.from(form.elements).filter(f=>f.name===key).forEach(f=>f.checked=value.includes(f.value));continue;}const field=form.elements.namedItem(key);if(!field||key==='csrfmiddlewaretoken')continue;if(field.type==='checkbox')field.checked=!!value;else{field.value=value;if(field.hasAttribute('data-progress-select'))paintProgress(field);}}if(Object.keys(values).length)form.dataset.restored='true';});}
  const form=document.getElementById('appearance-form');
  if(!form)return;
  const original=document.body.className,originalValue=form.dataset.savedTheme||'rpg';

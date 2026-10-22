@@ -2345,3 +2345,258 @@ msgstr "Validate and see result"
 
 msgid "v0.4.0 ·"
 msgstr "v0.4.0 ·"
+
+msgid "ANTES DE EMPEZAR"
+msgstr "BEFORE YOU START"
+
+msgid "Adaptación activa"
+msgstr "Active adaptation"
+
+msgid "Adaptación educativa acordada"
+msgstr "Agreed educational adaptation"
+
+msgid "Adaptación educativa y NEAE comunicada"
+msgstr "Educational adaptation and reported additional support needs"
+
+msgid "Adaptación finalizada"
+msgstr "Adaptation ended"
+
+msgid "Atención a la diversidad"
+msgstr "Inclusive teaching and support"
+
+msgid "Atención a la diversidad · apoyos previstos"
+msgstr "Inclusive teaching · planned support"
+
+msgid "CREAR · PROBAR · MEJORAR"
+msgstr "CREATE · TEST · IMPROVE"
+
+msgid "Cada reto necesita un identificador único y una consigna válida."
+msgstr "Each challenge needs a unique identifier and a valid task."
+
+msgid ""
+"Cada reto tiene una consigna, una pista y un criterio de observación. Marca "
+"individualmente los alcanzados; cada alumno puede seguir su propio ritmo."
+msgstr ""
+"Each challenge has a task, a hint and an observation criterion. Mark "
+"achievements individually; each student can work at their own pace."
+
+msgid "Consigna del reto"
+msgstr "Challenge task"
+
+msgid "Copia histórica de biblioteca"
+msgstr "Historical library snapshot"
+
+msgid "Desarrollo de la sesión"
+msgstr "Session outline"
+
+msgid ""
+"Edita consignas, pistas y criterios. Deja vacíos los bloques que no "
+"necesites. La numeración se genera en orden. Una vez registrado un avance, "
+"los retos quedan fijados para conservar el historial."
+msgstr ""
+"Edit tasks, hints and criteria. Leave unused blocks empty. Numbers are "
+"generated in order. Once progress is recorded, challenges are fixed to "
+"preserve history."
+
+msgid ""
+"El color resume retos alcanzados de esta sesión; no demuestra por sí solo un"
+" aprendizaje ni completa el curso."
+msgstr ""
+"The colour summarises challenges achieved in this session; it does not by "
+"itself demonstrate learning or complete the course."
+
+msgid "Eliminar esta sesión"
+msgstr "Delete this session"
+
+msgid "Eliminar sesión de prueba"
+msgstr "Delete test session"
+
+msgid "Escribe ELIMINAR para confirmar"
+msgstr "Type ELIMINAR to confirm"
+
+msgid "Escribe ELIMINAR y comprueba que la sesión no ha cambiado."
+msgstr "Type ELIMINAR and check that the session has not changed."
+
+msgid ""
+"Esta sesión tiene historial o ya no es un borrador vacío. Puedes cancelarla "
+"conservando sus registros."
+msgstr ""
+"This session has history or is no longer an empty draft. You can cancel it "
+"while keeping its records."
+
+msgid "Evidencia u observación de los retos"
+msgstr "Challenge evidence or observation"
+
+msgid "Formato de retos no válido."
+msgstr "Invalid challenge format."
+
+msgid "Guardar retos"
+msgstr "Save challenges"
+
+msgid "Historial de retos alcanzados"
+msgstr "Challenge achievement history"
+
+msgid "Indica la consigna de cada reto."
+msgstr "Enter the task for each challenge."
+
+msgid ""
+"Información restringida. Los apoyos no son diagnósticos ni etiquetas "
+"permanentes. La primera entrada es la revisión vigente; las anteriores se "
+"conservan."
+msgstr ""
+"Restricted information. Support plans are not diagnoses or permanent labels."
+" The first entry is the current revision; previous entries are preserved."
+
+msgid "La observación de retos no puede superar 2000 caracteres."
+msgstr "Challenge observations cannot exceed 2000 characters."
+
+msgid ""
+"Las revisiones se guardan sin borrar los resultados anteriores. No incluyas "
+"información clínica o familiar."
+msgstr ""
+"Revisions are saved without deleting previous results. Do not include "
+"clinical or family information."
+
+msgid "Los retos seleccionados no pertenecen a esta sesión."
+msgstr "The selected challenges do not belong to this session."
+
+msgid ""
+"Los retos ya tienen seguimiento. Conserva esta versión y prepara otra sesión"
+" para cambiarlos."
+msgstr ""
+"Progress has already been recorded for these challenges. Keep this version "
+"and prepare another session to change them."
+
+msgid "Mapa de retos"
+msgstr "Challenge map"
+
+msgid "Máximo 30 retos por sesión."
+msgstr "Maximum 30 challenges per session."
+
+msgid "NEAE comunicada por una fuente identificada"
+msgstr "Additional educational support needs reported by an identified source"
+
+msgid "Naranja · todos"
+msgstr "Orange · all"
+
+msgid "Organizar retos"
+msgstr "Organise challenges"
+
+msgid ""
+"Orientaciones generales de la sesión. Las adaptaciones individuales se "
+"consultan con permiso específico, sin mostrar diagnósticos al grupo."
+msgstr ""
+"General session guidance. Individual adaptations require specific "
+"permission, without showing diagnoses to the group."
+
+msgid "Otra persona ha actualizado los retos. Recarga antes de guardar."
+msgstr "Someone else has updated the challenges. Reload before saving."
+
+msgid "Otra persona ha modificado los apoyos. Recarga antes de guardar."
+msgstr "Someone else has changed the support plan. Reload before saving."
+
+msgid "Pista docente"
+msgstr "Teacher hint"
+
+msgid ""
+"Progreso de actividad por sesión, independiente de la evaluación del "
+"aprendizaje."
+msgstr "Activity progress by session, independent of learning assessment."
+
+msgid "Qué observar"
+msgstr "What to observe"
+
+msgid ""
+"Registra apoyos necesarios, fuente y revisión. Esta marca no genera un "
+"diagnóstico. Desmarca la adaptación para finalizarla conservando el "
+"historial. Solo es visible con permiso de información restringida."
+msgstr ""
+"Record the required support, source and review date. This marker does not "
+"generate a diagnosis. Uncheck the adaptation to end it while preserving "
+"history. Visible only with restricted information permission."
+
+msgid "Registrar o revisar adaptación"
+msgstr "Record or review adaptation"
+
+msgid "Requiere adaptación educativa"
+msgstr "Requires educational adaptation"
+
+msgid "Retos alcanzados en esta sesión"
+msgstr "Challenges achieved in this session"
+
+msgid "Revisar apoyos y fecha de revisión"
+msgstr "Review support and review date"
+
+msgid "Revisión de un registro anterior; se conserva el historial."
+msgstr "Revision of an earlier record; history is preserved."
+
+msgid ""
+"Se borrará únicamente esta sesión y su planificación, incluidos los retos "
+"preparados. No se borrarán el grupo, las matrículas, la biblioteca, las "
+"demás sesiones de la serie ni la auditoría. Esta acción no se puede deshacer"
+" desde la plataforma."
+msgstr ""
+"Only this session and its plan, including prepared challenges, will be "
+"deleted. The group, enrolments, library, other sessions in the series and "
+"audit will remain. This action cannot be undone from the platform."
+
+msgid ""
+"Sesión eliminada. El grupo, el alumnado y las demás sesiones se conservan."
+msgstr ""
+"Session deleted. The group, students and other sessions are preserved."
+
+msgid "Sin adaptaciones registradas en este apartado."
+msgstr "No adaptations recorded in this section."
+
+msgid "Sin retos alcanzados registrados todavía."
+msgstr "No challenge achievements recorded yet."
+
+msgid "Texto completo de la planificación"
+msgstr "Full planning text"
+
+msgid ""
+"Todavía no hay retos estructurados. Organiza los retos para activar el "
+"seguimiento individual."
+msgstr ""
+"There are no structured challenges yet. Organise challenges to enable "
+"individual tracking."
+
+msgid ""
+"Una NEAE comunicada debe registrarse como hecho comunicado, no como una "
+"interpretación."
+msgstr ""
+"Reported additional support needs must be recorded as a reported fact, not "
+"an interpretation."
+
+msgid "Volver a la sesión"
+msgstr "Back to session"
+
+msgid "retos"
+msgstr "challenges"
+
+msgid "v0.5.0 ·"
+msgstr "v0.5.0 ·"
+
+msgid "Tipo de adaptación"
+msgstr "Adaptation type"
+
+msgid "Metodológica"
+msgstr "Teaching method"
+
+msgid "De acceso"
+msgstr "Access"
+
+msgid "Curricular"
+msgstr "Curricular"
+
+msgid "Combinada"
+msgstr "Combined"
+
+msgid "Añade un criterio de observación."
+msgstr "Add an observation criterion."
+
+msgid "Sin apoyos generales previstos. Puedes añadirlos en la planificación."
+msgstr "No general support planned. You can add it to the session plan."
+
+msgid "Sin pista inicial."
+msgstr "No initial hint."
