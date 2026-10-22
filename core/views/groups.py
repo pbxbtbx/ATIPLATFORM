@@ -16,4 +16,3 @@ def group_detail(request,pk):
 def group_edit(request,pk=None):
     require_admin(request.user)
     return generic_edit(request,GroupForm,_('Editar grupo') if pk else _('Nuevo grupo'),get_object_or_404(ClassGroup,pk=pk) if pk else None,'groups')
-

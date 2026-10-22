@@ -87,4 +87,3 @@ def student_export(request,pk):
         audit(request.user,'student:export',student)
         response=JsonResponse(data,json_dumps_params={'ensure_ascii':False,'indent':2});response['Content-Disposition']='attachment; filename="expediente.json"';response['Cache-Control']='no-store';return response
     return page(request,_('Exportación administrativa'),section='export',student=student,can_sensitive=profile(request.user).sensitive_access)
-

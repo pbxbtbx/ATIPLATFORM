@@ -43,4 +43,3 @@ def generic_edit(request,form_class,title,instance=None,back='home',prepare=None
             messages.success(request,_('Cambios guardados.')); return redirect(back)
         except ValidationError as e: fail(form,e)
     return render(request,'core/form.html',{'title':title,'form':form})
-

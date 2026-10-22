@@ -43,4 +43,3 @@ def user_edit(request,pk):
                 audit(request.user,'user:permissions',target)
             return redirect('settings')
     return render(request,'core/form.html',{'title':_('Permisos de ')+target.username,'form':form})
-

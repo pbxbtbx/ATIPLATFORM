@@ -35,4 +35,3 @@ def evidence_download(request,pk):
     audit(request.user,'evidence:download',evidence)
     response=FileResponse(evidence.file.open('rb'),as_attachment=True,filename='evidencia'+Path(evidence.file.name).suffix)
     response['Cache-Control']='no-store'; return response
-

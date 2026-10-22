@@ -72,4 +72,3 @@ def group_report(request):
         for r in progress: writer.writerow([safe(v) for v in [r.student.name,timezone.localtime(r.session.start).date(),r.session.title,r.challenge,_(r.get_learning_status_display()),r.evidence,r.next_step]])
         return output
     return render(request,'core/group_report.html',{'title':_('Seguimiento de grupo'),'groups':groups(request.user),'selected_group':selected,'progress':progress,'attendance_rows':attendance,'domains':Resource.objects.values_list('domain',flat=True).distinct()})
-

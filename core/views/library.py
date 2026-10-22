@@ -23,4 +23,3 @@ def sequence_edit(request):
         obj=form.save(commit=False); obj.snapshot=[snapshot(r) for r in form.cleaned_data['resources']]; obj.save(); form.save_m2m(); audit(request.user,'sequence:create',obj)
         return redirect('library')
     return render(request,'core/form.html',{'title':_('Asignar secuencia (copia histórica)'),'form':form})
-

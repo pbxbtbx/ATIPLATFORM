@@ -122,4 +122,3 @@ def recover_session(request,pk):
             session_errors(obj); obj.save(); audit(request.user,'session:recover',obj); return redirect('session',pk=obj.pk)
         except ValidationError as e: fail(form,e)
     return render(request,'core/form.html',{'title':_('Recuperar sesión · se conserva la original'),'form':form})
-

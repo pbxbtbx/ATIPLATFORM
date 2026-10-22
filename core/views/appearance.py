@@ -12,4 +12,3 @@ def appearance(request):
         messages.success(request,_('Tu estilo se ha guardado. Solo cambia la apariencia de tu cuenta.'))
         return redirect('appearance')
     return render(request,'core/appearance.html',{'title':_('Personalización'),'form':form})
-

@@ -19,4 +19,3 @@ def task_add(request):
 @require_POST
 def task_done(request,pk):
     obj=get_object_or_404(Task,pk=pk,author=request.user); obj.done=True; obj.save(); return redirect('home')
-

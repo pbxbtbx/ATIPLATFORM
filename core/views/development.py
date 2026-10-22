@@ -44,4 +44,3 @@ def config_restore(request,pk):
     if request.POST.get('confirm')!='RESTAURAR': return HttpResponse(_('Confirma escribiendo RESTAURAR. Solo se restaura configuración; no datos educativos.'),status=400)
     version=ConfigVersion.objects.create(environment=settings.ENVIRONMENT,author=request.user,description=_('Restauración de configuración ')+str(old.pk),payload=validate_config(old.payload))
     audit(request.user,'config:restore-draft',version); return redirect('config_preview',pk=version.pk)
-
