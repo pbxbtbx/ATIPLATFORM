@@ -1,3 +1,4 @@
+from django.utils.translation import gettext as _
 from django.http import HttpResponse
 class MaintenanceMiddleware:
     def __init__(self,get_response): self.get_response=get_response
@@ -6,7 +7,7 @@ class MaintenanceMiddleware:
         from .access import developer
         if request.user.is_authenticated and not request.path.startswith(('/developer/','/logout/','/static/')):
             if current()['maintenance'] and not developer(request.user):
-                return HttpResponse('Atigra Makers está en mantenimiento. Inténtalo más tarde.',status=503)
+                return HttpResponse(_('Atigra Makers está en mantenimiento. Inténtalo más tarde.'),status=503)
         return self.get_response(request)
 
 
@@ -23,3 +24,20 @@ class SafeErrorMiddleware(MiddlewareMixin):
         except Exception:
             pass
         return None
+
+
+class UserLanguageMiddleware:
+    """Idioma por cuenta, o cookie de idioma para la pantalla de acceso."""
+    def __init__(self,get_response): self.get_response=get_response
+    def __call__(self,request):
+        from django.utils import translation
+        from django.utils.cache import patch_vary_headers
+        from .access import profile
+        language=profile(request.user).language if request.user.is_authenticated else request.COOKIES.get('atigra_language','es')
+        if language not in ('es','en'): language='es'
+        request.LANGUAGE_CODE=language
+        with translation.override(language):
+            response=self.get_response(request)
+            response.headers.setdefault('Content-Language',language)
+        patch_vary_headers(response,('Cookie',))
+        return response

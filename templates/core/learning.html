@@ -1,12 +1,12 @@
-{% load learning_theme %}
+{% load i18n %}{% load learning_theme %}
 <section class="card learning-history">
   <div class="section-head">
     <div>
-      <p class="eyebrow">HISTORIAL INDIVIDUAL</p>
-      <h2>Un proceso que deja huella</h2>
+      <p class="eyebrow">{% translate "HISTORIAL INDIVIDUAL" %}</p>
+      <h2>{% translate "Un proceso que deja huella" %}</h2>
     </div>
   </div>
-  <p class="muted">Cada tarjeta corresponde a un registro de clase. Completar una actividad no equivale a demostrar el aprendizaje.</p>
+  <p class="muted">{% translate "Cada tarjeta corresponde a un registro de clase. Completar una actividad no equivale a demostrar el aprendizaje." %}</p>
   {% include "core/rarity_legend.html" %}
   {% for l in learning %}
   <article class="learning-entry progress-{{ l.learning_status }} rarity-{{ l.learning_status|learning_rarity }}" aria-labelledby="learning-{{ l.pk }}">
@@ -16,45 +16,45 @@
         <span>{{ l.session.start|date:'M Y' }}</span>
       </div>
       <div class="learning-session">
-        <p class="eyebrow">CLASE · SESIÓN {{ l.session.number }} · {{ l.session.start|date:'H:i' }}</p>
+        <p class="eyebrow">{% translate "CLASE · SESIÓN" %} {{ l.session.number }} · {{ l.session.start|date:'H:i' }}</p>
         <h3 id="learning-{{ l.pk }}"><a href="{% url 'session' l.session.pk %}">{{ l.session.title }}</a></h3>
         <p>{{ l.session.group.name }}</p>
       </div>
-      <a class="learning-open" href="{% url 'session' l.session.pk %}">Ver clase →</a>
+      <a class="learning-open" href="{% url 'session' l.session.pk %}">{% translate "Ver clase →" %}</a>
     </header>
     <div class="learning-entry-body">
-      {% if l.learning_status == "autonomous" %}<p class="legendary-caption"><span aria-hidden="true">◆</span> Legendario · objetivo completado con autonomía</p>{% endif %}
-      <div class="learning-challenge"><span class="eyebrow">RETO TRABAJADO</span><h4>{{ l.challenge }}</h4></div>
+      {% if l.learning_status == "autonomous" %}<p class="legendary-caption"><span aria-hidden="true">◆</span> {% translate "Legendario · objetivo completado con autonomía" %}</p>{% endif %}
+      <div class="learning-challenge"><span class="eyebrow">{% translate "RETO TRABAJADO" %}</span><h4>{{ l.challenge }}</h4></div>
       <div class="actions learning-statuses">
-        <span class="tag progress-badge progress-{{ l.activity_status }} rarity-{{ l.activity_status|learning_rarity }}">Actividad: {{ l.get_activity_status_display }}</span>
-        <span class="tag progress-badge progress-{{ l.learning_status }} rarity-{{ l.learning_status|learning_rarity }}">Aprendizaje: {{ l.get_learning_status_display }}</span>
-        {% if l.supersedes %}<span class="tag revision-badge">Revisión · versión previa conservada</span>{% endif %}
+        <span class="tag operational-tag">{% translate "Actividad:" %} {{ l.get_activity_status_display|learning_label }}</span>
+        <span class="tag progress-badge progress-{{ l.learning_status }} rarity-{{ l.learning_status|learning_rarity }}">{% translate "Aprendizaje:" %} {{ l.get_learning_status_display|learning_label }}</span>
+        {% if l.supersedes %}<span class="tag revision-badge">{% translate "Revisión · versión previa conservada" %}</span>{% endif %}
       </div>
       <div class="learning-content-grid">
         <section class="learning-block observation-block">
-          <h4>Observación y logros</h4>
+          <h4>{% translate "Observación y logros" %}</h4>
           <dl>
-            <dt>Objetivo</dt><dd>{{ l.objective|default:'Sin registrar.' }}</dd>
-            <dt>Evidencia observable</dt><dd>{{ l.evidence|default:'Sin registrar.' }}</dd>
-            <dt>Logros</dt><dd>{{ l.achievement|default:'Sin registrar.' }}</dd>
+            <dt>{% translate "Objetivo" %}</dt><dd>{{ l.objective|default:_('Sin registrar.') }}</dd>
+            <dt>{% translate "Evidencia observable" %}</dt><dd>{{ l.evidence|default:_('Sin registrar.') }}</dd>
+            <dt>{% translate "Logros" %}</dt><dd>{{ l.achievement|default:_('Sin registrar.') }}</dd>
           </dl>
         </section>
         <section class="learning-block support-block">
-          <h4>Acompañamiento</h4>
+          <h4>{% translate "Acompañamiento" %}</h4>
           <dl>
-            <dt>Dificultades</dt><dd>{{ l.difficulty|default:'Sin registrar.' }}</dd>
-            <dt>Apoyos</dt><dd>{{ l.support|default:'Sin registrar.' }}</dd>
-            <dt>Voz del alumno</dt><dd>{{ l.student_comment|default:'Sin registrar.' }}</dd>
+            <dt>{% translate "Dificultades" %}</dt><dd>{{ l.difficulty|default:_('Sin registrar.') }}</dd>
+            <dt>{% translate "Apoyos" %}</dt><dd>{{ l.support|default:_('Sin registrar.') }}</dd>
+            <dt>{% translate "Voz del alumno" %}</dt><dd>{{ l.student_comment|default:_('Sin registrar.') }}</dd>
           </dl>
         </section>
       </div>
-      <section class="learning-block next-step-block"><h4>Próximo paso</h4><p class="preserve">{{ l.next_step|default:'Sin registrar.' }}</p></section>
-      {% if l.internal_notes %}<section class="learning-block internal-block"><h4>Notas internas · uso del equipo</h4><p class="preserve">{{ l.internal_notes }}</p><small>Excluidas de los informes para familias.</small></section>{% endif %}
-      <details class="rubric-block"><summary>Observaciones de rúbrica</summary>{% for key,value in l.rubric.items %}{% if value %}<p><strong>{{ key }}:</strong> {{ value }}</p>{% endif %}{% endfor %}</details>
+      <section class="learning-block next-step-block"><h4>{% translate "Próximo paso" %}</h4><p class="preserve">{{ l.next_step|default:_('Sin registrar.') }}</p></section>
+      {% if l.internal_notes %}<section class="learning-block internal-block"><h4>{% translate "Notas internas · uso del equipo" %}</h4><p class="preserve">{{ l.internal_notes }}</p><small>{% translate "Excluidas de los informes para familias." %}</small></section>{% endif %}
+      <details class="rubric-block"><summary>{% translate "Observaciones de rúbrica" %}</summary>{% for key,value in l.rubric.items %}{% if value %}<p><strong>{{ key|rubric_label }}:</strong> {{ value }}</p>{% endif %}{% endfor %}</details>
     </div>
-    <footer class="learning-entry-footer">Registrado el {{ l.created_at|date:'d/m/Y H:i' }} · {{ l.author.get_full_name|default:l.author.username }}</footer>
+    <footer class="learning-entry-footer">{% translate "Registrado el" %} {{ l.created_at|date:'d/m/Y H:i' }} · {{ l.author.get_full_name|default:l.author.username }}</footer>
   </article>
   {% empty %}
-  <div class="empty-state"><h3>El primer avance está por llegar</h3><p>Regístralo desde el modo clase de una sesión.</p></div>
+  <div class="empty-state"><h3>{% translate "El primer avance está por llegar" %}</h3><p>{% translate "Regístralo desde el modo clase de una sesión." %}</p></div>
   {% endfor %}
 </section>

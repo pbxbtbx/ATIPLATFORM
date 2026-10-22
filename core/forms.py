@@ -1,3 +1,4 @@
+from django.utils.translation import gettext_lazy as _
 from django import forms
 from django.contrib.auth.models import User
 from django.contrib.auth.password_validation import validate_password
@@ -8,7 +9,7 @@ class VersionedForm(forms.ModelForm):
     def clean(self):
         data=super().clean()
         for start,end in [('starts','ends'),('start','end')]:
-            if data.get(start) and data.get(end) and data[end]<data[start]: self.add_error(end,'La fecha final no puede preceder a la inicial.')
+            if data.get(start) and data.get(end) and data[end]<data[start]: self.add_error(end,_('La fecha final no puede preceder a la inicial.'))
         return data
     def __init__(self,*args,**kwargs):
         super().__init__(*args,**kwargs)
@@ -49,17 +50,17 @@ HolidayForm=form_for(Holiday,['title','start','end'])
 SequenceForm=form_for(Sequence,['name','resources','group'])
 
 class UserForm(forms.Form):
-    username=forms.CharField(label='Usuario',max_length=150)
-    first_name=forms.CharField(label='Nombre',max_length=100)
-    password=forms.CharField(label='Contraseña inicial',widget=forms.PasswordInput)
-    role=forms.ChoiceField(label='Rol',choices=Profile.ROLES)
-    sensitive_access=forms.BooleanField(label='Permiso específico de información restringida',required=False)
-    development_access=forms.BooleanField(label='Permiso específico de desarrollo',required=False)
+    username=forms.CharField(label=_('Usuario'),max_length=150)
+    first_name=forms.CharField(label=_('Nombre'),max_length=100)
+    password=forms.CharField(label=_('Contraseña inicial'),widget=forms.PasswordInput)
+    role=forms.ChoiceField(label=_('Rol'),choices=Profile.ROLES)
+    sensitive_access=forms.BooleanField(label=_('Permiso específico de información restringida'),required=False)
+    development_access=forms.BooleanField(label=_('Permiso específico de desarrollo'),required=False)
     def clean_password(self):
         value=self.cleaned_data['password']; validate_password(value); return value
     def clean_username(self):
         value=self.cleaned_data['username']
-        if User.objects.filter(username=value).exists(): raise forms.ValidationError('Usuario ya existente.')
+        if User.objects.filter(username=value).exists(): raise forms.ValidationError(_('Usuario ya existente.'))
         return value
 
 class DynamicStudentForm(StudentForm):
@@ -79,12 +80,12 @@ class DynamicStudentForm(StudentForm):
         return obj
 
 class EditUserForm(forms.Form):
-    first_name=forms.CharField(label='Nombre',max_length=100)
-    role=forms.ChoiceField(label='Rol',choices=Profile.ROLES)
-    active=forms.BooleanField(label='Cuenta activa',required=False)
-    sensitive_access=forms.BooleanField(label='Permiso específico de información restringida',required=False)
-    development_access=forms.BooleanField(label='Permiso específico de desarrollo',required=False)
+    first_name=forms.CharField(label=_('Nombre'),max_length=100)
+    role=forms.ChoiceField(label=_('Rol'),choices=Profile.ROLES)
+    active=forms.BooleanField(label=_('Cuenta activa'),required=False)
+    sensitive_access=forms.BooleanField(label=_('Permiso específico de información restringida'),required=False)
+    development_access=forms.BooleanField(label=_('Permiso específico de desarrollo'),required=False)
 
 
 class AppearanceForm(forms.Form):
-    theme=forms.ChoiceField(label='Elige tu estilo',choices=Profile._meta.get_field('theme').choices,widget=forms.RadioSelect)
+    theme=forms.ChoiceField(label=_('Elige tu estilo'),choices=Profile._meta.get_field('theme').choices,widget=forms.RadioSelect)

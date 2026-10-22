@@ -1,22 +1,22 @@
-{% extends 'core/base.html' %}
+{% extends 'core/base.html' %}{% load i18n %}
 {% block content %}
-<div class="page-heading"><div><p class="eyebrow">TU ESPACIO, TU ESTILO</p><h1>Personalización<span class="pink">.</span></h1><p>Elige la apariencia con la que te resulte más cómodo trabajar.</p></div><span class="tag">Preferencia personal</span></div>
+<div class="page-heading"><div><p class="eyebrow">{% translate "TU ESPACIO, TU ESTILO" %}</p><h1>{% translate "Personalización" %}<span class="pink">.</span></h1><p>{% translate "Elige la apariencia con la que te resulte más cómodo trabajar." %}</p></div><span class="tag">{% translate "Preferencia personal" %}</span></div>
 <section class="card appearance-settings">
-  <h2>Estilo de la plataforma</h2>
-  <p>Puedes probar los estilos aquí antes de guardar. Tu elección se conserva en tu cuenta y no cambia el estilo de otros docentes.</p>
+  <h2>{% translate "Estilo de la plataforma" %}</h2>
+  <p>{% translate "Puedes probar los estilos aquí antes de guardar. Tu elección se conserva en tu cuenta y no cambia el estilo de otros docentes." %}</p>
   <form method="post" data-dirty id="appearance-form" data-saved-theme="{{ appearance_theme }}">{% csrf_token %}{{ form.non_field_errors }}{{ form.theme.errors }}
-    <fieldset class="theme-options"><legend>Elige tu estilo</legend>
+    <fieldset class="theme-options"><legend>{% translate "Elige tu estilo" %}</legend>
       {% for value,label in form.fields.theme.choices %}
       <label class="theme-option" for="theme-{{ value }}">
         <input type="radio" id="theme-{{ value }}" name="theme" value="{{ value }}" {% if form.theme.value == value %}checked{% endif %}>
         <span class="theme-preview preview-{{ value }}" aria-hidden="true"><span class="mini-sidebar"><i></i><i></i><i></i></span><span class="mini-main"><i class="mini-title"></i><span class="mini-stats"><i></i><i></i><i></i></span><span class="mini-panel"><i></i><i></i><i></i></span></span></span>
         <strong>{{ label }}</strong>
-        <span class="theme-description">{% if value == 'rpg' %}Paneles de fantasía, marcos dorados e insignias de aprendizaje.{% elif value == 'classic' %}Fondos claros, colores de Atigra y una presentación limpia.{% else %}Tonos oscuros y marcos sencillos para una apariencia discreta.{% endif %}</span>
+        <span class="theme-description">{% if value == 'rpg' %}{% translate "Paneles de fantasía, marcos dorados e insignias de aprendizaje." %}{% elif value == 'classic' %}{% translate "Fondos claros, colores de Atigra y una presentación limpia." %}{% else %}{% translate "Tonos oscuros y marcos sencillos para una apariencia discreta." %}{% endif %}</span>
       </label>
       {% endfor %}
     </fieldset>
-    <div class="form-actions"><span data-save-state class="muted">Estilo guardado en tu cuenta</span><button class="button light" type="button" id="reset-theme">Volver al estilo guardado</button><button class="button">Guardar mi estilo</button></div>
+    <div class="form-actions"><span data-save-state class="muted">{% translate "Estilo guardado en tu cuenta" %}</span><button class="button light" type="button" id="reset-theme">{% translate "Volver al estilo guardado" %}</button><button class="button">{% translate "Guardar mi estilo" %}</button></div>
   </form>
 </section>
-<section class="card spaced"><h2>Un mismo aprendizaje, distintos estilos</h2><p>Los colores de adquisición mantienen su significado en todos los temas. «Legendario» se aplica al objetivo registrado. La selección de estilo no completa actividades ni cambia observaciones, permisos o informes.</p>{% include 'core/rarity_legend.html' %}</section>
+<section class="card spaced"><h2>{% translate "Un mismo aprendizaje, distintos estilos" %}</h2><p>{% translate "Los colores de adquisición mantienen su significado en todos los temas. «Legendario» se aplica al objetivo registrado. La selección de estilo no completa actividades ni cambia observaciones, permisos o informes." %}</p>{% include 'core/rarity_legend.html' %}</section>
 {% endblock %}

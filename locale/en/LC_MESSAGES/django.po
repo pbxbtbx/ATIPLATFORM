@@ -1,0 +1,2154 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Atigra Makers 0.3.0\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "+ imaginar"
+msgstr "+ imagine"
+
+msgid ". El nuevo registro conservará este en el historial."
+msgstr ". The new entry will keep this one in the history."
+
+msgid ". Esto es lo que tenemos por delante."
+msgstr ". Here is what lies ahead."
+
+msgid ""
+". No contiene datos educativos ni credenciales. La vista previa usa una "
+"tarjeta sintética y no modifica registros."
+msgstr ""
+". It contains no educational data or credentials. The preview uses a "
+"synthetic card and does not change records."
+
+msgid "01 · Abrir la clase"
+msgstr "01 · Open the class"
+
+msgid "02 · Asistencia y avances"
+msgstr "02 · Attendance and progress"
+
+msgid "03 · Preparar lo siguiente"
+msgstr "03 · Prepare what comes next"
+
+msgid "ATIGRA MAKERS · GESTIÓN EDUCATIVA"
+msgstr "ATIGRA MAKERS · EDUCATION MANAGEMENT"
+
+msgid "ATIGRA · APRENDER HACIENDO"
+msgstr "ATIGRA · LEARNING BY MAKING"
+
+msgid "Abrir calendario ↗"
+msgstr "Open calendar ↗"
+
+msgid "Abrir clase →"
+msgstr "Open class →"
+
+msgid "Abrir enlace externo ↗"
+msgstr "Open external link ↗"
+
+msgid "Abrir ficha →"
+msgstr "Open profile →"
+
+msgid "Accede con tu cuenta del equipo."
+msgstr "Sign in with your staff account."
+
+msgid ""
+"Acceso registrado. Esta información es opcional y se excluye de los informes"
+" para familias y de los registros técnicos."
+msgstr ""
+"Access logged. This information is optional and excluded from family reports"
+" and technical logs."
+
+msgid "Acción no válida."
+msgstr "Invalid action."
+
+msgid "Acompaña cada proceso, sin perder de vista a nadie."
+msgstr "Support every learning journey without losing sight of anyone."
+
+msgid "Acompañamiento"
+msgstr "Support and guidance"
+
+msgid "Actividad"
+msgstr "Activity"
+
+msgid "Actividad común para los registros seleccionados"
+msgstr "Shared activity for the selected students"
+
+msgid "Actividad:"
+msgstr "Activity:"
+
+msgid "Actividades previstas y retos de distintos niveles"
+msgstr "Planned activities and challenges at different levels"
+
+msgid "Actividades realizadas y completadas"
+msgstr "Activities completed and work carried out"
+
+msgid "Actividades y proyectos"
+msgstr "Activities and projects"
+
+msgid "Actividades y retos"
+msgstr "Activities and challenges"
+
+msgid "Activo"
+msgstr "Active"
+
+msgid "Adaptaciones aplicadas"
+msgstr "Adaptations used"
+
+msgid "Adjunta un archivo o un enlace."
+msgstr "Attach a file or a link."
+
+msgid "Administración"
+msgstr "Administration"
+
+msgid ""
+"Admite textos, colores, tipografía, logotipo local oficial, orden de menús, "
+"módulos, indicadores, campos personalizados, rúbricas y plantillas. Las "
+"claves admitidas están en el ejemplo."
+msgstr ""
+"Supports text, colours, fonts, an official local logo, menu order, modules, "
+"feature flags, custom fields, rubrics and templates. The example lists the "
+"supported keys."
+
+msgid "Alcance de autorización de recogida"
+msgstr "Scope of collection authorisation"
+
+msgid "Alcance del cambio"
+msgstr "Scope of change"
+
+msgid "Alumnado"
+msgstr "Students"
+
+msgid "Alumnado inscrito"
+msgstr "Enrolled students"
+
+msgid "Alumno"
+msgstr "Student"
+
+msgid "Alumnos a tu cargo"
+msgstr "Students in your care"
+
+msgid ""
+"Antes de usar datos reales: configura HTTPS, copias automáticas, política de"
+" conservación, responsables de tratamiento y revisión de permisos. Consulta "
+"docs/OPERATIONS.md."
+msgstr ""
+"Before using real data: configure HTTPS, automatic backups, retention "
+"policies, data controllers and permission reviews. See docs/OPERATIONS.md."
+
+msgid "Apartados incluidos"
+msgstr "Included sections"
+
+msgid "Aplicar idioma"
+msgstr "Apply language"
+
+msgid "Apoyos"
+msgstr "Support"
+
+msgid "Apoyos acordados"
+msgstr "Agreed support"
+
+msgid "Apoyos acordados:"
+msgstr "Agreed support:"
+
+msgid "Apoyos utilizados"
+msgstr "Support used"
+
+msgid "Apoyos y adaptaciones"
+msgstr "Support and adaptations"
+
+msgid "Aprender haciendo."
+msgstr "Learning by making."
+
+msgid "Aprendizaje"
+msgstr "Learning"
+
+msgid "Aprendizaje demostrado"
+msgstr "Demonstrated learning"
+
+msgid "Aprendizaje en proceso"
+msgstr "Learning in progress"
+
+msgid "Aprendizaje:"
+msgstr "Learning:"
+
+msgid "Archivado"
+msgstr "Archived"
+
+msgid "Archivo privado"
+msgstr "Private file"
+
+msgid "Asignar secuencia (copia histórica)"
+msgstr "Assign sequence (historical copy)"
+
+msgid "Asistencia"
+msgstr "Attendance"
+
+msgid "Asistencia en el periodo"
+msgstr "Attendance during the period"
+
+msgid "Asistencia y aprendizaje"
+msgstr "Attendance and learning"
+
+msgid "Atigra Makers está en mantenimiento. Inténtalo más tarde."
+msgstr "Atigra Makers is under maintenance. Please try again later."
+
+msgid "Atigra Makers · Informe para familia"
+msgstr "Atigra Makers · Family report"
+
+msgid "Atigra claro"
+msgstr "Atigra light"
+
+msgid "Auditoría de desarrollo"
+msgstr "Development audit"
+
+msgid "Ausencia"
+msgstr "Absent"
+
+msgid "Ausencia justificada"
+msgstr "Excused absence"
+
+msgid "Autorizaciones por finalidad"
+msgstr "Authorisations by purpose"
+
+msgid "Autorización específica de imágenes"
+msgstr "Specific image-use authorisation"
+
+msgid "Avances y fortalezas"
+msgstr "Progress and strengths"
+
+msgid "Avisos"
+msgstr "Notifications"
+
+msgid "Azul"
+msgstr "Blue"
+
+msgid ""
+"Añade lecciones, proyectos o retos. Cada sesión conservará una copia del "
+"recurso utilizado."
+msgstr ""
+"Add lessons, projects or challenges. Each session will retain a copy of the "
+"resource used."
+
+msgid "Añade objetivos para preparar la clase."
+msgstr "Add learning objectives to prepare the class."
+
+msgid "Añadir avance o revisión individual"
+msgstr "Add individual progress or a revision"
+
+msgid "Añadir evidencia privada"
+msgstr "Add private evidence"
+
+msgid "Añadir recordatorio"
+msgstr "Add reminder"
+
+msgid "BORRADOR → VISTA PREVIA → PUBLICACIÓN"
+msgstr "DRAFT → PREVIEW → PUBLISH"
+
+msgid "Baja"
+msgstr "Withdrawn"
+
+msgid "Baja temporal"
+msgstr "Temporarily withdrawn"
+
+msgid "Base de datos"
+msgstr "Database"
+
+msgid "Biblioteca"
+msgstr "Library"
+
+msgid "Biblioteca maker"
+msgstr "Maker library"
+
+msgid "Bienvenido al taller"
+msgstr "Welcome to the workshop"
+
+msgid "Borrador"
+msgstr "Draft"
+
+msgid "Buscar"
+msgstr "Search"
+
+msgid "Buscar alumno"
+msgstr "Search students"
+
+msgid "Buscar por nombre"
+msgstr "Search by name"
+
+msgid "Buscar recurso"
+msgstr "Search resources"
+
+msgid "Buscar título o ámbito"
+msgstr "Search by title or subject area"
+
+msgid "CADA PERSONA, SU PROPIO RITMO"
+msgstr "EVERY PERSON, THEIR OWN PACE"
+
+msgid "CLASE · SESIÓN"
+msgstr "CLASS · SESSION"
+
+msgid "CONTINUIDAD DEL APRENDIZAJE"
+msgstr "LEARNING CONTINUITY"
+
+msgid "COPIA HISTÓRICA DE BIBLIOTECA"
+msgstr "HISTORICAL LIBRARY COPY"
+
+msgid "Cada avance merece su espacio"
+msgstr "Every step forward deserves space"
+
+msgid "Cada campo necesita key, label, type, required, options."
+msgstr "Each field needs key, label, type, required and options."
+
+msgid "Cada grupo tiene su recorrido"
+msgstr "Every group has its own journey"
+
+msgid "Cada pequeño avance cuenta."
+msgstr "Every small step counts."
+
+msgid ""
+"Cada tarjeta corresponde a un registro de clase. Completar una actividad no "
+"equivale a demostrar el aprendizaje."
+msgstr ""
+"Each card is a class entry. Completing an activity is not the same as "
+"demonstrating learning."
+
+msgid "Calendario"
+msgstr "Calendar"
+
+msgid "Cambios guardados."
+msgstr "Changes saved."
+
+msgid "Cambios pendientes de guardar"
+msgstr "Unsaved changes"
+
+msgid "Cambios sin guardar"
+msgstr "Unsaved changes"
+
+msgid "Campo de ejemplo"
+msgstr "Example field"
+
+msgid "Campos no válidos."
+msgstr "Invalid fields."
+
+msgid "Campos personalizados"
+msgstr "Custom fields"
+
+msgid "Cancelada"
+msgstr "Cancelled"
+
+msgid "Capacidad"
+msgstr "Capacity"
+
+msgid "Capacidad:"
+msgstr "Capacity:"
+
+msgid "Cerrar el círculo"
+msgstr "Close the loop"
+
+msgid "Cerrar sesión"
+msgstr "Sign out"
+
+msgid ""
+"Clase guardada. Los registros individuales conservan sus versiones "
+"anteriores."
+msgstr "Class saved. Individual entries retain their previous versions."
+
+msgid "Clases de hoy"
+msgstr "Today's classes"
+
+msgid "Color hexadecimal no válido."
+msgstr "Invalid hexadecimal colour."
+
+msgid "Colores del aprendizaje"
+msgstr "Learning colours"
+
+msgid "Colores del aprendizaje por objetivo"
+msgstr "Learning colours by objective"
+
+msgid "Comentario del alumno"
+msgstr "Student comment"
+
+msgid "Completado"
+msgstr "Completed"
+
+msgid "Completado con apoyo"
+msgstr "Completed with support"
+
+msgid "Completado con autonomía"
+msgstr "Completed independently"
+
+msgid "Completados"
+msgstr "Completed"
+
+msgid "Con apoyo"
+msgstr "With support"
+
+msgid "Conectada"
+msgstr "Connected"
+
+msgid "Configura el primer curso académico."
+msgstr "Set up the first academic year."
+
+msgid "Configuración"
+msgstr "Settings"
+
+msgid "Configuración JSON"
+msgstr "JSON configuration"
+
+msgid "Configuración declarativa (JSON, sin código)"
+msgstr "Declarative configuration (JSON, no code)"
+
+msgid "Configuración inválida: "
+msgstr "Invalid configuration: "
+
+msgid "Configuración publicada en "
+msgstr "Configuration published in "
+
+msgid "Configuración versionada, diagnóstico y mantenimiento ·"
+msgstr "Versioned configuration, diagnostics and maintenance ·"
+
+msgid "Configurar curso →"
+msgstr "Set up academic year →"
+
+msgid "Confirma el alcance escribiendo EXPORTAR."
+msgstr "Confirm the scope by typing EXPORTAR."
+
+msgid "Confirma escribiendo EXPORTAR"
+msgstr "Confirm by typing EXPORTAR"
+
+msgid "Confirma escribiendo PUBLICAR"
+msgstr "Confirm by typing PUBLICAR"
+
+msgid ""
+"Confirma escribiendo RESTAURAR. Solo se restaura configuración; no datos "
+"educativos."
+msgstr ""
+"Confirm by typing RESTAURAR. Only configuration is restored, not educational"
+" data."
+
+msgid "Confirmación de restauración"
+msgstr "Restore confirmation"
+
+msgid "Conflicto de edición. Recarga y vuelve a intentarlo."
+msgstr "Editing conflict. Reload and try again."
+
+msgid "Conflicto: el grupo o docente ya tiene otra clase a esa hora."
+msgstr ""
+"Conflict: the group or teacher already has another class at this time."
+
+msgid ""
+"Conservación: entre 30 y 3650 días, sujeta a revisión antes de datos reales."
+msgstr "Retention: 30 to 3650 days, subject to review before using real data."
+
+msgid "Consolidado"
+msgstr "Consolidated"
+
+msgid "Consulta"
+msgstr "See"
+
+msgid "Consultar"
+msgstr "View"
+
+msgid "Contacto de emergencia"
+msgstr "Emergency contact"
+
+msgid "Contacto necesario"
+msgstr "Necessary contact details"
+
+msgid "Contacto prioritario"
+msgstr "Primary contact"
+
+msgid "Contacto:"
+msgstr "Contact:"
+
+msgid "Contraseña inicial"
+msgstr "Initial password"
+
+msgid "Coordinación"
+msgstr "Coordination"
+
+msgid "Copia verificada"
+msgstr "Verified backup"
+
+msgid "Correo"
+msgstr "Email"
+
+msgid ""
+"Crea primero un curso académico en Configuración y después tu primer grupo."
+msgstr "Create an academic year in Settings first, then your first group."
+
+msgid ""
+"Crea una secuencia para conservar una selección de recursos asociada a un "
+"grupo."
+msgstr ""
+"Create a sequence to retain a selection of resources associated with a "
+"group."
+
+msgid "Crear restauración"
+msgstr "Create restore draft"
+
+msgid "Crear secuencia"
+msgstr "Create sequence"
+
+msgid "Crear un borrador"
+msgstr "Create a draft"
+
+msgid "Crear usuario interno"
+msgstr "Create internal user"
+
+msgid "Criterios"
+msgstr "Criteria"
+
+msgid "Criterios de observación"
+msgstr "Observation criteria"
+
+msgid ""
+"Cuando edites un formulario, la campana y el aviso de esa página te "
+"indicarán que hay cambios pendientes."
+msgstr ""
+"When you edit a form, the bell and the notice on that page will show that "
+"changes are pending."
+
+msgid "Cuenta activa"
+msgstr "Active account"
+
+msgid "Curso académico"
+msgstr "Academic year"
+
+msgid "Cursos académicos"
+msgstr "Academic years"
+
+msgid "Debe haber entre 1 y 20 estados de progreso."
+msgstr "There must be between 1 and 20 progress states."
+
+msgid "Definición de campo inválida."
+msgstr "Invalid field definition."
+
+msgid "Desarrollador"
+msgstr "Developer"
+
+msgid "Desarrollo"
+msgstr "Development"
+
+msgid "Descargar PDF ↓"
+msgstr "Download PDF ↓"
+
+msgid "Descargar archivo privado ↓"
+msgstr "Download private file ↓"
+
+msgid "Descargar expediente JSON"
+msgstr "Download JSON record"
+
+msgid "Describe el cambio."
+msgstr "Describe the change."
+
+msgid "Describe lo realizado antes de cerrar la sesión."
+msgstr "Describe what was done before closing the session."
+
+msgid "Descripción"
+msgstr "Description"
+
+msgid "Descripción del cambio"
+msgstr "Change description"
+
+msgid "Desde"
+msgstr "From"
+
+msgid "Dificultades"
+msgstr "Difficulties"
+
+msgid "Dificultades encontradas"
+msgstr "Difficulties encountered"
+
+msgid "Distintos ritmos."
+msgstr "Different paces."
+
+msgid "Docente"
+msgstr "Teacher"
+
+msgid "Docentes / coordinación"
+msgstr "Teachers / coordination"
+
+msgid "Duración estimada (minutos)"
+msgstr "Estimated duration (minutes)"
+
+msgid "Día"
+msgstr "Day"
+
+msgid "Dúrcal"
+msgstr "Dúrcal"
+
+msgid "EL TALLER, EN MARCHA"
+msgstr "THE WORKSHOP IN MOTION"
+
+msgid "ESPACIO DOCENTE"
+msgstr "STAFF WORKSPACE"
+
+msgid "ESPACIO INTERNO"
+msgstr "INTERNAL WORKSPACE"
+
+msgid "Editar ficha"
+msgstr "Edit profile"
+
+msgid "Editar grupo"
+msgstr "Edit group"
+
+msgid "Editar planificación"
+msgstr "Edit plan"
+
+msgid "Editar recurso"
+msgstr "Edit resource"
+
+msgid "Editar sesión"
+msgstr "Edit session"
+
+msgid "Editar →"
+msgstr "Edit →"
+
+msgid "Ej.: Construir y probar un sensor de luz"
+msgstr "E.g. Build and test a light sensor"
+
+msgid "Ejemplo sintético de interfaz"
+msgstr "Synthetic interface example"
+
+msgid ""
+"El acceso a cada grupo y a la información restringida depende de tus "
+"permisos. Solicita tu cuenta a administración."
+msgstr ""
+"Access to each group and restricted information depends on your permissions."
+" Ask administration for an account."
+
+msgid ""
+"El aviso se muestra solo en la pestaña donde estás editando. No se copian "
+"los textos del formulario ni se guardan automáticamente."
+msgstr ""
+"The notice only appears in the tab where you are editing. Form text is not "
+"copied or saved automatically."
+
+msgid "El docente debe estar asignado al grupo."
+msgstr "The teacher must be assigned to the group."
+
+msgid "El final debe ser posterior al inicio."
+msgstr "The end must be after the start."
+
+msgid "El grupo"
+msgstr "The group"
+
+msgid "El grupo de destino debe estar activo."
+msgstr "The destination group must be active."
+
+msgid "El grupo ha alcanzado su capacidad."
+msgstr "The group has reached its capacity."
+
+msgid "El logotipo debe ser un recurso oficial local bajo /static/."
+msgstr "The logo must be an official local resource under /static/."
+
+msgid "El primer avance está por llegar"
+msgstr "The first step forward is still to come"
+
+msgid "El próximo gran proyecto"
+msgstr "The next great project"
+
+msgid "El taller de la plataforma"
+msgstr "The platform workshop"
+
+msgid "El taller está por organizar"
+msgstr "The workshop is ready to organise"
+
+msgid ""
+"El traslado cierra la matrícula seleccionada el día anterior a la nueva "
+"incorporación y conserva sesiones, asistencia y aprendizajes."
+msgstr ""
+"A transfer closes the selected enrolment on the day before the new start and"
+" preserves sessions, attendance and learning."
+
+msgid "El traslado no puede preceder a la matrícula."
+msgstr "The transfer cannot precede the enrolment."
+
+msgid "Elige la apariencia con la que te resulte más cómodo trabajar."
+msgstr "Choose the appearance that helps you work comfortably."
+
+msgid "Elige tu estilo"
+msgstr "Choose your style"
+
+msgid "Emergencia"
+msgstr "Emergency"
+
+msgid "En proceso"
+msgstr "In progress"
+
+msgid "Enlace externo (no se visita automáticamente)"
+msgstr "External link (not visited automatically)"
+
+msgid "Entrar a la plataforma →"
+msgstr "Enter the platform →"
+
+msgid "Equipo Atigra"
+msgstr "Atigra staff"
+
+msgid "Equipo asignado"
+msgstr "Assigned staff"
+
+msgid "Equipo autorizado"
+msgstr "Authorised staff"
+
+msgid "Error"
+msgstr "Error"
+
+msgid "Errores técnicos redactados"
+msgstr "Redacted technical errors"
+
+msgid "Escribe RESTAURAR"
+msgstr "Type RESTAURAR"
+
+msgid "Español"
+msgstr "Spanish"
+
+msgid ""
+"Esta exportación interna contiene datos personales, matrículas históricas, "
+"responsables vinculados, autorizaciones, asistencia, avances con notas "
+"internas y metadatos de evidencias de este alumno. No incluye cuentas ni "
+"contraseñas. Los archivos se descargan por separado con autorización."
+msgstr ""
+"This internal export contains personal details, historical enrolments, "
+"linked responsible adults, authorisations, attendance, progress with "
+"internal notes, and evidence metadata for this student. It does not include "
+"accounts or passwords. Files are downloaded separately with authorisation."
+
+msgid ""
+"Esta versión ya fue publicada. Para restaurarla, crea un borrador desde el "
+"historial."
+msgstr ""
+"This version has already been published. To restore it, create a draft from "
+"the history."
+
+msgid "Esta y las siguientes (fechas, docente y estado)"
+msgstr "This and following sessions (dates, teacher and status)"
+
+msgid "Estado"
+msgstr "Status"
+
+msgid "Estado de aprendizaje no válido."
+msgstr "Invalid learning status."
+
+msgid "Estado de asistencia no válido."
+msgstr "Invalid attendance status."
+
+msgid "Estado de progreso inválido."
+msgstr "Invalid progress state."
+
+msgid "Estados de progreso duplicados."
+msgstr "Duplicate progress states."
+
+msgid "Estilo de la plataforma"
+msgstr "Platform style"
+
+msgid "Estilo guardado en tu cuenta"
+msgstr "Style saved to your account"
+
+msgid "Estilo visual"
+msgstr "Visual style"
+
+msgid "Estrategias y apoyos educativos"
+msgstr "Educational strategies and support"
+
+msgid "Estrategias, apoyos y adaptaciones educativas"
+msgstr "Educational strategies, support and adaptations"
+
+msgid "Etiquetas no válidas."
+msgstr "Invalid labels."
+
+msgid "Evidencia"
+msgstr "Evidence"
+
+msgid "Evidencia observable"
+msgstr "Observable evidence"
+
+msgid "Evidencias observadas"
+msgstr "Observed evidence"
+
+msgid "Excluidas de los informes para familias."
+msgstr "Excluded from family reports."
+
+msgid "Experiencia previa"
+msgstr "Prior experience"
+
+msgid "Explorar la biblioteca →"
+msgstr "Explore the library →"
+
+msgid "Exportación administrativa"
+msgstr "Administrative export"
+
+msgid "Exportar CSV autorizado ↓"
+msgstr "Export authorised CSV ↓"
+
+msgid "Exportar CSV ↓"
+msgstr "Export CSV ↓"
+
+msgid "Exportar expediente administrativo ↓"
+msgstr "Export administrative record ↓"
+
+msgid "Fantasía RPG"
+msgstr "Fantasy RPG"
+
+msgid "Fecha"
+msgstr "Date"
+
+msgid "Fecha de incorporación"
+msgstr "Start date"
+
+msgid "Fecha de nacimiento"
+msgstr "Date of birth"
+
+msgid "Fecha de revisión"
+msgstr "Review date"
+
+msgid "Fecha no válida."
+msgstr "Invalid date."
+
+msgid "Fecha o matrícula no válida."
+msgstr "Invalid date or enrolment."
+
+msgid "Fecha vencida"
+msgstr "Overdue"
+
+msgid "Fecha y sesión"
+msgstr "Date and session"
+
+msgid "Festivo / periodo sin clase"
+msgstr "Holiday / break"
+
+msgid "Festivos y periodos sin clase"
+msgstr "Holidays and breaks"
+
+msgid "Ficha del alumno"
+msgstr "Student profile"
+
+msgid "Ficha individual"
+msgstr "Individual profile"
+
+msgid "Filtrar"
+msgstr "Filter"
+
+msgid "Filtrar recordatorios"
+msgstr "Filter reminders"
+
+msgid "Fin"
+msgstr "End"
+
+msgid "Finalidad específica"
+msgstr "Specific purpose"
+
+msgid "Finalidad y relevancia educativa u operativa"
+msgstr "Purpose and educational or operational relevance"
+
+msgid "Finalidad:"
+msgstr "Purpose:"
+
+msgid "Finalizado"
+msgstr "Finished"
+
+msgid "Fondos claros, colores de Atigra y una presentación limpia."
+msgstr "Light backgrounds, Atigra colours and a clean layout."
+
+msgid "Fortalezas observadas"
+msgstr "Observed strengths"
+
+msgid "Fuente"
+msgstr "Source"
+
+msgid "Fuente:"
+msgstr "Source:"
+
+msgid "GESTIÓN DEL TALLER"
+msgstr "WORKSHOP MANAGEMENT"
+
+msgid "Generar vista previa →"
+msgstr "Generate preview →"
+
+msgid "Gris"
+msgstr "Grey"
+
+msgid "Grupo"
+msgstr "Group"
+
+msgid "Grupo de destino"
+msgstr "Destination group"
+
+msgid "Grupos"
+msgstr "Groups"
+
+msgid "Grupos activos"
+msgstr "Active groups"
+
+msgid "Guarda antes de cerrar la página o cambiar de idioma."
+msgstr "Save before closing the page or changing language."
+
+msgid "Guardar borrador"
+msgstr "Save draft"
+
+msgid "Guardar borrador y previsualizar →"
+msgstr "Save draft and preview →"
+
+msgid "Guardar cambios"
+msgstr "Save changes"
+
+msgid "Guardar matrícula"
+msgstr "Save enrolment"
+
+msgid "Guardar mi estilo"
+msgstr "Save my style"
+
+msgid "Guardar y cerrar sesión ✓"
+msgstr "Save and close session ✓"
+
+msgid "HACER VISIBLE EL APRENDIZAJE"
+msgstr "MAKING LEARNING VISIBLE"
+
+msgid "HISTORIAL INDIVIDUAL"
+msgstr "INDIVIDUAL HISTORY"
+
+msgid "Hasta"
+msgstr "To"
+
+msgid "Hay cambios sin guardar"
+msgstr "There are unsaved changes"
+
+msgid "Hay claves no admitidas. No se permite código ejecutable."
+msgstr "There are unsupported keys. Executable code is not allowed."
+
+msgid "Haz visible lo que aprende cada persona."
+msgstr "Make each person's learning visible."
+
+msgid "Hecho comunicado"
+msgstr "Reported fact"
+
+msgid "Historial de asistencia"
+msgstr "Attendance history"
+
+msgid "Historial de configuración"
+msgstr "Configuration history"
+
+msgid "Historial de matrículas"
+msgstr "Enrolment history"
+
+msgid "Horario habitual (informativo)"
+msgstr "Usual timetable (informational)"
+
+msgid "Horario por configurar"
+msgstr "Timetable to be configured"
+
+msgid "Hoy hay espacio para preparar"
+msgstr "Today is a good day to prepare"
+
+msgid "Ideas que se comparten. Aprendizajes que se multiplican."
+msgstr "Ideas to share. Learning that grows."
+
+msgid "Identificadores de campo duplicados."
+msgstr "Duplicate field identifiers."
+
+msgid "Idioma"
+msgstr "Language"
+
+msgid "Idioma de la interfaz"
+msgstr "Interface language"
+
+msgid "Idioma no válido."
+msgstr "Invalid language."
+
+msgid "Imagen inválida."
+msgstr "Invalid image."
+
+msgid "Incluir asistencia"
+msgstr "Include attendance"
+
+msgid "Incluir información restringida (acceso adicional auditado)"
+msgstr "Include restricted information (additional audited access)"
+
+msgid "Incorporación"
+msgstr "Joining date"
+
+msgid "Indica el reto trabajado para cada registro seleccionado."
+msgstr "Enter the challenge worked on for each selected entry."
+
+msgid "Infinitas posibilidades."
+msgstr "Endless possibilities."
+
+msgid "Información pertinente"
+msgstr "Relevant information"
+
+msgid "Información restringida"
+msgstr "Restricted information"
+
+msgid "Información restringida 🔒"
+msgstr "Restricted information 🔒"
+
+msgid "Informe para familia →"
+msgstr "Family report →"
+
+msgid "Informes"
+msgstr "Reports"
+
+msgid "Inicial"
+msgstr "Beginner"
+
+msgid "Inicio"
+msgstr "Home"
+
+msgid "Instrucciones"
+msgstr "Instructions"
+
+msgid "Instrucciones de salud"
+msgstr "Health instructions"
+
+msgid "Instrucciones y enlaces"
+msgstr "Instructions and links"
+
+msgid "Intereses y proyectos deseados"
+msgstr "Interests and desired projects"
+
+msgid "Intermedio"
+msgstr "Intermediate"
+
+msgid "Interpretación por contrastar"
+msgstr "Interpretation awaiting confirmation"
+
+msgid "JSON no válido."
+msgstr "Invalid JSON."
+
+msgid "LO PREVISTO"
+msgstr "THE PLAN"
+
+msgid "LO QUE OCURRIÓ Y LO QUE VIENE"
+msgstr "WHAT HAPPENED AND WHAT COMES NEXT"
+
+msgid ""
+"La asignación a grupos se gestiona en la ficha de cada grupo. Desarrollo no "
+"concede acceso a alumnado."
+msgstr ""
+"Group assignments are managed in each group's profile. Development does not "
+"grant access to students."
+
+msgid "La asistencia no determina dificultades ni estados de aprendizaje."
+msgstr "Attendance does not determine difficulties or learning states."
+
+msgid "La asistencia no determina el aprendizaje."
+msgstr "Attendance does not determine learning."
+
+msgid "La configuración debe ser un objeto JSON."
+msgstr "The configuration must be a JSON object."
+
+msgid "La configuración se aplica solo a"
+msgstr "The configuration only applies to"
+
+msgid "La fecha está fuera de la vigencia del grupo."
+msgstr "The date is outside the group's date range."
+
+msgid "La fecha final no puede preceder a la inicial."
+msgstr "The end date cannot precede the start date."
+
+msgid "La matrícula debe estar dentro de la vigencia del grupo."
+msgstr "Enrolment must be within the group's date range."
+
+msgid "La planificación y lo realizado se registran por separado."
+msgstr "Planned and actual work are recorded separately."
+
+msgid ""
+"La serie contiene registros realizados. Modifica solo esta sesión para "
+"conservarlos."
+msgstr ""
+"The series contains completed records. Edit this session only to preserve "
+"them."
+
+msgid "La sesión coincide con un periodo sin clase."
+msgstr "The session overlaps a holiday or break."
+
+msgid "La sesión ha cambiado. Recarga antes de guardar."
+msgstr "The session has changed. Reload before saving."
+
+msgid "Las próximas clases"
+msgstr "Upcoming classes"
+
+msgid "Lax"
+msgstr "Lax"
+
+msgid "Legendario"
+msgstr "Legendary"
+
+msgid "Legendario · objetivo completado con autonomía"
+msgstr "Legendary · objective completed independently"
+
+msgid "Lila"
+msgstr "Lilac"
+
+msgid "Logotipo configurado"
+msgstr "Configured logo"
+
+msgid "Logros"
+msgstr "Achievements"
+
+msgid "Logros / fortalezas"
+msgstr "Achievements / strengths"
+
+msgid "Los cambios de esta página aún no se han guardado."
+msgstr "Changes on this page have not been saved yet."
+
+msgid ""
+"Los colores de adquisición mantienen su significado en todos los temas. "
+"«Legendario» se aplica al objetivo registrado. La selección de estilo no "
+"completa actividades ni cambia observaciones, permisos o informes."
+msgstr ""
+"Acquisition colours keep the same meaning in all themes. “Legendary” applies"
+" to the recorded objective. Choosing a style does not complete activities or"
+" change observations, permissions or reports."
+
+msgid ""
+"Los recordatorios solo los ves tú. Utilízalos para materiales, preparación y"
+" tareas; no incluyas información sensible del alumnado."
+msgstr ""
+"Only you can see your reminders. Use them for materials, preparation and "
+"tasks; do not include sensitive student information."
+
+msgid "MODO CLASE · SESIÓN"
+msgstr "CLASS MODE · SESSION"
+
+msgid "Mantenimiento debe ser booleano."
+msgstr "Maintenance must be a boolean."
+
+msgid "Marcar completado"
+msgstr "Mark completed"
+
+msgid "Materiales"
+msgstr "Materials"
+
+msgid "Materiales y preparación"
+msgstr "Materials and preparation"
+
+msgid "Materiales:"
+msgstr "Materials:"
+
+msgid "Matrícula / traslado"
+msgstr "Enrolment / transfer"
+
+msgid "Matrícula de origen (opcional)"
+msgstr "Original enrolment (optional)"
+
+msgid "Matrícula y datos personales"
+msgstr "Enrolment and personal details"
+
+msgid "Matrícula y traslado"
+msgstr "Enrolment and transfer"
+
+msgid "Menús debe contener cada sección una vez."
+msgstr "Menus must contain each section exactly once."
+
+msgid "Mes"
+msgstr "Month"
+
+msgid "Mi cuaderno"
+msgstr "My notebook"
+
+msgid "Mi espacio"
+msgstr "My workspace"
+
+msgid "Mis recordatorios"
+msgstr "My reminders"
+
+msgid "Módulo desconocido."
+msgstr "Unknown module."
+
+msgid "Módulos e indicadores deben ser booleanos."
+msgstr "Modules and feature flags must be booleans."
+
+msgid "Nacimiento:"
+msgstr "Date of birth:"
+
+msgid "Naranja"
+msgstr "Orange"
+
+msgid "Naturaleza"
+msgstr "Type of information"
+
+msgid "No comprobada"
+msgstr "Not verified"
+
+msgid ""
+"No hay alumnos para mostrar. No se han incorporado datos reales ni ficticios"
+" automáticamente."
+msgstr ""
+"No students to display. No real or fictional data has been added "
+"automatically."
+
+msgid "No hay autorizaciones registradas."
+msgstr "No authorisations recorded."
+
+msgid "No hay avances en el periodo seleccionado."
+msgstr "No progress entries in the selected period."
+
+msgid "No hay evidencias. Los archivos que añadas serán privados."
+msgstr "No evidence yet. Any files you add will be private."
+
+msgid ""
+"No hay matrículas vigentes en la fecha de esta sesión. Administración puede "
+"configurar el alumnado del grupo."
+msgstr ""
+"There are no active enrolments on this session's date. Administration can "
+"configure the group's students."
+
+msgid "No hay recordatorios en esta vista."
+msgstr "There are no reminders in this view."
+
+msgid "No hay sesiones anteriores pendientes de registrar."
+msgstr "There are no past sessions waiting to be recorded."
+
+msgid "No puedes quitarte tu propio acceso de administración."
+msgstr "You cannot remove your own administration access."
+
+msgid "No puedes registrar una sesión cancelada o pendiente de recuperar."
+msgstr ""
+"You cannot record a cancelled session or one awaiting a make-up class."
+
+msgid "No registrado"
+msgstr "Not recorded"
+
+msgid ""
+"No se escriben datos educativos en esta vista. La publicación afecta la "
+"presentación y configuración del entorno"
+msgstr ""
+"No educational data is written in this view. Publishing affects the "
+"appearance and configuration of the environment"
+
+msgid "No tienes clases programadas para este día."
+msgstr "You have no classes scheduled for this day."
+
+msgid "No tienes recordatorios pendientes."
+msgstr "You have no pending reminders."
+
+msgid "Noche tranquila"
+msgstr "Quiet night"
+
+msgid "Nombre"
+msgstr "Name"
+
+msgid "Nombre preferido"
+msgstr "Preferred name"
+
+msgid "Nombre y apellidos"
+msgstr "Full name"
+
+msgid "Nota privada individual · nunca se copia a otros"
+msgstr "Individual private note · never copied to others"
+
+msgid "Notas internas (excluidas de informes familiares)"
+msgstr "Internal notes (excluded from family reports)"
+
+msgid "Notas internas · uso del equipo"
+msgstr "Internal notes · staff use"
+
+msgid "Notificaciones"
+msgstr "Notifications"
+
+msgid "Nueva matrícula, sin cerrar otra"
+msgstr "New enrolment without closing another"
+
+msgid "Nuevo grupo"
+msgstr "New group"
+
+msgid "Número de sesión"
+msgstr "Session number"
+
+msgid "Objetivo"
+msgstr "Objective"
+
+msgid "Objetivos"
+msgstr "Objectives"
+
+msgid "Objetivos pendientes y próximos pasos"
+msgstr "Pending objectives and next steps"
+
+msgid "Objetivos y preparación de la siguiente clase."
+msgstr "Objectives and preparation for the next class."
+
+msgid "Objetivos, retos y apoyos"
+msgstr "Objectives, challenges and support"
+
+msgid "Observa el proceso, celebra los avances y prepara el siguiente reto."
+msgstr ""
+"Observe the process, celebrate progress and prepare the next challenge."
+
+msgid "Observaciones de rúbrica"
+msgstr "Rubric observations"
+
+msgid "Observaciones internas"
+msgstr "Internal observations"
+
+msgid "Observaciones internas de sesión"
+msgstr "Internal session observations"
+
+msgid "Observaciones operativas"
+msgstr "Operational observations"
+
+msgid "Observación breve de asistencia"
+msgstr "Brief attendance note"
+
+msgid "Observación docente"
+msgstr "Teacher observation"
+
+msgid "Observación operativa"
+msgstr "Operational observation"
+
+msgid "Observación y logros"
+msgstr "Observation and achievements"
+
+msgid "Observación, sin clasificación pública"
+msgstr "Observation, without public ranking"
+
+msgid "Operativo"
+msgstr "Operational"
+
+msgid ""
+"Otra persona ha modificado este registro. Recarga la página antes de guardar"
+" para conservar sus cambios."
+msgstr ""
+"Someone else has modified this record. Reload the page before saving to "
+"preserve their changes."
+
+msgid "PERMISO ESPECÍFICO · DESARROLLO"
+msgstr "SPECIFIC PERMISSION · DEVELOPMENT"
+
+msgid "PLANIFICACIÓN CON INTENCIÓN"
+msgstr "PURPOSEFUL PLANNING"
+
+msgid "Paneles de fantasía, marcos dorados e insignias de aprendizaje."
+msgstr "Fantasy panels, golden frames and learning badges."
+
+msgid ""
+"Pantallas, integraciones, permisos y estructuras requieren cambios revisados"
+" en el repositorio. Procedimiento: rama → revisión → pruebas → migración con"
+" copia previa → despliegue → comprobación y recuperación."
+msgstr ""
+"Screens, integrations, permissions and structures require reviewed "
+"repository changes. Process: branch → review → tests → migration with prior "
+"backup → deployment → verification and recovery."
+
+msgid "Para hoy"
+msgstr "Due today"
+
+msgid "Para repetir, crea una serie nueva."
+msgstr "To repeat sessions, create a new series."
+
+msgid "Pendiente de recuperar"
+msgstr "Awaiting make-up class"
+
+msgid "Pendiente de retomar"
+msgstr "To revisit"
+
+msgid "Pendientes"
+msgstr "Pending"
+
+msgid "Pequeñas tareas para seguir avanzando."
+msgstr "Small tasks to keep moving forward."
+
+msgid "Perfil educativo"
+msgstr "Educational profile"
+
+msgid "Periodo inválido."
+msgstr "Invalid period."
+
+msgid "Periodo sin clase"
+msgstr "Break"
+
+msgid "Permiso específico de desarrollo"
+msgstr "Specific development permission"
+
+msgid "Permiso específico de información restringida"
+msgstr "Specific restricted-information permission"
+
+msgid "Permisos de "
+msgstr "Permissions for "
+
+msgid "Personalización"
+msgstr "Personalisation"
+
+msgid "Planifica con intención. Acompaña cada ritmo."
+msgstr "Plan with purpose. Support every pace."
+
+msgid "Planificación"
+msgstr "Planning"
+
+msgid "Planificada"
+msgstr "Planned"
+
+msgid "Planificar una clase"
+msgstr "Plan a class"
+
+msgid "Por aprender"
+msgstr "Not yet learned"
+
+msgid "Por cerrar"
+msgstr "To close"
+
+msgid "Por definir"
+msgstr "To be defined"
+
+msgid "Por objetivo, a tu propio ritmo"
+msgstr "By objective, at your own pace"
+
+msgid "Preferencia personal"
+msgstr "Personal preference"
+
+msgid "Preferencias y objetivos personales"
+msgstr "Preferences and personal goals"
+
+msgid "Prepara cada encuentro. Da espacio a lo que viene."
+msgstr "Prepare each meeting. Make room for what comes next."
+
+msgid "Preparar con tiempo"
+msgstr "Prepare ahead"
+
+msgid "Preparar informe para familia"
+msgstr "Prepare family report"
+
+msgid "Presente"
+msgstr "Present"
+
+msgid "Prioritario"
+msgstr "Primary"
+
+msgid "Proyectos y evidencias"
+msgstr "Projects and evidence"
+
+msgid "Próximo"
+msgstr "Upcoming"
+
+msgid "Próximo paso"
+msgstr "Next step"
+
+msgid "Próximo paso:"
+msgstr "Next step:"
+
+msgid "Próximos pasos"
+msgstr "Next steps"
+
+msgid "Publicada"
+msgstr "Published"
+
+msgid "Publicar configuración"
+msgstr "Publish configuration"
+
+msgid ""
+"Publicar puede ocultar módulos o activar mantenimiento para el equipo. No "
+"borra historial educativo. Entorno:"
+msgstr ""
+"Publishing may hide modules or enable maintenance for staff. It does not "
+"delete educational history. Environment:"
+
+msgid "Puedes asignar un reto distinto a cada alumno."
+msgstr "You can assign a different challenge to each student."
+
+msgid ""
+"Puedes probar los estilos aquí antes de guardar. Tu elección se conserva en "
+"tu cuenta y no cambia el estilo de otros docentes."
+msgstr ""
+"You can preview styles here before saving. Your choice is saved to your "
+"account and does not change other teachers' styles."
+
+msgid "RETO TRABAJADO"
+msgstr "CHALLENGE WORKED ON"
+
+msgid "Reabrir"
+msgstr "Reopen"
+
+msgid "Realizada"
+msgstr "Completed"
+
+msgid "Recogida:"
+msgstr "Collection:"
+
+msgid "Recordatorio (sin datos sensibles)"
+msgstr "Reminder (no sensitive data)"
+
+msgid "Recordatorio completado."
+msgstr "Reminder completed."
+
+msgid "Recordatorio docente"
+msgstr "Teacher reminder"
+
+msgid "Recordatorio reabierto."
+msgstr "Reminder reopened."
+
+msgid ""
+"Recordatorios personales y avisos de guardado, sin mezclar los colores del "
+"aprendizaje."
+msgstr ""
+"Personal reminders and saving notices, separate from learning colours."
+
+msgid "Recuperar sesión"
+msgstr "Make up session"
+
+msgid "Recuperar sesión · se conserva la original"
+msgstr "Make up session · original preserved"
+
+msgid "Recurso de aprendizaje"
+msgstr "Learning resource"
+
+msgid "Recurso de biblioteca"
+msgstr "Library resource"
+
+msgid "Recursos"
+msgstr "Resources"
+
+msgid "Registra los apoyos que resulten útiles durante la clase."
+msgstr "Record the support that proves useful during class."
+
+msgid ""
+"Registra únicamente información pertinente con finalidad definida. No "
+"introduzcas diagnósticos inferidos."
+msgstr ""
+"Only record relevant information for a defined purpose. Do not enter "
+"inferred diagnoses."
+
+msgid "Registrado el"
+msgstr "Recorded on"
+
+msgid "Registrar autorización específica"
+msgstr "Record specific authorisation"
+
+msgid "Registrar autorización →"
+msgstr "Record authorisation →"
+
+msgid "Registrar clase →"
+msgstr "Record class →"
+
+msgid "Regístralo desde el modo clase de una sesión."
+msgstr "Record it from a session's class mode."
+
+msgid "Relación"
+msgstr "Relationship"
+
+msgid "Repeticiones no válidas."
+msgstr "Invalid repetitions."
+
+msgid "Repeticiones: de 1 a 52."
+msgstr "Repetitions: 1 to 52."
+
+msgid "Repetir semanalmente (número de sesiones)"
+msgstr "Repeat weekly (number of sessions)"
+
+msgid "Requisitos previos"
+msgstr "Prerequisites"
+
+msgid "Responsable"
+msgstr "Responsible adult"
+
+msgid "Responsables compartidos"
+msgstr "Shared responsible adults"
+
+msgid "Responsables y contactos"
+msgstr "Responsible adults and contacts"
+
+msgid "Restauración de configuración "
+msgstr "Configuration restore "
+
+msgid ""
+"Restaurar crea otro borrador de configuración. No modifica matrículas, "
+"sesiones ni aprendizaje. Requiere vista previa y publicación posterior."
+msgstr ""
+"Restoring creates another configuration draft. It does not change "
+"enrolments, sessions or learning. It requires a preview and a subsequent "
+"publication."
+
+msgid "Restringida"
+msgstr "Restricted"
+
+msgid "Resumen"
+msgstr "Summary"
+
+msgid "Retirada"
+msgstr "Withdrawn"
+
+msgid "Reto"
+msgstr "Challenge"
+
+msgid "Reto / proyecto trabajado"
+msgstr "Challenge / project worked on"
+
+msgid "Reto individual (vacío = actividad común)"
+msgstr "Individual challenge (empty = shared activity)"
+
+msgid "Reto y evidencia"
+msgstr "Challenge and evidence"
+
+msgid "Retos por dificultad"
+msgstr "Challenges by difficulty"
+
+msgid "Retos y ampliaciones"
+msgstr "Challenges and extensions"
+
+msgid "Retos y ampliaciones por dificultad"
+msgstr "Challenges and extensions by difficulty"
+
+msgid "Retraso"
+msgstr "Late arrival"
+
+msgid "Revisa y guarda el formulario de esta página."
+msgstr "Review and save the form on this page."
+
+msgid "Revisar cambios"
+msgstr "Review changes"
+
+msgid "Revisar el"
+msgstr "Review on"
+
+msgid "Revisión · versión previa conservada"
+msgstr "Revision · previous version retained"
+
+msgid "Rol"
+msgstr "Role"
+
+msgid "Rúbrica breve · observaciones"
+msgstr "Short rubric · observations"
+
+msgid "Rúbricas no válidas."
+msgstr "Invalid rubrics."
+
+msgid "Salida anticipada"
+msgstr "Early departure"
+
+msgid "Saltar al contenido"
+msgstr "Skip to content"
+
+msgid "Se comprueban al planificar sesiones."
+msgstr "Checked when planning sessions."
+
+msgid ""
+"Se comprueban todas las fechas, festivos y conflictos antes de crear la "
+"serie."
+msgstr ""
+"All dates, holidays and conflicts are checked before creating the series."
+
+msgid ""
+"Se excluyen notas internas, información restringida, observaciones de "
+"asistencia y datos de otros alumnos. No se envía nada automáticamente."
+msgstr ""
+"Internal notes, restricted information, attendance notes and other students'"
+" data are excluded. Nothing is sent automatically."
+
+msgid "Secuencias asignadas"
+msgstr "Assigned sequences"
+
+msgid "Seguimiento"
+msgstr "Follow-up"
+
+msgid "Seguimiento de grupo"
+msgstr "Group follow-up"
+
+msgid "Seguimiento interno por grupo →"
+msgstr "Internal group follow-up →"
+
+msgid "Selecciona grupo"
+msgstr "Select group"
+
+msgid "Selecciona qué compartir. Revisa siempre antes de exportar."
+msgstr "Choose what to share. Always review before exporting."
+
+msgid "Selecciona un alumno y los apartados que quieres incluir."
+msgstr "Select a student and the sections you want to include."
+
+msgid "Selecciona un grupo para consultar sus registros."
+msgstr "Select a group to view its records."
+
+msgid "Selecciona una persona"
+msgstr "Select a person"
+
+msgid "Seleccionable para informe familiar"
+msgstr "Selectable for family report"
+
+msgid "Semana"
+msgstr "Week"
+
+msgid "Servidor web"
+msgstr "Web server"
+
+msgid "Sesiones por registrar"
+msgstr "Sessions to record"
+
+msgid "Sesiones · planificación y registro"
+msgstr "Sessions · plan and records"
+
+msgid "Sesión"
+msgstr "Session"
+
+msgid "Sesión de ejemplo · sin datos reales"
+msgstr "Example session · no real data"
+
+msgid "Sesión guardada. La fecha no completa aprendizajes automáticamente."
+msgstr "Session saved. The date does not complete learning automatically."
+
+msgid "Siguiente →"
+msgstr "Next →"
+
+msgid "Sin acciones de configuración."
+msgstr "No configuration actions."
+
+msgid "Sin actividades previstas."
+msgstr "No planned activities."
+
+msgid "Sin autorización registrada"
+msgstr "No authorisation recorded"
+
+msgid "Sin avance registrado en esta clase"
+msgstr "No progress recorded in this class"
+
+msgid "Sin cambios pendientes"
+msgstr "No pending changes"
+
+msgid "Sin conexión. Mantén esta página abierta y guarda al reconectar."
+msgstr "Offline. Keep this page open and save when reconnected."
+
+msgid ""
+"Sin incidencias registradas. No se guardan mensajes, trazas, datos "
+"personales ni secretos."
+msgstr ""
+"No incidents recorded. Messages, traces, personal data and secrets are not "
+"stored."
+
+msgid "Sin información restringida registrada."
+msgstr "No restricted information recorded."
+
+msgid "Sin iniciar"
+msgstr "Not started"
+
+msgid "Sin materiales indicados."
+msgstr "No materials specified."
+
+msgid "Sin matrículas activas. Añádelas desde la ficha de cada alumno."
+msgstr "No active enrolments. Add them from each student's profile."
+
+msgid "Sin matrículas."
+msgstr "No enrolments."
+
+msgid "Sin objetivos registrados."
+msgstr "No objectives recorded."
+
+msgid "Sin observación registrada."
+msgstr "No observation recorded."
+
+msgid "Sin registrar"
+msgstr "Not recorded"
+
+msgid "Sin registrar."
+msgstr "Not recorded."
+
+msgid "Sin registros de asistencia."
+msgstr "No attendance records."
+
+msgid "Sin registros en este periodo."
+msgstr "No records in this period."
+
+msgid "Sin responsables vinculados."
+msgstr "No responsible adults linked."
+
+msgid "Sin ubicación"
+msgstr "No location"
+
+msgid ""
+"Solo PDF, PNG o JPEG verificados, hasta 10 MB. Los archivos se descargan de "
+"forma privada."
+msgstr ""
+"Verified PDF, PNG or JPEG only, up to 10 MB. Files are downloaded privately."
+
+msgid "Solo esta sesión"
+msgstr "This session only"
+
+msgid ""
+"Solo se aplica a quienes marques «Añadir avance». Las evidencias y notas "
+"privadas se escriben individualmente."
+msgstr ""
+"Only applies to students marked “Add progress”. Evidence and private notes "
+"are written individually."
+
+msgid "Solo se recuperan sesiones canceladas o pendientes."
+msgstr "Only cancelled or pending sessions can be made up."
+
+msgid "TU AGENDA"
+msgstr "YOUR AGENDA"
+
+msgid "TU CENTRO DE AVISOS"
+msgstr "YOUR NOTIFICATION CENTRE"
+
+msgid "TU ESPACIO, TU ESTILO"
+msgstr "YOUR SPACE, YOUR STYLE"
+
+msgid "Teléfono"
+msgstr "Phone"
+
+msgid "Texto no válido."
+msgstr "Invalid text."
+
+msgid "Tipo"
+msgstr "Type"
+
+msgid "Tipo de clase"
+msgstr "Class type"
+
+msgid "Tipografía no permitida."
+msgstr "Font not allowed."
+
+msgid "Todas las ubicaciones"
+msgstr "All locations"
+
+msgid "Todavía no hay sesiones."
+msgstr "No sessions yet."
+
+msgid "Todavía no hay versiones guardadas."
+msgstr "No saved versions yet."
+
+msgid "Todo al día"
+msgstr "All up to date"
+
+msgid ""
+"Todo al día. Anota aquí materiales, preparativos o recordatorios sin "
+"información sensible."
+msgstr ""
+"All up to date. Note materials, preparation or reminders here without "
+"sensitive information."
+
+msgid "Todo el equipo"
+msgstr "All staff"
+
+msgid "Todos"
+msgstr "All"
+
+msgid "Todos los autorizados"
+msgstr "All authorised groups"
+
+msgid "Todos los grupos"
+msgstr "All groups"
+
+msgid "Todos los tipos"
+msgstr "All types"
+
+msgid "Todos los ámbitos"
+msgstr "All subject areas"
+
+msgid "Tonos oscuros y marcos sencillos para una apariencia discreta."
+msgstr "Dark tones and simple frames for a quiet appearance."
+
+msgid "Tu estilo se ha guardado. Solo cambia la apariencia de tu cuenta."
+msgstr "Your style has been saved. It only changes your account's appearance."
+
+msgid "Tu próxima idea empieza aquí. Añade una sesión al calendario."
+msgstr "Your next idea starts here. Add a session to the calendar."
+
+msgid "Tutor legal"
+msgstr "Legal guardian"
+
+msgid "Tutores"
+msgstr "Guardians"
+
+msgid "Título"
+msgstr "Title"
+
+msgid "USO INTERNO · ÁMBITO AUTORIZADO"
+msgstr "INTERNAL USE · AUTHORISED SCOPE"
+
+msgid "Ubicación"
+msgstr "Location"
+
+msgid "Ubicación por configurar"
+msgstr "Location to be configured"
+
+msgid "Un cuaderno privado"
+msgstr "A private notebook"
+
+msgid "Un espacio para cada grupo. Un camino para cada persona."
+msgstr "A space for every group. A path for every person."
+
+msgid "Un espacio para imaginar, crear y aprender."
+msgstr "A space to imagine, create and learn."
+
+msgid "Un mismo aprendizaje, distintos estilos"
+msgstr "Same learning, different styles"
+
+msgid "Un mismo responsable puede vincularse a varios hermanos."
+msgstr "The same responsible adult can be linked to several siblings."
+
+msgid "Un nuevo día para crear"
+msgstr "A new day to create"
+
+msgid "Un proceso que deja huella"
+msgstr "A learning journey that leaves a mark"
+
+msgid "Un propósito para hoy"
+msgstr "A purpose for today"
+
+msgid ""
+"Un responsable puede vincularse a varios hermanos. Si aún no existe, créalo "
+"en Configuración → Responsables."
+msgstr ""
+"A responsible adult can be linked to several siblings. If they do not exist "
+"yet, create them in Settings → Responsible adults."
+
+msgid "Una biblioteca por construir"
+msgstr "A library waiting to be built"
+
+msgid "Una clase a tu medida"
+msgstr "A class tailored to you"
+
+msgid "Una mirada al proceso, sin clasificaciones del alumnado."
+msgstr "A look at the process without ranking students."
+
+msgid "Usuario"
+msgstr "Username"
+
+msgid "Usuario ya existente."
+msgstr "Username already exists."
+
+msgid "Usuarios y permisos"
+msgstr "Users and permissions"
+
+msgid "VISTA PREVIA · FAMILIAS"
+msgstr "PREVIEW · FAMILIES"
+
+msgid "Valida la vista previa y confirma escribiendo PUBLICAR."
+msgstr "Validate the preview and confirm by typing PUBLICAR."
+
+msgid "Validación y alcance"
+msgstr "Validation and scope"
+
+msgid "Validar esta vista previa"
+msgstr "Validate this preview"
+
+msgid "Variantes y apoyos"
+msgstr "Variants and support"
+
+msgid "Ver alumnado ↗"
+msgstr "View students ↗"
+
+msgid "Ver clase →"
+msgstr "View class →"
+
+msgid "Ver configuración completa"
+msgstr "View full configuration"
+
+msgid "Ver grupos ↗"
+msgstr "View groups ↗"
+
+msgid "Ver todos los recordatorios →"
+msgstr "View all reminders →"
+
+msgid "Verde"
+msgstr "Green"
+
+msgid "Versiones de código"
+msgstr "Code releases"
+
+msgid "Versión del texto"
+msgstr "Text version"
+
+msgid "Versión no válida."
+msgstr "Invalid version."
+
+msgid "Vincular responsable existente"
+msgstr "Link existing responsible adult"
+
+msgid "Visibilidad"
+msgstr "Visibility"
+
+msgid "Vista previa aislada"
+msgstr "Isolated preview"
+
+msgid "Vista previa validada"
+msgstr "Validated preview"
+
+msgid "Volver"
+msgstr "Back"
+
+msgid "Volver al estilo guardado"
+msgstr "Return to saved style"
+
+msgid "Voz del alumno"
+msgstr "Student voice"
+
+msgid "Ya existe una matrícula activa en este grupo."
+msgstr "There is already an active enrolment in this group."
+
+msgid "alumnos"
+msgstr "students"
+
+msgid "empieza en clase"
+msgstr "starts in class"
+
+msgid "en el repositorio. Esta pestaña no ejecuta comandos ni despliegues."
+msgstr "in the repository. This tab does not execute commands or deployments."
+
+msgid "min · v"
+msgstr "min · v"
+
+msgid "pendientes"
+msgstr "pending"
+
+msgid "v"
+msgstr "v"
+
+msgid "v0.3.0 ·"
+msgstr "v0.3.0 ·"
+
+msgid "y"
+msgstr "and"
+
+msgid ""
+"«Legendario» se refiere al objetivo de ese registro, no a todo el curso. Los"
+" estados los registra el docente."
+msgstr ""
+"“Legendary” refers to the objective in that entry, not the whole course. "
+"States are recorded by the teacher."
+
+msgid "· Aprendizaje"
+msgstr "· Learning"
+
+msgid "· Atigra Makers"
+msgstr "· Atigra Makers"
+
+msgid ""
+"· Gestión educativa inicial, modo clase, biblioteca histórica y "
+"configuración versionada."
+msgstr ""
+"· Initial educational management, class mode, historical library and "
+"versioned configuration."
+
+msgid ""
+"· Personalización por usuario, estilos RPG, claro y oscuro, y escala visual "
+"del aprendizaje."
+msgstr ""
+"· Per-user personalisation, RPG, light and dark styles, and a visual "
+"learning scale."
+
+msgid "· Referencia"
+msgstr "· Reference"
+
+msgid "· Retirada"
+msgstr "· Withdrawn"
+
+msgid "· v"
+msgstr "· v"
+
+msgid "Ámbito"
+msgstr "Subject area"
+
+msgid "Última restauración de prueba"
+msgstr "Last test restoration"
+
+msgid "Último avance:"
+msgstr "Latest progress:"
+
+msgid ""
+"Úsala únicamente para una finalidad autorizada. Para familias, utiliza el "
+"informe con selección de apartados."
+msgstr ""
+"Use it only for an authorised purpose. For families, use the report with "
+"selected sections."
+
+msgid "← Anterior"
+msgstr "← Previous"
+
+msgid "↗ construir"
+msgstr "↗ build"
+
+msgid "✓ Colores, tipografías y recursos locales permitidos."
+msgstr "✓ Colours, fonts and permitted local resources."
+
+msgid "✓ Estructura y tipos de valores comprobados."
+msgstr "✓ Structure and value types checked."
+
+msgid "✓ No se admite JavaScript, SQL ni comandos."
+msgstr "✓ JavaScript, SQL and commands are not allowed."
+
+msgid "✳ aprender"
+msgstr "✳ learn"
+
+msgid "＋ Añadir alumno"
+msgstr "＋ Add student"
+
+msgid "＋ Añadir evidencia"
+msgstr "＋ Add evidence"
+
+msgid "＋ Añadir registro"
+msgstr "＋ Add entry"
+
+msgid "＋ Crear"
+msgstr "＋ Create"
+
+msgid "＋ Crear grupo"
+msgstr "＋ Create group"
+
+msgid "＋ Crear recordatorio"
+msgstr "＋ Create reminder"
+
+msgid "＋ Nueva sesión"
+msgstr "＋ New session"
+
+msgid "＋ Nuevo recurso"
+msgstr "＋ New resource"
+
+msgid "＋ Planificar"
+msgstr "＋ Plan"
+
+msgid "＋ Planificar sesión"
+msgstr "＋ Plan session"
+
+msgid "＋ Vincular responsable"
+msgstr "＋ Link responsible adult"
+
+msgid "Avances y próximos pasos"
+msgstr "Progress and next steps"
+
+msgid "Comprensión del reto"
+msgstr "Understanding the challenge"
+
+msgid "División en pasos"
+msgstr "Breaking problems into steps"
+
+msgid "Herramientas"
+msgstr "Tools"
+
+msgid "Programación y depuración"
+msgstr "Programming and debugging"
+
+msgid "Diseño y prototipado"
+msgstr "Design and prototyping"
+
+msgid "Creatividad"
+msgstr "Creativity"
+
+msgid "Autonomía"
+msgstr "Independence"
+
+msgid "Colaboración"
+msgstr "Collaboration"
+
+msgid "Explicación de decisiones"
+msgstr "Explaining decisions"
+
+msgid "Cuidado del material"
+msgstr "Care of equipment"
+
+msgctxt "date_field"
+msgid "Inicio"
+msgstr "Start"
+
+msgid "Hola,"
+msgstr "Hello,"
+
+msgid "Hoy,"
+msgstr "Today,"
+
+msgid ""
+"Notificaciones privadas, cambios pendientes, español/inglés y organización "
+"modular."
+msgstr ""
+"Private notifications, unsaved changes, Spanish/English and modular "
+"organisation."

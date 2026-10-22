@@ -1,10 +1,11 @@
+from django.utils.translation import gettext_lazy as _
 """Decoración del aprendizaje: no modifica estados, datos ni permisos."""
 LEARNING_RARITIES = [
-    {'key': 'common', 'name': 'Por aprender', 'color': 'Gris'},
-    {'key': 'uncommon', 'name': 'En proceso', 'color': 'Verde'},
-    {'key': 'rare', 'name': 'Con apoyo', 'color': 'Azul'},
-    {'key': 'epic', 'name': 'Consolidado', 'color': 'Lila'},
-    {'key': 'legendary', 'name': 'Legendario', 'color': 'Naranja'},
+    {'key': 'common', 'name': _('Por aprender'), 'color': _('Gris')},
+    {'key': 'uncommon', 'name': _('En proceso'), 'color': _('Verde')},
+    {'key': 'rare', 'name': _('Con apoyo'), 'color': _('Azul')},
+    {'key': 'epic', 'name': _('Consolidado'), 'color': _('Lila')},
+    {'key': 'legendary', 'name': _('Legendario'), 'color': _('Naranja')},
 ]
 RARITY_BY_STATUS = {
     'new': 'common',

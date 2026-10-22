@@ -1,6 +1,6 @@
-# Actualizar PythonAnywhere: temas y Personalización
+# Actualizar PythonAnywhere: notificaciones, idiomas y módulos (0.3.0)
 
-Esta entrega añade el tema decorativo RPG, los cinco colores del aprendizaje y una sección Personalización con tres estilos por usuario. Añade una migración para guardar la preferencia visual. No cambia los flujos de clase ni transforma los registros educativos.
+Esta entrega añade Notificaciones, avisos de cambios pendientes, selector español/inglés, decoración maker y reorganización modular. La nueva migración guarda el idioma por usuario. No cambia los flujos de clase ni transforma los registros educativos.
 
 ## 1. Copia de seguridad previa
 
@@ -21,13 +21,13 @@ git pull --ff-only
 
 Si Git indica cambios locales o no puede avanzar, detente y revisa el mensaje. No uses reset, clean ni fuerces la actualización. El archivo WSGI y la clave privada se configuraron fuera del checkout y no se sustituyen con estos comandos.
 
-## 3. Aplicar la preferencia de estilo a la base de datos
+## 3. Guardar la preferencia de idioma en la base de datos
 
 ```sh
 APP_ENV=demo .venv/bin/python manage.py migrate --noinput
 ```
 
-La migración nueva se llama `0003_profile_theme`. Añade una columna a los perfiles de usuario; los datos educativos se conservan. No recargues la web antes de completar la migración. Si aparece un error, detente y conserva la copia anterior.
+La migración nueva se llama `0004_profile_language`. Añade la columna de idioma a los perfiles de usuario; las preferencias de estilo y los datos educativos se conservan. No recargues la web antes de completar la migración. Si aparece un error, detente y conserva la copia anterior.
 
 ## 4. Actualizar los archivos de diseño
 
@@ -42,16 +42,19 @@ Actualiza `staticfiles/`. No borra la base de datos ni los archivos privados. No
 1. Entra en la pestaña **Web** de PythonAnywhere.
 2. Pulsa el botón verde **Reload**.
 3. Abre la plataforma con HTTPS y pulsa **Ctrl+F5**.
-4. Comprueba que aparece **Personalización** en el menú lateral.
+4. Comprueba que aparece **Notificaciones**, la campana y el selector de idioma.
 
 ## 6. Comprobar y continuar la prueba
 
-- Abre Personalización y prueba RPG, claro y oscuro; guarda el que prefieras.
+- Abre Notificaciones y prueba un recordatorio ficticio; complétalo y reábrelo.
+- Edita un formulario sin guardarlo y comprueba el aviso de la campana. Revierte o guarda antes de salir.
+- Selecciona English y pulsa ↵; vuelve a Español cuando quieras. Los contenidos que escribiste no cambian.
+- Abre Personalización y comprueba que tu estilo anterior se conserva.
 - Abre Alumnado → Persona ficticia 01 → Aprendizaje y comprueba la separación de clases y los colores.
 - Verifica que se conservan los avances y la asistencia de los dos alumnos de la prueba. Cambiar el estilo no completa objetivos ni modifica notas.
 - La actualización no cierra la clase ni crea avances. Podemos continuar donde se dejó: registrar lo realizado, cerrar la sesión y revisar los informes familiares.
 
-Más información: [Personalización y significado de colores](PERSONALIZACION.md).
+Más información: [Notificaciones e idiomas](NOTIFICACIONES_IDIOMAS.md), [Personalización](PERSONALIZACION.md) y [mapa modular del README](../README.md).
 
 ## Recuperación ante una actualización fallida
 

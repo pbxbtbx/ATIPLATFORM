@@ -2,6 +2,7 @@ from django.urls import path
 from django.contrib.auth import views as auth
 from core import views as v
 urlpatterns=[
+path('notifications/',v.notifications,name='notifications'),path('notifications/<uuid:pk>/toggle/',v.task_toggle,name='task_toggle'),path('language/',v.set_language,name='set_language'),
 path('login/',auth.LoginView.as_view(template_name='core/login.html'),name='login'),path('logout/',auth.LogoutView.as_view(),name='logout'),
 path('',v.home,name='home'),path('appearance/',v.appearance,name='appearance'),path('groups/',v.group_list,name='groups'),path('groups/new/',v.group_edit,name='group_new'),path('groups/<uuid:pk>/',v.group_detail,name='group'),path('groups/<uuid:pk>/edit/',v.group_edit,name='group_edit'),
 path('students/',v.student_list,name='students'),path('students/new/',v.student_edit,name='student_new'),path('students/<uuid:pk>/',v.student_detail,name='student'),path('students/<uuid:pk>/edit/',v.student_edit,name='student_edit'),path('students/<uuid:pk>/enroll/',v.enrollment,name='enrollment'),path('students/<uuid:pk>/guardian/',v.guardian_edit,name='guardian_link'),path('students/<uuid:pk>/restricted/',v.restricted_edit,name='restricted_new'),path('students/<uuid:pk>/consent/',v.consent_add,name='consent_new'),

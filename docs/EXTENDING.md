@@ -2,7 +2,7 @@
 
 ## Organización
 
-`config/`: despliegue, rutas y seguridad. `core/models.py`: entidades e integridad. `core/access.py`: autorización y ámbitos. `core/services.py`: snapshots, cambios con control de versión y traslados transaccionales. `core/forms.py`: validación y formularios. `core/views.py`: flujos HTTP. `core/configuration.py`: esquema declarativo permitido. `templates/core/` y `static/core/`: interfaz y recursos locales, sin CDN. `core/tests.py`: casos operativos y de aislamiento. La siguiente partición al crecer debería separar apps de matrícula, planificación, aprendizaje y configuración sin cambiar identificadores.
+`config/`: despliegue, rutas y seguridad. `core/models.py`: entidades e integridad. `core/access.py`: autorización y ámbitos. `core/services.py`: snapshots, cambios con control de versión y traslados transaccionales. `core/forms.py`: validación y formularios. `core/views/`: flujos HTTP divididos por dominio; las rutas públicas se mantienen mediante `__init__.py`. `core/configuration.py`: esquema declarativo permitido. `templates/core/` y `static/core/`: interfaz y recursos locales, sin CDN. `core/tests.py`: casos operativos y de aislamiento. La siguiente partición al crecer debería separar apps de matrícula, planificación, aprendizaje y configuración sin cambiar identificadores.
 
 ## Añadir pantallas y permisos
 
@@ -25,3 +25,10 @@ Para integraciones nuevas: configurar destino explícito, credenciales del gesto
 ## Configuración
 
 Claves y validaciones en configuration.py. Los módulos operativos son library y reports; los controles también se aplican en servidor. El indicador `rubrics` activa/desactiva las observaciones de rúbrica en modo clase. Otros indicadores se guardan para futuras funciones y no ejecutan acciones. Tipografías limitadas, colores hexadecimales, logotipo oficial solo en `/static/`. Subir el logotipo requiere revisión del recurso y despliegue del archivo estático. Las etiquetas permiten cambiar navegación, `home_title`, `save_button` y los campos de los formularios con `<modelo>.<campo>.label` y `<modelo>.<campo>.help` (por ejemplo `session.goals.help`). Las plantillas son texto, nunca código. La restauración vuelve a pasar por validación/vista previa/publicación y no ejecuta migraciones ni cambia registros educativos.
+
+
+## Notificaciones e idioma
+
+Consulta el mapa del README antes de modificar un área. Los recordatorios se consultan con `Task.objects.filter(author=request.user)` incluso para administración. No copies valores de campos, información restringida ni borradores a la bandeja. El estado de cambios pendientes vive en `drafts.js`, en memoria de esa página.
+
+El idioma se activa en `UserLanguageMiddleware` y se guarda con `Profile.language`. Las traducciones se aplican a etiquetas al presentarlas, nunca a los registros educativos. Versiona y compila `locale/en/LC_MESSAGES/django.po`; usa `pgettext_lazy` cuando una palabra tenga significados distintos según el contexto. No traduzcas códigos de estado, claves JSON ni las palabras de confirmación que comprueba el servidor.
