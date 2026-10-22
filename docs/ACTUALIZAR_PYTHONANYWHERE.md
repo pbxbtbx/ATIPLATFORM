@@ -1,6 +1,6 @@
-# Actualizar PythonAnywhere: importación ODS (0.6.0)
+# Actualizar PythonAnywhere: práctica y accesibilidad (0.7.0)
 
-Esta entrega añade importación revisable de ODS con pestañas, correspondencia de grupos, alumnado, responsables compartidos y condiciones explícitas de tutela. Conserva las funciones anteriores de retos, adaptaciones, importación Word, colores, notificaciones e idiomas.
+Esta entrega añade práctica con dos aprendices ficticios en una base separada, cinco bloques de progreso, preferencias de accesibilidad por cuenta y ayudas de voz local bajo demanda. Conserva las importaciones, retos y datos existentes.
 
 ## 1. Copia de seguridad previa
 
@@ -27,7 +27,7 @@ Si Git indica cambios locales o no puede avanzar, detente y revisa el mensaje. N
 APP_ENV=demo .venv/bin/python manage.py migrate --noinput
 ```
 
-Esta versión no añade tablas ni migraciones. Si ya estabas en 0.5.0, aparecerá `No migrations to apply`. Si faltan migraciones anteriores, se aplicarán automáticamente. Las preferencias de estilo y los datos educativos se conservan. No recargues la web antes de completar la migración. Si aparece un error, detente y conserva la copia anterior.
+Debe aparecer `0008_challengeprogress_content_area_learning_content_area_and_more` seguida de `OK`. Añade preferencias de accesibilidad y clasificación de ámbito sin modificar aprendizajes anteriores. Si faltan otras migraciones, se aplicarán también. La práctica crea su archivo SQLite separado al abrirla; no tienes que ejecutar SQL manualmente. Las preferencias de estilo y los datos educativos se conservan. No recargues la web antes de completar la migración. Si aparece un error, detente y conserva la copia anterior.
 
 ## 4. Actualizar los archivos de diseño
 
@@ -42,9 +42,9 @@ Actualiza `staticfiles/`. No borra la base de datos ni los archivos privados. No
 1. Entra en la pestaña **Web** de PythonAnywhere.
 2. Pulsa el botón verde **Reload**.
 3. Abre la plataforma con HTTPS y pulsa **Ctrl+F5**.
-4. Comprueba que el pie muestra **v0.6.0**, que Calendario muestra **Importar sesiones / Word** y que Personalización permite **Básicos** o **RPG**.
-5. En Alumnado → Importar / añadir varios, comprueba la opción **Alumnado, responsables y grupos · ODS**.
-6. Sigue [la guía de importación ODS](IMPORTAR_ODS.md), comenzando por el grupo que quieras probar. Nada se crea hasta confirmar.
+4. Comprueba que el pie muestra **v0.7.0**, que Calendario muestra **Importar sesiones / Word** y que Personalización permite **Básicos** o **RPG**.
+5. Comprueba los nuevos accesos **Accesibilidad** y **Práctica ficticia**.
+6. Sigue [la prueba de dos aprendices ficticios](PRACTICA_ACCESIBILIDAD.md), sin abrir la clase real para ensayar logros.
 
 ## 6. Comprobar y continuar la prueba
 

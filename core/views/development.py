@@ -15,7 +15,7 @@ def developer_view(request):
             audit(request.user,'config:draft',version); return redirect('config_preview',pk=version.pk)
         except (ValidationError,json.JSONDecodeError) as e: error=' '.join(e.messages) if isinstance(e,ValidationError) else _('JSON no válido.')
     with connection.cursor() as cursor: cursor.execute('SELECT 1'); db_ok=cursor.fetchone()[0]==1
-    return render(request,'core/developer.html',{'title':_('Desarrollador'),'payload':payload,'error':error,'versions':ConfigVersion.objects.filter(environment=settings.ENVIRONMENT).select_related('author').order_by('-created_at'),'audits':Audit.objects.filter(action__startswith='config:').select_related('actor').order_by('-created_at')[:30],'db_ok':db_ok,'backup':BackupCheck.objects.order_by('-created_at').first(),'releases':Release.objects.order_by('-deployed_at'),'app_version':'0.6.0','technical_events':TechnicalEvent.objects.order_by('-created_at')[:20]})
+    return render(request,'core/developer.html',{'title':_('Desarrollador'),'payload':payload,'error':error,'versions':ConfigVersion.objects.filter(environment=settings.ENVIRONMENT).select_related('author').order_by('-created_at'),'audits':Audit.objects.filter(action__startswith='config:').select_related('actor').order_by('-created_at')[:30],'db_ok':db_ok,'backup':BackupCheck.objects.order_by('-created_at').first(),'releases':Release.objects.order_by('-deployed_at'),'app_version':'0.7.0','technical_events':TechnicalEvent.objects.order_by('-created_at')[:20]})
 
 
 @login_required

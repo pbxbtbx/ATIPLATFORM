@@ -331,7 +331,7 @@ class LanguageTests(TestCase):
         self.client.force_login(self.user)
     def test_english_is_saved_per_account_without_changing_other_users(self):
         response=self.client.post('/language/',{'language':'en','next':'/'},follow=True)
-        self.assertContains(response,'<html lang="en">',html=False)
+        self.assertContains(response,'<html lang="en" ',html=False)
         self.assertContains(response,'Notifications');self.assertContains(response,'A new day to create')
         self.assertEqual(response.headers['Content-Language'],'en')
         self.user.profile.refresh_from_db();self.other.profile.refresh_from_db()

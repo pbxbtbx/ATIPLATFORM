@@ -30,6 +30,15 @@ def student_detail(request,pk):
     if tab=='learning':
         from core.challenges import tier_for
         ctx['challenge_history']=[{'entry':entry,'count':len(entry.reached),'total':len(entry.specs),'tier':tier_for(len(entry.reached),len(entry.specs))} for entry in student.challenge_progress.filter(session__group__in=groups(request.user)).select_related('session','author').order_by('-created_at','-id')]
+        from core.curriculum import board,AREA_CHOICES
+        ctx['content_board']=board(ctx['learning'],[r['entry'] for r in ctx['challenge_history']])
+        ctx['unassigned_count']=sum(not r.content_area for r in ctx['learning'])+sum(not r['entry'].content_area for r in ctx['challenge_history'])
+        area=request.GET.get('area','all')
+        if area not in dict(AREA_CHOICES) and area!='all':area='all'
+        ctx['selected_area']=area
+        if area!='all':
+            ctx['learning']=[r for r in ctx['learning'] if r.content_area==area]
+            ctx['challenge_history']=[r for r in ctx['challenge_history'] if r['entry'].content_area==area]
     if tab=='attendance': ctx['attendance']=Attendance.objects.filter(student=student,session__group__in=groups(request.user)).select_related('session').order_by('-session__start')
     if tab=='guardians': ctx['links']=student.guardians.select_related('guardian')
     if tab=='evidence': ctx['evidences']=student.evidences.filter(session__group__in=groups(request.user)).select_related('author')

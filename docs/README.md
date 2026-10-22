@@ -2,6 +2,7 @@
 
 | Documento | Para qué sirve |
 | --- | --- |
+| [Práctica y accesibilidad](PRACTICA_ACCESIBILIDAD.md) | Dos aprendices ficticios en una base separada, cinco bloques de progreso y ajustes visuales/voz local. |
 | [Importar ODS](IMPORTAR_ODS.md) | Importar alumnado, responsables y varios grupos desde una hoja, con revisión y sin sobrescribir fichas. |
 | [Retos y adaptaciones](RETOS_ADAPTACIONES.md) | Tarjetas, retos por alumno, NEAE restringida y eliminación de una sesión sin historial. |
 | [Importar Word, CSV y alumnado en lote](IMPORTACIONES.md) | Preparar, revisar y confirmar clases o matrículas sin modificar registros anteriores. |

@@ -2934,3 +2934,566 @@ msgstr ""
 
 msgid "El texto de una celda tiene demasiados niveles de formato."
 msgstr "Cell text has too many formatting levels."
+
+msgid "Abrir bloque"
+msgstr "Open area"
+
+msgid "Accesibilidad"
+msgstr "Accessibility"
+
+msgid ""
+"Accesibilidad de la interfaz. Puedes elegir tamaño de texto, contraste, "
+"espaciado, controles grandes, movimiento reducido y decoración simplificada."
+" Las ayudas de voz se escuchan solo al pulsar un botón."
+msgstr ""
+"Interface accessibility. Choose text size, contrast, spacing, larger "
+"controls, reduced motion and simpler decoration. Voice help is played only "
+"when you press a button."
+
+msgid ""
+"Activa las ayudas de voz y guarda. Después pulsa Escuchar ayuda de esta "
+"pantalla. Se leen explicaciones de navegación, no nombres, contactos, notas "
+"ni campos personales."
+msgstr ""
+"Enable voice help and save. Then press Listen to page help. It reads "
+"navigation explanations, not names, contacts, notes or personal fields."
+
+msgid "Activar ayudas de audiodescripción"
+msgstr "Enable audio description help"
+
+msgid "Ajustar medidas"
+msgstr "Adjust dimensions"
+
+msgid "Ajustes personales para leer, navegar y trabajar con más comodidad."
+msgstr "Personal settings for more comfortable reading, navigation and work."
+
+msgid "Alto contraste"
+msgstr "High contrast"
+
+msgid "Aprendiz ficticio A"
+msgstr "Fictional learner A"
+
+msgid "Aprendiz ficticio B"
+msgstr "Fictional learner B"
+
+msgid "Aquí puedes probar sin cambiar la clase real"
+msgstr "Practise here without changing the real class"
+
+msgid "Audiodescripción"
+msgstr "Audio description"
+
+msgid "Audiodescripción de la interfaz"
+msgstr "Interface audio description"
+
+msgid "Añadir un botón"
+msgstr "Add a button"
+
+msgid "Añadir un objeto"
+msgstr "Add an object"
+
+msgid "BASE DE PRÁCTICA SEPARADA"
+msgstr "SEPARATE PRACTICE DATABASE"
+
+msgid "Bloque de contenidos"
+msgstr "Content area"
+
+msgid "Bloque de la práctica"
+msgstr "Practice area"
+
+msgid "Bloques de contenidos del progreso personal"
+msgstr "Personal progress content areas"
+
+msgid "Botones y controles más grandes"
+msgstr "Larger buttons and controls"
+
+msgid ""
+"Cada cuenta tiene su propia práctica. No se importan nombres, contactos ni "
+"observaciones reales a este espacio."
+msgstr ""
+"Each account has its own practice. Real names, contacts and observations are"
+" not imported into this space."
+
+msgid "Clase ficticia · ocho retos por aprendiz"
+msgstr "Fictional class · eight challenges per learner"
+
+msgid "Combinar volúmenes"
+msgstr "Combine volumes"
+
+msgid ""
+"Comprender límites, sesgos, privacidad y uso responsable de la inteligencia "
+"artificial."
+msgstr ""
+"Understand limits, bias, privacy and responsible use of artificial "
+"intelligence."
+
+msgid "Comprobar una respuesta"
+msgstr "Check an answer"
+
+msgid "Conectar un actuador"
+msgstr "Connect an actuator"
+
+msgid ""
+"Construir mecanismos y trabajar con sensores, actuadores y automatismos."
+msgstr "Build mechanisms and work with sensors, actuators and automation."
+
+msgid "Continuar"
+msgstr "Resume"
+
+msgid "Contraste"
+msgstr "Contrast"
+
+msgid "Controles de audiodescripción"
+msgstr "Audio description controls"
+
+msgid "Corregir un error"
+msgstr "Fix an error"
+
+msgid "Creación de apps móviles"
+msgstr "Mobile app creation"
+
+msgid "Crear juegos, programar sus reglas y probar soluciones."
+msgstr "Create games, program their rules and test solutions."
+
+msgid "Crear un personaje"
+msgstr "Create a character"
+
+msgid "Crear una forma básica"
+msgstr "Create a basic shape"
+
+msgid "Crear y explicar una regla nueva"
+msgstr "Create and explain a new rule"
+
+msgid "Definir una necesidad"
+msgstr "Define a need"
+
+msgid "Definir una victoria"
+msgstr "Define a win condition"
+
+msgid "Del tema elegido"
+msgstr "Use selected theme"
+
+msgid "Depurar un fallo"
+msgstr "Debug a fault"
+
+msgid "Detectar un contacto"
+msgstr "Detect a collision"
+
+msgid "Detener"
+msgstr "Stop"
+
+msgid "Dibujar una idea"
+msgstr "Sketch an idea"
+
+msgid "Dibujar una pantalla"
+msgstr "Sketch a screen"
+
+msgid ""
+"Diseñar interfaces y crear aplicaciones móviles con una finalidad útil."
+msgstr ""
+"Design interfaces and create mobile applications with a useful purpose."
+
+msgid "Diseñar, modelar, prototipar y preparar creaciones para impresión 3D."
+msgstr "Design, model, prototype and prepare creations for 3D printing."
+
+msgid "Diseño e impresión 3D"
+msgstr "3D design and printing"
+
+msgid "Distinguir datos y opiniones"
+msgstr "Distinguish facts and opinions"
+
+msgid ""
+"Dos aprendices inventados, sin matrícula ni relación con el alumnado real."
+msgstr "Two fictional learners, without enrolments or links to real students."
+
+msgid "EXPLORAR · CREAR · COMPRENDER"
+msgstr "EXPLORE · CREATE · UNDERSTAND"
+
+msgid "El enlace Saltar al contenido evita repetir el menú."
+msgstr "The Skip to content link bypasses the menu."
+
+msgid ""
+"El foco visible indica dónde estás. Las etiquetas y contadores acompañan "
+"siempre al color."
+msgstr ""
+"Visible focus shows where you are. Labels and counters always accompany "
+"colour."
+
+msgid "Enter activa enlaces y botones. Espacio marca casillas."
+msgstr "Enter activates links and buttons. Space checks boxes."
+
+msgid "Escribe REINICIAR para borrar únicamente tu práctica ficticia."
+msgstr "Type REINICIAR to delete only your fictional practice."
+
+msgid "Escribe REINICIAR para confirmar"
+msgstr "Type REINICIAR to confirm"
+
+msgid "Escuchar ayuda"
+msgstr "Listen to help"
+
+msgid "Escuchar ayuda de esta pantalla"
+msgstr "Listen to page help"
+
+msgid ""
+"Esta es una prueba de las ayudas de voz de Atigra Makers. Puedes pausar, "
+"continuar o detener la lectura."
+msgstr ""
+"This is a test of Atigra Makers voice help. You can pause, resume or stop "
+"reading."
+
+msgid ""
+"Este navegador no ofrece lectura de voz. Puedes utilizar un lector de "
+"pantalla."
+msgstr ""
+"This browser does not support voice reading. You can use a screen reader."
+
+msgid "Explicar el funcionamiento"
+msgstr "Explain how it works"
+
+msgid "Explicar límites y decisiones"
+msgstr "Explain limits and decisions"
+
+msgid "Explicar una mejora"
+msgstr "Explain an improvement"
+
+msgid "Extra"
+msgstr "Extra"
+
+msgid ""
+"Ficha individual. Usa las pestañas Resumen, Aprendizaje, Asistencia, "
+"Proyectos y evidencias, Tutores e Información restringida, si tienes "
+"permiso. En Aprendizaje hay tres bloques principales y dos extras, seguidos "
+"del historial."
+msgstr ""
+"Individual record. Use the tabs Overview, Learning, Attendance, Projects and"
+" evidence, Guardians and Restricted information when permitted. Learning "
+"contains three main content areas and two extras, followed by history."
+
+msgid "Filtrar historial por bloque"
+msgstr "Filter history by content area"
+
+msgid "Grande"
+msgstr "Large"
+
+msgid "Guardar accesibilidad"
+msgstr "Save accessibility"
+
+msgid "Guardar retos ficticios"
+msgstr "Save fictional challenges"
+
+msgid "IA ética"
+msgstr "Ethical AI"
+
+msgid "Identificar componentes"
+msgstr "Identify components"
+
+msgid "Identificar un sesgo"
+msgstr "Identify bias"
+
+msgid "LABORATORIO SEGURO DE PRUEBAS"
+msgstr "SAFE PRACTICE LAB"
+
+msgid "La base de práctica debe estar separada de la base principal."
+msgstr "The practice database must be separate from the main database."
+
+msgid "La práctica ha cambiado en otra pestaña. Recarga antes de guardar."
+msgstr "Practice has changed in another tab. Reload before saving."
+
+msgid "La versión de la base de práctica no es compatible."
+msgstr "The practice database version is not compatible."
+
+msgid ""
+"Las ayudas de voz complementan el uso de un lector de pantalla; su "
+"disponibilidad depende del navegador y las voces instaladas en el "
+"dispositivo."
+msgstr ""
+"Voice help complements a screen reader; availability depends on the browser "
+"and voices installed on the device."
+
+msgid "Lectura detenida."
+msgstr "Reading stopped."
+
+msgid "Lectura en curso."
+msgstr "Reading in progress."
+
+msgid "Lectura en pausa."
+msgstr "Reading paused."
+
+msgid "Lectura finalizada."
+msgstr "Reading finished."
+
+msgid "Leer un sensor"
+msgstr "Read a sensor"
+
+msgid ""
+"Los registros anteriores sin clasificación conservan su historial. Asigna el"
+" bloque en la planificación para los nuevos registros; no se evalúa ni se "
+"reclasifica automáticamente el pasado."
+msgstr ""
+"Earlier unclassified records retain their history. Assign a content area in "
+"planning for new records; past records are not automatically assessed or "
+"reclassified."
+
+msgid ""
+"Los tres bloques principales son Diseño e impresión 3D, Robótica y "
+"Programación de videojuegos. Los extras son IA ética y Creación de apps "
+"móviles. Cada tarjeta resume únicamente los retos y observaciones "
+"registrados, no todo el aprendizaje posible."
+msgstr ""
+"The three main areas are 3D design and printing, Robotics and Game "
+"programming. Extras are Ethical AI and Mobile app creation. Each card "
+"summarises only recorded challenges and observations, not all possible "
+"learning."
+
+msgid ""
+"Marca dos retos para ver verde, cuatro para azul, seis para lila y ocho para"
+" naranja legendario en la paleta RPG. Guarda y consulta el progreso de cada "
+"aprendiz. La paleta básica mantiene sus colores simplificados."
+msgstr ""
+"Check two challenges for green, four for blue, six for purple and eight for "
+"legendary orange in the RPG palette. Save and view each learner's progress. "
+"The basic palette keeps its simplified colours."
+
+msgid "Mi recorrido maker"
+msgstr "My maker journey"
+
+msgid "Mini extras"
+msgstr "Mini extras"
+
+msgid ""
+"Modo clase. Primero están los materiales y los objetivos, después atención a"
+" la diversidad y el mapa de retos. Despliega la fila de cada alumno para "
+"registrar asistencia y retos. Guarda los cambios antes de salir."
+msgstr ""
+"Class mode. Materials and objectives come first, followed by inclusive "
+"teaching guidance and the challenge map. Expand each student row to record "
+"attendance and challenges. Save changes before leaving."
+
+msgid "Montar una estructura"
+msgstr "Build a structure"
+
+msgid "Muy grande"
+msgstr "Extra large"
+
+msgid "Más espacio entre líneas y bloques"
+msgstr "More spacing between lines and sections"
+
+msgid "Navegación por teclado"
+msgstr "Keyboard navigation"
+
+msgid ""
+"No hay una voz local disponible para este idioma. Puedes instalar una voz "
+"local en tu dispositivo o utilizar un lector de pantalla."
+msgstr ""
+"No local voice is available for this language. Install a local voice on your"
+" device or use a screen reader."
+
+msgid "Normal"
+msgstr "Normal"
+
+msgid "Organizar la navegación"
+msgstr "Organise navigation"
+
+msgid ""
+"Pantalla de inicio. Consulta las clases del día, las sesiones pendientes y "
+"tus recordatorios. Usa la navegación para abrir calendario, grupos o "
+"alumnado."
+msgstr ""
+"Home screen. Check today's classes, pending sessions and your reminders. Use"
+" navigation to open the calendar, groups or students."
+
+msgid "Pausada"
+msgstr "Slower"
+
+msgid "Pausar"
+msgstr "Pause"
+
+msgid "Preferencias de accesibilidad guardadas para tu cuenta."
+msgstr "Accessibility preferences saved for your account."
+
+msgid "Preferencias de interfaz"
+msgstr "Interface preferences"
+
+msgid "Preparar una pieza imprimible"
+msgstr "Prepare a printable part"
+
+msgid "Presentar una app útil"
+msgstr "Present a useful app"
+
+msgid "Probar accesibilidad"
+msgstr "Test accessibility"
+
+msgid "Probar el mecanismo"
+msgstr "Test the mechanism"
+
+msgid "Probar un prototipo"
+msgstr "Test a prototype"
+
+msgid "Probar voz local"
+msgstr "Test local voice"
+
+msgid "Programación de videojuegos"
+msgstr "Game programming"
+
+msgid "Programar el movimiento"
+msgstr "Program movement"
+
+msgid "Programar un evento"
+msgstr "Program an event"
+
+msgid "Programar una respuesta"
+msgstr "Program a response"
+
+msgid "Progreso personal ficticio"
+msgstr "Fictional personal progress"
+
+msgid "Proponer un uso responsable"
+msgstr "Propose a responsible use"
+
+msgid "Proteger datos personales"
+msgstr "Protect personal data"
+
+msgid "Práctica ficticia"
+msgstr "Fictional practice"
+
+msgid ""
+"Práctica ficticia en una base separada. Hay dos aprendices ficticios y cinco"
+" ámbitos. Elige un ámbito, abre un aprendiz y marca sus retos. Dos de ocho "
+"dan verde y ocho de ocho dan naranja en la paleta RPG. Guarda para conservar"
+" la práctica. No afecta al alumnado real."
+msgstr ""
+"Fictional practice in a separate database. There are two fictional learners "
+"and five areas. Choose an area, open a learner and check their challenges. "
+"Two of eight are green and eight of eight orange in the RPG palette. Save to"
+" keep practice progress. Real students are unaffected."
+
+msgid ""
+"Práctica ficticia reiniciada. Los datos educativos reales se conservan."
+msgstr "Fictional practice reset. Real educational data is preserved."
+
+msgid "Recargar práctica guardada"
+msgstr "Reload saved practice"
+
+msgid "Reconocer un uso de IA"
+msgstr "Recognise an AI use"
+
+msgid "Reducir movimiento y animaciones"
+msgstr "Reduce motion and animations"
+
+msgid "Reiniciar mi práctica"
+msgstr "Reset my practice"
+
+msgid "Reiniciar únicamente mi práctica"
+msgstr "Reset only my practice"
+
+msgid "Retos de sesiones con seguimiento"
+msgstr "Challenges from tracked sessions"
+
+msgid "Retos ficticios guardados en la base de práctica."
+msgstr "Fictional challenges saved in the practice database."
+
+msgid "Reutilizar una secuencia"
+msgstr "Reuse a sequence"
+
+msgid "Revisa la selección y la versión de la práctica."
+msgstr "Check the practice selection and version."
+
+msgid "Revisar el laminado"
+msgstr "Review slicing"
+
+msgid "Revisar una fuente"
+msgstr "Review a source"
+
+msgid "Robótica"
+msgstr "Robotics"
+
+msgid ""
+"Se borrarán los retos y las revisiones de tus dos aprendices ficticios en "
+"todos los bloques. No se borrarán matrículas, sesiones ni avances del "
+"alumnado real. Esta acción no se puede deshacer desde la interfaz."
+msgstr ""
+"Challenges and revisions for your two fictional learners will be deleted in "
+"every area. Real student enrolments, sessions and progress will not be "
+"deleted. This action cannot be undone from the interface."
+
+msgid "Selección de práctica no válida."
+msgstr "Invalid practice selection."
+
+msgid "Simplificar decoración de la interfaz"
+msgstr "Simplify interface decoration"
+
+msgid "Sin bloque asignado"
+msgstr "No content area assigned"
+
+msgid "Sin retos registrados todavía"
+msgstr "No challenges recorded yet"
+
+msgid "Situar elementos"
+msgstr "Position elements"
+
+msgid ""
+"Solo se utilizan voces marcadas como locales por el navegador. Si no hay una"
+" voz local en español o inglés, se indicará cómo continuar; no se cambia a "
+"una voz remota automáticamente."
+msgstr ""
+"Only voices marked as local by the browser are used. If no local Spanish or "
+"English voice is available, guidance will be shown; remote voices are not "
+"selected automatically."
+
+msgid "Tabulador y Mayús + Tabulador recorren los controles."
+msgstr "Tab and Shift + Tab move through controls."
+
+msgid "Tamaño del texto"
+msgstr "Text size"
+
+msgid "Todo el historial"
+msgstr "Full history"
+
+msgid ""
+"Tres bloques principales y dos extras. Cada persona avanza a su ritmo; los "
+"contadores solo incluyen sesiones con seguimiento registrado."
+msgstr ""
+"Three main areas and two extras. Everyone progresses at their own pace; "
+"counters only include sessions with recorded tracking."
+
+msgid "UNA INTERFAZ A TU MEDIDA"
+msgstr "AN INTERFACE THAT FITS YOU"
+
+msgid ""
+"Usa la navegación principal para cambiar de sección. Los títulos separan los"
+" bloques de contenido. Tabulador recorre los controles, Enter activa botones"
+" y los formularios necesitan guardarse para conservar los cambios."
+msgstr ""
+"Use the main navigation to change sections. Headings separate content "
+"sections. Tab moves through controls, Enter activates buttons and forms must"
+" be saved to keep changes."
+
+msgid "Velocidad de lectura"
+msgstr "Reading speed"
+
+msgid "Ver historial del bloque"
+msgstr "View area history"
+
+msgid "Voz local preparada. Pulsa Escuchar para comenzar."
+msgstr "Local voice ready. Press Listen to begin."
+
+msgid "observaciones vigentes"
+msgstr "current observations"
+
+msgid "retos registrados alcanzados"
+msgstr "recorded challenges achieved"
+
+msgid "sesiones"
+msgstr "sessions"
+
+msgid "v0.7.0 ·"
+msgstr "v0.7.0 ·"
+
+msgid "Ágil"
+msgstr "Faster"
+
+msgid "Navegación principal"
+msgstr "Main navigation"
+
+msgid ""
+"La base de práctica contiene tablas ajenas. Usa un archivo independiente."
+msgstr "The practice database contains unrelated tables. Use a separate file."

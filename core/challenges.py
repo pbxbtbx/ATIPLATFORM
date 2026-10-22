@@ -78,7 +78,7 @@ def save_progress(session,student,user,data):
     evidence=data.get('challenge_evidence_'+key,'').strip()
     if len(evidence)>2000:raise ValidationError(_('La observación de retos no puede superar 2000 caracteres.'))
     if set(ids)!=set(latest.reached if latest else []) or evidence!=(latest.evidence if latest else ''):
-        obj=ChallengeProgress.objects.create(session=session,student=student,author=user,reached=ids,specs=specs,evidence=evidence,supersedes=latest)
+        obj=ChallengeProgress.objects.create(session=session,student=student,author=user,content_area=session.content_area,reached=ids,specs=specs,evidence=evidence,supersedes=latest)
         audit(user,'challenge:revision',obj)
 
 

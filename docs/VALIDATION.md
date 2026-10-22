@@ -1,3 +1,16 @@
+# Validación de práctica y accesibilidad · 0.7.0
+
+- Suite completa: 88 pruebas correctas, incluidas doce nuevas de preferencias, práctica, ámbitos e integridad.
+- Práctica: SQLite separado con esquema versionado; dos aprendices por propietario; 2/8 y 8/8 guardados, control de edición concurrente, IDs de personas reales sin capacidad de dirigir el guardado, ámbito permitido, CSRF, autenticación y reinicio confirmado.
+- Antes/después de la práctica en pruebas y navegador: alumnado, matrículas, sesiones, aprendizaje y retos de la base educativa conservados sin cambios. La auditoría registra metadatos de acciones.
+- Ámbitos: tres principales y dos extras, resúmenes sin duplicar revisiones, historial anterior sin clasificación conservado, códigos copiados al registrar aprendizaje y retos; docente ajeno sin acceso a registros fuera de su ámbito.
+- Preferencias por cuenta: persistencia tras nuevo acceso, rechazo de valores inválidos y clases HTML acotadas. Las ayudas de voz no incorporan datos de la ficha individual a sus mensajes.
+- Chromium: ajustes de texto, contraste, espaciado, controles grandes, reducción de movimiento y decoración simplificada; práctica guardada; cinco tarjetas por aprendiz; IDs de elementos únicos; Saltar al contenido lleva el foco a main; español/inglés; 768 y 384 px sin desbordamiento; sin errores JavaScript.
+- Voz comprobada con API simulada: selección de voz local aunque exista una remota antes, idioma es/en, velocidad configurada, sin reproducción automática, pausa/continuación/parada y bloqueo de voces exclusivamente remotas. La reproducción audible con voces reales de Windows y el uso con lectores de pantalla reales quedan pendientes de la prueba en el dispositivo del usuario; no se afirma certificación de accesibilidad.
+- Migración 0008 aplicada en demo local tras copia verificada. No se añaden dependencias externas; el esquema ficticio se inicializa desde SQL estático del repositorio en su propio archivo.
+
+## Validaciones anteriores
+
 # Validación de importación ODS · 0.6.0
 
 - Suite completa: 76 pruebas correctas, incluidas 13 específicas de ODS.

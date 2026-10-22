@@ -49,7 +49,7 @@ def candidates(draft, options):
                 except (ValueError,ValidationError): raise ValidationError(_('Inicio, duración o número no válidos en el CSV.'))
                 title=row['titulo']; content={'goals':row.get('objetivos',''),'materials':row.get('materiales',''),'planned':row.get('actividades','')}
             if not 1<=duration<=720 or number<1: raise ValidationError(_('Duración o número de sesión fuera de rango.'))
-            obj=Session(group=group,teacher=options['teacher'],title=title,number=number,start=start,end=start+timedelta(minutes=duration),**content)
+            obj=Session(group=group,teacher=options['teacher'],content_area=options.get('content_area',''),title=title,number=number,start=start,end=start+timedelta(minutes=duration),**content)
             session_errors(obj)
             if any(s.start<obj.end and s.end>obj.start for s in result): raise ValidationError(_('Las sesiones del archivo se solapan entre sí.'))
             from core.challenges import extract_challenges,validate_specs

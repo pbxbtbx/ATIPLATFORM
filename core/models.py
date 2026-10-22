@@ -1,5 +1,6 @@
 from django.utils.translation import gettext_lazy as _, pgettext_lazy
 import uuid
+from .curriculum import AREA_CHOICES
 from django.db import models
 from django.conf import settings
 from django.core.validators import MinValueValidator
@@ -20,6 +21,7 @@ class Profile(models.Model):
     development_access = models.BooleanField(default=False)
     language = models.CharField(_('Idioma'),max_length=2,choices=[('es',_('Español')),('en','English')],default='es')
     learning_palette = models.CharField(_('Colores del aprendizaje'),max_length=12,choices=[('rpg',_('RPG')),('basic',_('Básicos'))],default='rpg')
+    accessibility = models.JSONField(default=dict,blank=True)
     theme = models.CharField(_('Estilo visual'),max_length=16,choices=[('rpg',_('Fantasía RPG')),('classic',_('Atigra claro')),('night',_('Noche tranquila'))],default='rpg')
 
 class AcademicYear(Record):
@@ -86,6 +88,7 @@ class GuardianLink(Record):
         constraints = [models.UniqueConstraint(fields=['student','guardian'],name='guardian_link_unique')]
 
 class Resource(Record):
+    content_area = models.CharField(_('Bloque de contenidos'),max_length=20,choices=AREA_CHOICES,blank=True,default='')
     title = models.CharField(_('Título'),max_length=200)
     kind = models.CharField(_('Tipo de clase'),max_length=20,choices=ClassGroup.TYPES)
     domain = models.CharField(_('Ámbito'),max_length=120)
@@ -108,6 +111,7 @@ class Sequence(Record):
     def __str__(self): return self.name
 
 class Session(Record):
+    content_area = models.CharField(_('Bloque de contenidos'),max_length=20,choices=AREA_CHOICES,blank=True,default='')
     STATES = [('planned',_('Planificada')),('done',_('Realizada')),('cancelled',_('Cancelada')),('recover',_('Pendiente de recuperar'))]
     group = models.ForeignKey(ClassGroup,verbose_name=_('Grupo'),on_delete=models.PROTECT)
     teacher = models.ForeignKey(settings.AUTH_USER_MODEL,verbose_name=_('Docente'),on_delete=models.PROTECT)
@@ -148,6 +152,7 @@ class Attendance(Record):
         constraints = [models.UniqueConstraint(fields=['session','student'],name='attendance_unique')]
 
 class Learning(Record):
+    content_area = models.CharField(_('Bloque de contenidos'),max_length=20,choices=AREA_CHOICES,blank=True,default='')
     STATES = [('new',_('Sin iniciar')),('progress',_('En proceso')),('supported',_('Completado con apoyo')),('autonomous',_('Completado con autonomía')),('resume',_('Pendiente de retomar'))]
     student = models.ForeignKey(Student,on_delete=models.PROTECT,related_name='learning')
     session = models.ForeignKey(Session,on_delete=models.PROTECT)
@@ -167,6 +172,8 @@ class Learning(Record):
     state_labels = models.JSONField(default=dict,blank=True)
     supersedes = models.ForeignKey('self',null=True,blank=True,on_delete=models.PROTECT)
     def save(self,*args,**kwargs):
+        if self._state.adding and not self.content_area:
+            self.content_area=self.session.content_area
         if self._state.adding and not self.state_labels:
             from .configuration import learning_states
             self.state_labels=dict(learning_states())
@@ -247,6 +254,7 @@ class ImportDraft(Record):
 
 
 class ChallengeProgress(Record):
+    content_area = models.CharField(_('Bloque de contenidos'),max_length=20,choices=AREA_CHOICES,blank=True,default='')
     session = models.ForeignKey(Session,on_delete=models.PROTECT)
     student = models.ForeignKey(Student,on_delete=models.PROTECT,related_name='challenge_progress')
     author = models.ForeignKey(settings.AUTH_USER_MODEL,on_delete=models.PROTECT)

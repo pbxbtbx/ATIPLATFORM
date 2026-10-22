@@ -42,6 +42,7 @@ def session_edit(request,pk=None):
                 session_errors(obj,obj.pk if instance else None)
                 # Freeze library content when selecting a new resource; edits do not mutate prior snapshots.
                 if not instance or 'resource' in form.changed_data: obj.resource_snapshot=snapshot(obj.resource)
+                if not obj.content_area and obj.resource: obj.content_area=obj.resource.content_area
                 sid=uuid.uuid4() if count>1 else None
                 if not instance: obj.series=sid
                 obj=save_versioned(form,request.user)
@@ -131,7 +132,7 @@ def class_save(request,pk):
 def recover_session(request,pk):
     source=get_object_or_404(session_q(request.user),pk=pk)
     if source.status not in ('recover','cancelled'): return HttpResponse(_('Solo se recuperan sesiones canceladas o pendientes.'),status=400)
-    form=SessionForm(request.POST or None,initial={k:getattr(source,k) for k in ['group','teacher','title','number','resource','goals','materials','planned','diversity']})
+    form=SessionForm(request.POST or None,initial={k:getattr(source,k) for k in ['group','teacher','content_area','title','number','resource','goals','materials','planned','diversity']})
     form.fields['group'].queryset=groups(request.user)
     form.fields['teacher'].queryset=User.objects.filter(classgroup__in=groups(request.user)).distinct()
     if request.method=='POST' and form.is_valid():

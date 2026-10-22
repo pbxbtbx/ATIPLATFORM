@@ -49,3 +49,6 @@ FILE_UPLOAD_DIRECTORY_PERMISSIONS = 0o700
 
 # Lote ODS acotado a 300 alumnos y dos responsables; límite finito para su revisión.
 DATA_UPLOAD_MAX_NUMBER_FIELDS = 6000
+
+# Prácticas ficticias: archivo independiente; nunca apunta a la base educativa.
+PRACTICE_DATABASE_PATH = BASE_DIR/'var'/'practice'/(ENVIRONMENT+'.sqlite3')

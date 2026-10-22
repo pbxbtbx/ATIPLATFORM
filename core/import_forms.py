@@ -2,6 +2,7 @@ from django import forms
 from django.utils.translation import gettext_lazy as _
 from .access import groups
 from .models import ClassGroup
+from .curriculum import AREA_CHOICES
 
 
 class UploadImportForm(forms.Form):
@@ -18,6 +19,7 @@ class UploadImportForm(forms.Form):
 
 
 class ImportOptionsForm(forms.Form):
+    content_area=forms.ChoiceField(label=_('Bloque de contenidos'),choices=AREA_CHOICES,required=False)
     group=forms.ModelChoiceField(label=_('Grupo de destino'),queryset=ClassGroup.objects.none())
     joined=forms.DateField(label=_('Fecha de incorporación'),required=False,widget=forms.DateInput(attrs={'type':'date'}))
     teacher=forms.ModelChoiceField(label=_('Docente'),queryset=None,required=False)
@@ -34,11 +36,11 @@ class ImportOptionsForm(forms.Form):
         from django.contrib.auth.models import User
         self.fields['group'].queryset=groups(user).filter(status='active')
         self.fields['teacher'].queryset=User.objects.filter(is_active=True,classgroup__in=groups(user)).distinct()
-        keep=['group','joined'] if kind=='students' else ['group','teacher'] if kind=='sessions' else ['group','teacher','title','number','start','duration','goals','materials','diversity','planned']
+        keep=['group','joined'] if kind=='students' else ['group','teacher','content_area'] if kind=='sessions' else ['group','teacher','content_area','title','number','start','duration','goals','materials','diversity','planned']
         for field in list(self.fields):
             if field not in keep: del self.fields[field]
         for name in keep:
-            if name not in ('goals','materials','diversity','planned'): self.fields[name].required=True
+            if name not in ('content_area','goals','materials','diversity','planned'): self.fields[name].required=True
 
 
 class ODSImportForm(forms.Form):

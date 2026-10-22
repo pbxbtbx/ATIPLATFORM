@@ -4,6 +4,7 @@ Plataforma interna de gestión educativa con interfaz en español e inglés. Dja
 
 ## Guías de uso
 
+- [Práctica ficticia, bloques de progreso y accesibilidad](docs/PRACTICA_ACCESIBILIDAD.md).
 - [Importar ODS con responsables y varios grupos](docs/IMPORTAR_ODS.md).
 - [Retos estructurados, adaptaciones y prueba de una clase](docs/RETOS_ADAPTACIONES.md).
 - [Importar Word, CSV y añadir varios alumnos](docs/IMPORTACIONES.md).
@@ -95,6 +96,8 @@ Las rutas se mantienen estables en `config/urls.py`. `core/views/` sustituye el 
 | `core/views/evidence.py` | Subidas privadas y descargas autorizadas | `Evidence`, validación de archivos y permisos |
 | `core/views/reports.py` | Informes familiares e internos, PDF y CSV | `templates/core/reports.html`, `templates/core/group_report.html` |
 | `core/challenges.py`, `core/views/planning.py` | Retos estructurados, progreso individual y eliminación protegida | `ChallengeProgress`, `SupportPlan`, `core/test_challenges.py`, [guía](docs/RETOS_ADAPTACIONES.md) |
+| `core/curriculum.py`, `core/accessibility.py` | Cinco bloques del progreso y ajustes de interfaz por cuenta | `core/views/accessibility.py`, `static/core/accessibility.*`, [guía](docs/PRACTICA_ACCESIBILIDAD.md) |
+| `core/practice.py`, `core/views/practice.py` | Dos aprendices ficticios en SQLite independiente | `core/practice_migrations/`, `core/test_accessibility_curriculum.py`; nunca usar la base educativa para esta práctica |
 | `core/ods_importing.py`, `core/ods_service.py`, `core/views/ods.py` | Hoja ODS: pestañas, grupos, alumnado y responsables compartidos | `ODSImportForm`, `core/test_ods.py`, [guía](docs/IMPORTAR_ODS.md) |
 | `core/importing.py`, `core/import_forms.py`, `core/views/imports.py` | Importación revisable de Word/CSV y alta de alumnado por lotes | `ImportDraft`, `core/test_importing.py`, [guía](docs/IMPORTACIONES.md) |
 | `core/views/notifications.py` | Recordatorios privados, filtros y completar/reabrir | `Task`, `templates/core/notifications.html`, `notification_tray.html` |
