@@ -29,7 +29,8 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [BASE_DIR/'static']
 STATIC_ROOT = BASE_DIR/'staticfiles'
-MEDIA_ROOT = BASE_DIR/'var'/'private'/ENVIRONMENT
+# Explicit private paths allow changing environment without moving existing records/files.
+MEDIA_ROOT = Path(os.getenv('PRIVATE_MEDIA_ROOT', str(BASE_DIR/'var'/'private'/ENVIRONMENT)))
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 LOGIN_URL = '/login/'
 LOGIN_REDIRECT_URL = '/'
@@ -54,4 +55,4 @@ FILE_UPLOAD_DIRECTORY_PERMISSIONS = 0o700
 DATA_UPLOAD_MAX_NUMBER_FIELDS = 6000
 
 # Prácticas ficticias: archivo independiente; nunca apunta a la base educativa.
-PRACTICE_DATABASE_PATH = BASE_DIR/'var'/'practice'/(ENVIRONMENT+'.sqlite3')
+PRACTICE_DATABASE_PATH = Path(os.getenv('PRACTICE_DATABASE_PATH', str(BASE_DIR/'var'/'practice'/(ENVIRONMENT+'.sqlite3'))))

@@ -20,3 +20,5 @@
 Las guías de prueba usan únicamente registros ficticios en `APP_ENV=demo`. Las instrucciones no contienen contraseñas. La prueba manual se marca como completada solo cuando la persona que la realiza confirma cada resultado; no debe confundirse con las pruebas automatizadas ya ejecutadas.
 
 - [Ciberseguridad, integridad y diagnóstico seguro](SECURITY.md)
+
+- [Paso seguro de demo a producción conservando rutas](PASO_A_PRODUCCION.md)

@@ -80,3 +80,7 @@ Migración 0004 aplicada sobre una copia SQLite anterior: recuentos de todas las
 - pip-audit 2.9.0 contra dependencias de ejecución fijadas: **0 vulnerabilidades conocidas** en la consulta realizada. Esto no acredita ausencia de fallos, seguridad de OS/proxy ni todas las clases de vulnerabilidad.
 - `manage.py check`, `makemigrations --check --dry-run` y `git diff --check` correctos; no hay migración de datos nueva.
 - Pendiente ejecutar el workflow alojado de GitHub y validar el despliegue PythonAnywhere y su configuración HTTPS/DEBUG/clave. No se ha realizado una auditoría independiente, prueba de intrusión ni revisión legal.
+
+### Rutas explícitas para el paso a producción
+
+`PRIVATE_MEDIA_ROOT` y `PRACTICE_DATABASE_PATH` permiten conservar adjuntos y práctica al cambiar APP_ENV, junto con DATABASE_PATH ya existente. Tres pruebas aisladas comprueban rutas conservadas, defaults anteriores y rechazo de la clave placeholder en producción. No se mueven bases ni archivos ni se modifican registros. La configuración WSGI y Bash deben coincidir: véase PASO_A_PRODUCCION.md.
