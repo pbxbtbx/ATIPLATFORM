@@ -1,3 +1,16 @@
+# Validación de importación ODS · 0.6.0
+
+- Suite completa: 76 pruebas correctas, incluidas 13 específicas de ODS.
+- Archivo real inspeccionado en memoria: pestañas/columnas reconocidas y grupo solicitado localizado. No se ha importado alumnado real ni contactos reales a la base demo local ni a PythonAnywhere. El archivo no se incluye en el repositorio, fixtures o capturas.
+- Se detectaron datos de contacto que necesitan revisión, sin inventar nombres ni fusionar responsables con datos distintos.
+- Pruebas ficticias: varias pestañas y grupos, responsables compartidos, alumnos repetidos entre grupos, selección expresa de existentes, capacidad revalidada, campos excluidos, corrección de contactos, tutela explícita, homónimos de responsables y contacto sin nombre excluible sin perder el alumno.
+- Seguridad: propietario del borrador, Administración en servidor, CSRF, caducidad, ODS/XML inválidos, límites, bloques vacíos de Calc y texto/formato acotado. No se copian pagos, observaciones ni casillas de privacidad a la carga temporal; no se crean autorizaciones desde ellas.
+- Confirmaciones repetidas sin duplicar; plan cambiado desde la revisión rechazado; fichas, matrículas y condiciones existentes conservadas.
+- Chromium con ODS ficticio: subir, seleccionar una pestaña y dos grupos, validar, confirmar dos alumnos y un responsable compartido; resultado recargable sin duplicación, idiomas español/inglés, tablet 768 px sin desbordamiento y sin errores JavaScript. Comprobación de relaciones también en base de datos.
+- Sin nuevas migraciones ni dependencias; conserva las tablas existentes y aumenta a 6000 el límite finito de campos de formulario para revisar lotes ODS.
+
+## Validaciones anteriores
+
 # Validación de retos y adaptaciones · 0.5.0
 
 - Suite completa: 63 pruebas correctas, incluidas nueve de retos, adaptaciones y eliminación.

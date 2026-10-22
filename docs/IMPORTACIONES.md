@@ -1,4 +1,6 @@
-# Importar alumnado y sesiones · versión 0.4.0
+# Importar alumnado y sesiones
+
+**Desde 0.6.0:** también puedes [importar directamente hojas ODS con responsables y grupos](IMPORTAR_ODS.md). Los límites y exclusiones de CSV descritos aquí no se aplican a las funciones específicas de ODS.
 
 Las importaciones son locales al servidor y requieren iniciar sesión. No usan IA, no envían el documento a terceros y no ejecutan macros, comandos, instrucciones del documento ni sus enlaces. Un archivo se interpreta como contenido educativo, nunca como una orden para la aplicación.
 
@@ -61,4 +63,4 @@ La caducidad impide reutilizar el borrador aunque no se haya ejecutado la limpie
 - `templates/core/import_*.html`: pasos de la interfaz.
 - `core/test_importing.py`: permisos, extracción, conflictos, capacidad e idempotencia.
 
-No se importan responsables, información restringida, calificaciones, asistencia, cuentas, grupos completos ni archivos de evidencias. Esas ampliaciones requieren definir su formato y permisos específicos.
+En los flujos CSV/Word no se importan responsables, información restringida, calificaciones, asistencia, cuentas, grupos completos ni archivos de evidencias. Para responsables y varias matrículas por hoja utiliza [la importación ODS](IMPORTAR_ODS.md).

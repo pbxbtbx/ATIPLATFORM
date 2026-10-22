@@ -1,6 +1,6 @@
-# Actualizar PythonAnywhere: retos, diversidad y adaptaciones (0.5.0)
+# Actualizar PythonAnywhere: importación ODS (0.6.0)
 
-Esta entrega añade tarjetas de retos y seguimiento individual, materiales al principio, atención a la diversidad, planes restringidos de adaptación y eliminación protegida de sesiones de prueba. Incluye las funciones anteriores de importación, colores, notificaciones e idiomas.
+Esta entrega añade importación revisable de ODS con pestañas, correspondencia de grupos, alumnado, responsables compartidos y condiciones explícitas de tutela. Conserva las funciones anteriores de retos, adaptaciones, importación Word, colores, notificaciones e idiomas.
 
 ## 1. Copia de seguridad previa
 
@@ -27,7 +27,7 @@ Si Git indica cambios locales o no puede avanzar, detente y revisa el mensaje. N
 APP_ENV=demo .venv/bin/python manage.py migrate --noinput
 ```
 
-Las migraciones nuevas son `0006_session_challenge_specs_session_diversity_and_more` y `0007_supportplan_adaptation_kind`. Añaden estructura de retos, atención a la diversidad y tablas de revisiones individuales. También se aplicarán automáticamente las migraciones anteriores que falten. Las preferencias de estilo y los datos educativos se conservan. No recargues la web antes de completar la migración. Si aparece un error, detente y conserva la copia anterior.
+Esta versión no añade tablas ni migraciones. Si ya estabas en 0.5.0, aparecerá `No migrations to apply`. Si faltan migraciones anteriores, se aplicarán automáticamente. Las preferencias de estilo y los datos educativos se conservan. No recargues la web antes de completar la migración. Si aparece un error, detente y conserva la copia anterior.
 
 ## 4. Actualizar los archivos de diseño
 
@@ -42,9 +42,9 @@ Actualiza `staticfiles/`. No borra la base de datos ni los archivos privados. No
 1. Entra en la pestaña **Web** de PythonAnywhere.
 2. Pulsa el botón verde **Reload**.
 3. Abre la plataforma con HTTPS y pulsa **Ctrl+F5**.
-4. Comprueba que el pie muestra **v0.5.0**, que Calendario muestra **Importar sesiones / Word** y que Personalización permite **Básicos** o **RPG**.
-5. Abre la ficha Word ya importada: debe mostrar tarjetas de retos sin tener que importarla otra vez.
-6. Sigue [la prueba de retos, adaptación y eliminación](RETOS_ADAPTACIONES.md).
+4. Comprueba que el pie muestra **v0.6.0**, que Calendario muestra **Importar sesiones / Word** y que Personalización permite **Básicos** o **RPG**.
+5. En Alumnado → Importar / añadir varios, comprueba la opción **Alumnado, responsables y grupos · ODS**.
+6. Sigue [la guía de importación ODS](IMPORTAR_ODS.md), comenzando por el grupo que quieras probar. Nada se crea hasta confirmar.
 
 ## 6. Comprobar y continuar la prueba
 

@@ -2,6 +2,7 @@
 
 | Documento | Para qué sirve |
 | --- | --- |
+| [Importar ODS](IMPORTAR_ODS.md) | Importar alumnado, responsables y varios grupos desde una hoja, con revisión y sin sobrescribir fichas. |
 | [Retos y adaptaciones](RETOS_ADAPTACIONES.md) | Tarjetas, retos por alumno, NEAE restringida y eliminación de una sesión sin historial. |
 | [Importar Word, CSV y alumnado en lote](IMPORTACIONES.md) | Preparar, revisar y confirmar clases o matrículas sin modificar registros anteriores. |
 | [Notificaciones e idiomas](NOTIFICACIONES_IDIOMAS.md) | Recordatorios privados, cambios sin guardar, selector español/inglés y decoración maker. |

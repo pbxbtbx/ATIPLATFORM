@@ -2600,3 +2600,337 @@ msgstr "No general support planned. You can add it to the session plan."
 
 msgid "Sin pista inicial."
 msgstr "No initial hint."
+
+msgid ""
+"Alumnado, matrículas y responsables importados. Los registros anteriores se "
+"conservan."
+msgstr ""
+"Students, enrolments and responsible contacts imported. Existing records are"
+" preserved."
+
+msgid "Alumnado, responsables y grupos · ODS"
+msgstr "Students, responsible contacts and groups · ODS"
+
+msgid ""
+"Borrador privado: caduca en 24 horas. Si falta un grupo, créalo en otra "
+"pestaña y vuelve a abrir esta vista."
+msgstr ""
+"Private draft: expires in 24 hours. If a group is missing, create it in "
+"another tab and reopen this view."
+
+msgid ""
+"Completa el nombre o desmarca este responsable. El alumno puede importarse "
+"sin este contacto."
+msgstr ""
+"Complete the name or uncheck this responsible contact. The student can be "
+"imported without this contact."
+
+msgid "Confirmar e importar alumnado y responsables"
+msgstr "Confirm and import students and responsible contacts"
+
+msgid "Correo del responsable"
+msgstr "Contact email"
+
+msgid "Correspondencia de grupos"
+msgstr "Group mapping"
+
+msgid "Crear alumno nuevo"
+msgstr "Create new student"
+
+msgid "Duplicados y relaciones"
+msgstr "Duplicates and relationships"
+
+msgid ""
+"El alumno existente no coincide con el nombre y nacimiento revisados. No se "
+"sobrescribe su ficha."
+msgstr ""
+"The existing student does not match the reviewed name and date of birth. "
+"Their record will not be overwritten."
+
+msgid "El archivo no contiene una hoja de cálculo ODS."
+msgstr "The file contains no ODS spreadsheet."
+
+msgid "El archivo no es un ODS válido o excede los límites de seguridad."
+msgstr "The file is not a valid ODS or exceeds security limits."
+
+msgid ""
+"El formato del archivo no coincide con el tipo de importación seleccionado."
+msgstr "The file format does not match the selected import type."
+
+msgid "El grupo debe estar activo y la matrícula dentro de sus fechas."
+msgstr ""
+"The group must be active and the enrolment date within its date range."
+
+msgid "El límite es de 30 pestañas por archivo."
+msgstr "The limit is 30 sheets per file."
+
+msgid "El límite es de 300 alumnos por archivo ODS."
+msgstr "The limit is 300 students per ODS file."
+
+msgid ""
+"Elige pestañas y asigna cada grupo de la hoja a un grupo existente. Deja sin"
+" asignar los grupos que no quieras importar. Puedes importar un solo grupo o"
+" varios juntos."
+msgstr ""
+"Choose sheets and map each spreadsheet group to an existing group. Leave "
+"groups unmapped to exclude them. You can import one group or several "
+"together."
+
+msgid "Espaciado de celda no válido."
+msgstr "Invalid cell spacing."
+
+msgid ""
+"Este contacto no tiene nombre: queda sin seleccionar. Completa su nombre si "
+"quieres incluirlo."
+msgstr ""
+"This contact has no name and is left unchecked. Complete the name to include"
+" it."
+
+msgid "Fecha de incorporación y matrícula"
+msgstr "Joining and enrolment date"
+
+msgid "Ficha existente conservada"
+msgstr "Existing record preserved"
+
+msgid "Ficha nueva"
+msgstr "New record"
+
+msgid "Filas incluidas"
+msgstr "Included rows"
+
+msgid "Grupo en la hoja"
+msgstr "Spreadsheet group"
+
+msgid ""
+"Hay alumnos repetidos entre filas. Revisa y confirma la unión o excluye las "
+"filas repetidas."
+msgstr ""
+"Students are repeated across rows. Review and confirm merging, or exclude "
+"repeated rows."
+
+msgid ""
+"Hay datos por revisar. Comprueba los errores de las pestañas y filas "
+"seleccionadas."
+msgstr ""
+"Some data needs review. Check the errors in the selected sheets and rows."
+
+msgid ""
+"Hay filas de alumnado repetidas. Expándelas y revísalas en la hoja antes de "
+"importar."
+msgstr ""
+"Student rows are repeated. Expand and review them in the spreadsheet before "
+"importing."
+
+msgid ""
+"Hay responsables repetidos. Confirma su reutilización con contactos "
+"idénticos o revisa las filas."
+msgstr ""
+"Responsible contacts are repeated. Confirm reuse with identical contact "
+"details or review the rows."
+
+msgid ""
+"Hay varios responsables idénticos en la plataforma. Revisa los duplicados "
+"antes de importar."
+msgstr ""
+"There are several identical responsible contacts in the platform. Review "
+"duplicates before importing."
+
+msgid "He verificado la tutela legal para los vínculos nuevos"
+msgstr "I have verified legal guardianship for the new relationships"
+
+msgid "Incluir fila"
+msgstr "Include row"
+
+msgid "Incluir responsable"
+msgstr "Include responsible contact"
+
+msgid "Indica el nombre completo de cada alumno incluido."
+msgstr "Enter the full name of each included student."
+
+msgid ""
+"La matrícula existente comienza después de la fecha indicada. Revísala sin "
+"sobrescribir su historial."
+msgstr ""
+"The existing enrolment starts after the specified date. Review it without "
+"overwriting its history."
+
+msgid ""
+"Los alumnos existentes requieren selección expresa y coincidencia de nombre "
+"y nacimiento. Los responsables solo se reutilizan con nombre y contactos "
+"idénticos, y al menos un contacto. Las fichas, matrículas y relaciones "
+"existentes no se sobrescriben."
+msgstr ""
+"Existing students require explicit selection and matching name and date of "
+"birth. Responsible contacts are only reused with identical names and contact"
+" details, and at least one contact detail. Existing records, enrolments and "
+"relationships are not overwritten."
+
+msgid ""
+"Los datos han cambiado desde la revisión. Valida de nuevo antes de "
+"confirmar."
+msgstr "Data has changed since review. Validate again before confirming."
+
+msgid ""
+"Los vínculos nuevos se marcarán como tutor legal por tu confirmación "
+"expresa."
+msgstr ""
+"New relationships will be marked as legal guardians following your explicit "
+"confirmation."
+
+msgid "Los vínculos nuevos serán responsables sin tutela legal verificada."
+msgstr ""
+"New relationships will be responsible contacts without verified legal "
+"guardianship."
+
+msgid "Matrícula existente conservada"
+msgstr "Existing enrolment preserved"
+
+msgid "Nacimiento (opcional)"
+msgstr "Date of birth (optional)"
+
+msgid ""
+"No hay alumnado reconocible. Se necesitan las columnas Nombre Alumno y "
+"Apellido Alumno."
+msgstr ""
+"No recognisable student data. Columns Nombre Alumno and Apellido Alumno are "
+"required."
+
+msgid "No importar este grupo"
+msgstr "Do not import this group"
+
+msgid "Nombre completo revisado"
+msgstr "Reviewed full name"
+
+msgid "Nombre del responsable"
+msgstr "Contact name"
+
+msgid "Nueva matrícula"
+msgstr "New enrolment"
+
+msgid "Pestañas que quieres importar"
+msgstr "Sheets to import"
+
+msgid "Repetición de columnas no válida."
+msgstr "Invalid column repetition."
+
+msgid "Repetición de filas no válida."
+msgstr "Invalid row repetition."
+
+msgid "Responsable comunicado"
+msgstr "Reported responsible contact"
+
+msgid ""
+"Reutilizar responsables con nombre y contactos idénticos tras revisarlos"
+msgstr ""
+"Reuse responsible contacts with identical names and contact details after "
+"review"
+
+msgid "Revisar alumnos y responsables de esta pestaña"
+msgstr "Review students and responsible contacts in this sheet"
+
+msgid "Revisar hoja de alumnado ODS"
+msgstr "Review ODS student spreadsheet"
+
+msgid ""
+"Se excluyen pagos, notas libres, conocimientos, casillas de privacidad y "
+"autorizaciones. Responsable no implica tutor legal, emergencia ni "
+"autorización de recogida. Nada se guarda hasta confirmar."
+msgstr ""
+"Payments, free notes, experience, privacy checkboxes and authorisations are "
+"excluded. Responsible contact does not imply legal guardianship, emergency "
+"contact or collection authorisation. Nothing is saved until confirmation."
+
+msgid ""
+"Se guardará el lote completo en una transacción. Un error no creará "
+"registros parciales. Repetir esta confirmación no duplicará las altas. Las "
+"relaciones existentes conservarán sus permisos y condiciones."
+msgstr ""
+"The complete batch will be saved in one transaction. An error will not "
+"create partial records. Repeating this confirmation will not duplicate "
+"records. Existing relationships retain their permissions and conditions."
+
+msgid "Selecciona una pestaña y asigna al menos un grupo con filas incluidas."
+msgstr "Select a sheet and map at least one group with included rows."
+
+msgid "Sin filas de alumnado reconocibles; esta pestaña no se importará."
+msgstr "No recognisable student rows; this sheet will not be imported."
+
+msgid "Sin grupo indicado"
+msgstr "No group specified"
+
+msgid ""
+"Solo se incluirán las filas marcadas de pestañas seleccionadas y grupos "
+"asignados. Corrige contactos o desmarca un responsable si no quieres "
+"importarlo."
+msgstr ""
+"Only checked rows from selected sheets and mapped groups will be included. "
+"Correct contact details or uncheck a responsible contact to exclude it."
+
+msgid ""
+"Sube una hoja ODS de alumnado y responsables, una ficha DOCX de sesión o un "
+"CSV. También puedes escribir varios nombres. Primero revisarás los datos; "
+"nada se crea al subir el archivo."
+msgstr ""
+"Upload an ODS spreadsheet of students and contacts, a DOCX session sheet or "
+"a CSV. You can also enter several names. Review the data first; uploading "
+"creates no records."
+
+msgid "Teléfono del responsable"
+msgstr "Contact phone"
+
+msgid "Una celda supera el límite de 2000 caracteres."
+msgstr "A cell exceeds the 2000 character limit."
+
+msgid "Unir filas con el mismo nombre completo y nacimiento tras revisarlas"
+msgstr "Merge rows with identical full name and date of birth after review"
+
+msgid "Valor original de nacimiento"
+msgstr "Original date of birth value"
+
+msgid "Vincular alumno existente"
+msgstr "Link existing student"
+
+msgid ""
+"Ya existe un alumno con ese nombre. Selecciónalo expresamente en su fila o "
+"excluye la fila."
+msgstr ""
+"A student with that name already exists. Select them explicitly in the row "
+"or exclude the row."
+
+msgid ""
+"Ya existe un responsable con nombre y contactos idénticos. Confirma su "
+"reutilización o revisa la fila."
+msgstr ""
+"A responsible contact with identical name and details already exists. "
+"Confirm reuse or review the row."
+
+msgid "alumnos nuevos"
+msgstr "new students"
+
+msgid "contactos no incluidos"
+msgstr "excluded contacts"
+
+msgid "filas de alumnado"
+msgstr "student rows"
+
+msgid "filas excluidas"
+msgstr "excluded rows"
+
+msgid "responsables nuevos"
+msgstr "new responsible contacts"
+
+msgid "v0.6.0 ·"
+msgstr "v0.6.0 ·"
+
+msgid "Es una persona diferente aunque coincida su nombre; lo he comprobado"
+msgstr "This is a different person despite the matching name; I have checked"
+
+msgid ""
+"El nombre coincide con otro responsable y los contactos difieren. Revisa los"
+" datos o confirma expresamente que es una persona diferente."
+msgstr ""
+"The name matches another responsible contact but the contact details differ."
+" Review the data or explicitly confirm this is a different person."
+
+msgid "El texto de una celda tiene demasiados niveles de formato."
+msgstr "Cell text has too many formatting levels."

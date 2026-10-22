@@ -16,7 +16,7 @@ from core.services import move_student, session_errors
 
 
 def permitted(user,kind):
-    if kind=='students': require_admin(user)
+    if kind in ('students','ods'): require_admin(user)
     elif not educational(user): raise PermissionDenied
 
 
@@ -69,7 +69,7 @@ def candidates(draft, options):
 def import_start(request):
     if not educational(request.user): raise PermissionDenied
     form=UploadImportForm(request.POST or None,request.FILES or None)
-    if not admin(request.user): form.fields['kind'].choices=[choice for choice in form.fields['kind'].choices if choice[0]!='students']
+    if not admin(request.user): form.fields['kind'].choices=[choice for choice in form.fields['kind'].choices if choice[0] not in ('students','ods')]
     if request.method=='POST' and form.is_valid():
         kind=form.cleaned_data['kind']; permitted(request.user,kind)
         try:
@@ -77,9 +77,13 @@ def import_start(request):
             initial={}; source=''
             if upload:
                 suffix=upload.name.lower().rsplit('.',1)[-1]
-                if suffix!=('docx' if kind=='word' else 'csv'): raise ValidationError(_('Usa un archivo DOCX para fichas de Word o CSV para los otros tipos.'))
+                expected={'word':'docx','ods':'ods'}.get(kind,'csv')
+                if suffix!=expected: raise ValidationError(_('El formato del archivo no coincide con el tipo de importación seleccionado.'))
                 data=read_upload(upload)
-                if kind=='word':
+                if kind=='ods':
+                    from core.ods_importing import parse_ods
+                    ods_payload=parse_ods(data);rows=ods_payload['rows']
+                elif kind=='word':
                     initial=parse_docx(data); source=initial.pop('source'); rows=[{}]
                 else: rows=parse_csv(data,kind)
             else:
@@ -87,7 +91,7 @@ def import_start(request):
                 if not 1<=len(rows)<=200: raise ValidationError(_('El límite es de 200 registros por importación.'))
             # Borradores privados, no se conserva el archivo original ni sus metadatos personales.
             ImportDraft.objects.filter(author=request.user,created_at__lt=timezone.now()-timedelta(days=1)).delete()
-            draft=ImportDraft.objects.create(author=request.user,kind=kind,payload={'rows':rows,'initial':initial,'source':source})
+            draft=ImportDraft.objects.create(author=request.user,kind=kind,payload=ods_payload if kind=='ods' else {'rows':rows,'initial':initial,'source':source})
             audit(request.user,'import:draft',draft)
             return redirect('import_preview',pk=draft.pk)
         except ValidationError as exc: form.add_error(None,exc)
@@ -100,6 +104,7 @@ def import_start(request):
 def import_preview(request,pk):
     draft=get_object_or_404(ImportDraft,pk=pk,author=request.user)
     permitted(request.user,draft.kind)
+    if draft.kind=='ods':return redirect('ods_preview',pk=pk)
     if draft.created_at<timezone.now()-timedelta(days=1):
         draft.delete(); messages.error(request,_('El borrador ha caducado. Vuelve a importar el archivo.')); return redirect('import_start')
     if draft.committed:
