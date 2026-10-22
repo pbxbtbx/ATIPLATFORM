@@ -34,7 +34,8 @@ def reports(request):
             return response
         from reportlab.lib.styles import getSampleStyleSheet
         from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer
-        from xml.sax.saxutils import escape
+        # Security review: escaping output only, no XML parser.
+        from xml.sax.saxutils import escape  # nosec B406
         output=io.BytesIO(); doc=SimpleDocTemplate(output); styles=getSampleStyleSheet()
         body=[Paragraph(_('Atigra Makers · Informe para familia'),styles['Title']),Paragraph(escape(student.name),styles['Heading2']),Paragraph(escape(configured_text(current()['report_template'],'report_template')),styles['BodyText'])]
         for row in report_rows:

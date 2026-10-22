@@ -11,6 +11,7 @@ from .forms import ResourceForm,DynamicStudentForm
 from .services import move_student,snapshot,save_versioned
 from .configuration import DEFAULT
 
+@override_settings(ENVIRONMENT='development')
 class PlatformTests(TestCase):
     def setUp(self):
         self.admin=User.objects.create_user('admin',password='Example-password-948!'); Profile.objects.create(user=self.admin,role='admin',development_access=True,sensitive_access=True)

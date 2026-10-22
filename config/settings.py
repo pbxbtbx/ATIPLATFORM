@@ -4,9 +4,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 ENVIRONMENT = os.getenv('APP_ENV', 'development')
 if ENVIRONMENT not in ('development','testing','staging','production','demo'):
     raise RuntimeError('APP_ENV no reconocido')
-DEBUG = os.getenv('DEBUG', '1') == '1' and ENVIRONMENT != 'production'
-SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', 'local-development-only-do-not-deploy')
-if ENVIRONMENT == 'production' and SECRET_KEY == 'local-development-only-do-not-deploy':
+# Public demo/staging must never default to an interactive traceback.
+DEBUG = os.getenv('DEBUG', '1' if ENVIRONMENT in ('development', 'testing') else '0') == '1' and ENVIRONMENT != 'production'
+# Security review: local fallback only; production rejects it; dashboard warns for public demo.
+SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', 'local-development-only-do-not-deploy')  # nosec B105
+# Public production rejects the documented local placeholder.
+if ENVIRONMENT == 'production' and SECRET_KEY == 'local-development-only-do-not-deploy':  # nosec B105
     raise RuntimeError('Configure DJANGO_SECRET_KEY antes de producción')
 ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', 'localhost,127.0.0.1,testserver').split(',')
 INSTALLED_APPS = ['django.contrib.auth','django.contrib.contenttypes','django.contrib.sessions','django.contrib.messages','django.contrib.staticfiles','core']
@@ -35,7 +38,7 @@ SESSION_COOKIE_HTTPONLY = True
 SESSION_COOKIE_SAMESITE = 'Lax'
 SECURE_CONTENT_TYPE_NOSNIFF = True
 X_FRAME_OPTIONS = 'DENY'
-if ENVIRONMENT == 'production':
+if ENVIRONMENT == 'production' or os.getenv('HTTPS_ONLY', '0') == '1':
     SESSION_COOKIE_SECURE = CSRF_COOKIE_SECURE = True
     SECURE_SSL_REDIRECT = True
     SECURE_HSTS_SECONDS = 31536000

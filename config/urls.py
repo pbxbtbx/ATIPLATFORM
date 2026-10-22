@@ -2,6 +2,7 @@ from django.urls import path
 from django.contrib.auth import views as auth
 from core import views as v
 urlpatterns=[
+path('developer/security/',v.security_view,name='security'),
 path('accessibility/',v.accessibility_view,name='accessibility'),
 path('practice/',v.practice_view,name='practice'),
 path('imports/<uuid:pk>/ods/',v.ods_preview,name='ods_preview'),

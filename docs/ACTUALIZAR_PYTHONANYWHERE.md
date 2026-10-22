@@ -61,3 +61,18 @@ Más información: [Notificaciones e idiomas](NOTIFICACIONES_IDIOMAS.md), [Perso
 ## Recuperación ante una actualización fallida
 
 Conserva la ruta de la copia indicada en el paso 1 y anota el mensaje de error sin contraseñas. No sustituyas la base mientras el servicio esté escribiendo. Sigue el procedimiento de [operación y recuperación](OPERATIONS.md): detener escritores, verificar la copia, restaurar sobre una ruta nueva y utilizar código compatible antes de devolver el tráfico. Si solo quieres cambiar la apariencia, usa Personalización y guarda Atigra claro; no necesitas revertir la base de datos.
+
+## Actualización 0.8.0: panel de ciberseguridad
+
+Realiza la copia previa habitual. Después de `git pull --ff-only`, instala
+`.venv/bin/python -m pip install -r requirements.txt` (nuevo analizador XML seguro).
+Esta actualización no añade migraciones; puedes ejecutar el migrate habitual.
+Recoge estáticos y recarga Web. Entra en Desarrollador → Abrir panel de ciberseguridad.
+
+Para disponer de análisis locales recientes, instala `requirements-security.txt`
+y ejecuta `APP_ENV=demo .venv/bin/python manage.py security_scan` desde consola.
+La web no inicia análisis. Si la red del plan gratuito los impide, queda pendiente
+y el comando termina con error explícito. No regeneres el manifiesto descargado.
+Lee [SECURITY.md](SECURITY.md) para revisar DEBUG, HTTPS y la transición segura de
+demo a producción **antes de seguir registrando datos reales**. No cambies de
+entorno sin fijar las rutas de la BD y los adjuntos existentes.

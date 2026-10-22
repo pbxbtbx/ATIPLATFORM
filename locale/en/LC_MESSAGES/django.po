@@ -3497,3 +3497,187 @@ msgstr "Main navigation"
 msgid ""
 "La base de práctica contiene tablas ajenas. Usa un archivo independiente."
 msgstr "The practice database contains unrelated tables. Use a separate file."
+
+msgid "Abrir comprobaciones del repositorio en GitHub"
+msgstr "Open repository checks on GitHub"
+
+msgid "Abrir panel de ciberseguridad"
+msgstr "Open cybersecurity dashboard"
+
+msgid "Accesos a este panel"
+msgstr "Access to this dashboard"
+
+msgid "Análisis de código y dependencias"
+msgstr "Code and dependency analysis"
+
+msgid "Análisis estático de Python"
+msgstr "Python static analysis"
+
+msgid "Archivos diferentes, añadidos o ausentes:"
+msgstr "Changed, added or missing files:"
+
+msgid "Clave de aplicación propia y suficientemente larga"
+msgstr "Unique application key of sufficient length"
+
+msgid ""
+"Comparación SHA-256 con el manifiesto del repositorio. No sustituye una "
+"firma de lanzamiento: si alguien modifica código y manifiesto, esta "
+"comprobación no basta."
+msgstr ""
+"SHA-256 comparison against the repository manifest. This does not replace a "
+"release signature: if both code and manifest are changed, this check is "
+"insufficient."
+
+msgid "Comprobación registrada en los últimos 7 días"
+msgstr "Check recorded within the last 7 days"
+
+msgid "Comprobación superada"
+msgstr "Check passed"
+
+msgid "Configuración del servidor"
+msgstr "Server configuration"
+
+msgid "Consulta de seguridad registrada"
+msgstr "Security dashboard access recorded"
+
+msgid "Cookies de sesión protegidas frente a JavaScript"
+msgstr "Session cookies protected from JavaScript access"
+
+msgid "Cookies de sesión y CSRF solo por HTTPS"
+msgstr "Session and CSRF cookies restricted to HTTPS"
+
+msgid "Copias y recuperación"
+msgstr "Backups and recovery"
+
+msgid "DESARROLLADOR · CIBERSEGURIDAD"
+msgstr "DEVELOPER · CYBERSECURITY"
+
+msgid "Dependencias instaladas coinciden con las versiones declaradas"
+msgstr "Installed dependencies match declared versions"
+
+msgid "Depuración desactivada"
+msgstr "Debug mode disabled"
+
+msgid "Diagnóstico seguro"
+msgstr "Safe diagnostics"
+
+msgid "Entorno de producción para datos reales"
+msgstr "Production environment for real data"
+
+msgid ""
+"Este panel aporta comprobaciones parciales. No certifica que la plataforma "
+"esté libre de vulnerabilidades. Los análisis pendientes o caducados "
+"requieren revisión."
+msgstr ""
+"This dashboard provides partial checks. It does not certify that the "
+"platform is free of vulnerabilities. Pending or expired analyses require "
+"review."
+
+msgid "HSTS configurado"
+msgstr "HSTS configured"
+
+msgid "Hallazgos:"
+msgstr "Findings:"
+
+msgid "Hosts explícitos sin comodín"
+msgstr "Explicit hosts without wildcards"
+
+msgid "Integridad del código instalado"
+msgstr "Installed code integrity"
+
+msgid "Integridad y seguridad"
+msgstr "Integrity and security"
+
+msgid "Integridad, seguridad y diagnóstico"
+msgstr "Integrity, security and diagnostics"
+
+msgid ""
+"La auditoría interna conserva el usuario responsable, sin copiar contenido "
+"sensible."
+msgstr ""
+"The internal audit retains the responsible user without copying sensitive "
+"content."
+
+msgid ""
+"La fecha registrada no garantiza que la copia siga disponible ni sustituye "
+"un simulacro completo de recuperación."
+msgstr ""
+"The recorded date does not guarantee that the backup is still available or "
+"replace a full recovery exercise."
+
+msgid ""
+"Los análisis se ejecutan mediante el proceso de repositorio o una consola "
+"autorizada. Esta pantalla no ejecuta comandos, no permite subir código y no "
+"envía datos personales a analizadores."
+msgstr ""
+"Analyses run through the repository process or an authorized console. This "
+"screen does not execute commands, accept code uploads or send personal data "
+"to scanners."
+
+msgid "Middleware CSRF activo"
+msgstr "CSRF middleware enabled"
+
+msgid "No comprobado"
+msgstr "Not checked"
+
+msgid ""
+"No se muestran valores de claves, rutas privadas, credenciales ni datos "
+"educativos. Usar demo con datos reales requiere corregir su configuración y "
+"planificar el paso a producción con copia y recuperación."
+msgstr ""
+"Key values, private paths, credentials and educational data are not "
+"displayed. Using demo with real data requires correcting its configuration "
+"and planning a move to production with backup and recovery."
+
+msgid ""
+"Pendiente, no verificable o caducado. Se necesita un análisis del código "
+"actual de las últimas 24 horas."
+msgstr ""
+"Pending, unverifiable or expired. An analysis of the current code from the "
+"last 24 hours is required."
+
+msgid ""
+"Procedimiento de análisis, revisión, diagnóstico y respuesta a incidentes."
+msgstr "Analysis, review, diagnostics and incident response procedure."
+
+msgid "Protección contra marcos y detección de contenido"
+msgstr "Frame and content sniffing protection"
+
+msgid "Redirección a HTTPS"
+msgstr "HTTPS redirect"
+
+msgid ""
+"Referencia y fecha de incidencias. Las trazas y los mensajes originales no "
+"se muestran aquí. Investiga en un entorno aislado con datos sintéticos; "
+"mantén DEBUG desactivado en el servicio público."
+msgstr ""
+"Incident reference and date. Original messages and tracebacks are not "
+"displayed here. Investigate in an isolated environment using synthetic data;"
+" keep DEBUG disabled on the public service."
+
+msgid ""
+"Revisa la configuración, los análisis de vulnerabilidades y el estado de "
+"integridad del código."
+msgstr ""
+"Review configuration, vulnerability analyses and code integrity status."
+
+msgid "Revisar"
+msgstr "Review required"
+
+msgid "Revisar: no hay una comprobación reciente"
+msgstr "Review required: no recent check"
+
+msgid "Sin incidencias registradas."
+msgstr "No incidents recorded."
+
+msgid "Volver a Desarrollador"
+msgstr "Back to Developer"
+
+msgid "Vulnerabilidades conocidas en dependencias"
+msgstr "Known dependency vulnerabilities"
+
+msgid "v0.8.0 ·"
+msgstr "v0.8.0 ·"
+
+msgid "Último análisis vinculado al código actual:"
+msgstr "Latest analysis linked to the current code:"

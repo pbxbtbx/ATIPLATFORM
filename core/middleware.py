@@ -21,7 +21,8 @@ class SafeErrorMiddleware(MiddlewareMixin):
         try:
             # Never persist str(exception), URL, user, query string or traceback.
             TechnicalEvent.objects.create(code='APPLICATION_ERROR')
-        except Exception:
+        # Security review: failed redacted telemetry must not mask the original exception.
+        except Exception:  # nosec B110
             pass
         return None
 

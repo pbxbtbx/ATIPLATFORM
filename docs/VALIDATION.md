@@ -69,3 +69,14 @@ Pruebas de alcance por autor (también para administración), completar/reabrir 
 Chromium: 11 pantallas en inglés; crear, completar y reabrir recordatorio; campana con aviso de cambios; limpiar el aviso al revertir el campo; bloquear cambio de idioma con cambios pendientes; conservar contenido al fallar la validación; volver a español. Sin errores JavaScript y sin desbordamiento de Notificaciones a 768 px. La paleta operativa es distinta de la escala de aprendizaje.
 
 Migración 0004 aplicada sobre una copia SQLite anterior: recuentos de todas las tablas de aplicación y estilos por usuario conservados; idioma inicial español; integridad y claves foráneas correctas. Se ha vuelto a ejecutar el comando de backup con restauración temporal. El catálogo inglés contiene 656 mensajes compilados, incluidos contextos para distinguir Inicio/Home de Inicio/Start. Estas comprobaciones se hicieron en desarrollo; no afirman que PythonAnywhere se haya actualizado automáticamente.
+
+## 0.8.0 — ciberseguridad
+
+- `APP_ENV=testing .venv/bin/python manage.py test --noinput`: **96 pruebas correctas**, incluidas 8 del nuevo módulo. La suite de configuración fija explícitamente su entorno de desarrollo para probar el aislamiento aunque CI use testing.
+- Acceso anónimo redirigido; superusuario sin permiso de desarrollo rechazado; desarrollador no recibe acceso educativo. GET no ejecuta subprocesos, POST rechazado y CSRF probado.
+- Cambios, altas, ausencias y enlaces simbólicos en código detectados; manifiesto ausente no comprobado; comprobación CLI sin escribir.
+- Informes corruptos, caducados, de otro entorno o huella rechazados; ausencia y fallos de herramientas nunca se convierten en éxito. Informe agregado con permiso 0600; secretos no renderizados.
+- Bandit 1.8.6: **0 hallazgos** tras reforzar XML con defusedxml y revisar excepciones puntuales documentadas.
+- pip-audit 2.9.0 contra dependencias de ejecución fijadas: **0 vulnerabilidades conocidas** en la consulta realizada. Esto no acredita ausencia de fallos, seguridad de OS/proxy ni todas las clases de vulnerabilidad.
+- `manage.py check`, `makemigrations --check --dry-run` y `git diff --check` correctos; no hay migración de datos nueva.
+- Pendiente ejecutar el workflow alojado de GitHub y validar el despliegue PythonAnywhere y su configuración HTTPS/DEBUG/clave. No se ha realizado una auditoría independiente, prueba de intrusión ni revisión legal.

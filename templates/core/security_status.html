@@ -1,0 +1,1 @@
+{% load i18n %}{% if status == 'ok' %}✓ {% translate "Comprobación superada" %}{% elif status == 'warning' %}⚠ {% translate "Revisar" %}{% else %}? {% translate "No comprobado" %}{% endif %}

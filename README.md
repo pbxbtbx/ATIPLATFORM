@@ -145,3 +145,7 @@ Añade o actualiza una entrada `msgid`/`msgstr` en el `.po` para cada texto nuev
 ```
 
 Versiona tanto `django.po` como `django.mo`. El archivo compilado se entrega en el repositorio: **no necesitas instalar gettext ni polib en PythonAnywhere para ejecutar la aplicación**. Las dependencias de producción siguen en `requirements.txt`.
+
+### Ciberseguridad e integridad
+
+En **Desarrollador → Abrir panel de ciberseguridad** se comprueba configuración, integridad del código y evidencia reciente de análisis. [Guía, módulos y límites](docs/SECURITY.md). Los analizadores se ejecutan fuera de la web; no es una certificación de ausencia de vulnerabilidades.

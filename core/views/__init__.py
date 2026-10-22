@@ -21,3 +21,5 @@ from .ods import ods_preview
 
 from .practice import practice_view
 from .accessibility import accessibility_view
+
+from .security import security_view

@@ -5,7 +5,8 @@ import zipfile
 import unicodedata
 from datetime import date
 from decimal import Decimal, InvalidOperation
-from xml.etree import ElementTree as ET
+from defusedxml import ElementTree as ET
+from defusedxml.common import DefusedXmlException
 from django.core.exceptions import ValidationError
 from django.utils.translation import gettext as _
 
@@ -71,7 +72,7 @@ def parse_ods(data):
             xml=archive.read('content.xml')
             if b'\x00' in xml or b'<!DOCTYPE' in xml.upper() or b'<!ENTITY' in xml.upper():raise ValueError()
             root=ET.fromstring(xml)
-    except (zipfile.BadZipFile,KeyError,ValueError,ET.ParseError,RuntimeError,NotImplementedError):
+    except (zipfile.BadZipFile,KeyError,ValueError,ET.ParseError, DefusedXmlException,RuntimeError,NotImplementedError):
         raise ValidationError(_('El archivo no es un ODS válido o excede los límites de seguridad.'))
     sheets=[];rows=[];group_sources=[]
     spreadsheet=root.find(f'.//{{{OFFICE}}}spreadsheet')
