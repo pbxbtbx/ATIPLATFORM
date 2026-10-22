@@ -269,7 +269,7 @@ class AppearanceTests(TestCase):
     def test_preference_is_personal_and_persists_after_login(self):
         response=self.client.post('/appearance/',{'theme':'classic'},follow=True)
         self.assertEqual(response.status_code,200)
-        self.assertContains(response,'<body class="theme-classic">',html=False)
+        self.assertContains(response,'<body class="theme-classic learning-palette-rpg">',html=False)
         self.user.profile.refresh_from_db();self.other.profile.refresh_from_db()
         self.assertEqual(self.user.profile.theme,'classic');self.assertEqual(self.other.profile.theme,'rpg')
         self.client.logout();self.client.force_login(self.user)
@@ -278,7 +278,7 @@ class AppearanceTests(TestCase):
     def test_all_styles_render_and_invalid_style_is_rejected(self):
         for theme in ['rpg','classic','night']:
             with self.subTest(theme=theme):
-                self.assertContains(self.client.post('/appearance/',{'theme':theme},follow=True),'class="theme-'+theme+'"')
+                self.assertContains(self.client.post('/appearance/',{'theme':theme},follow=True),'class="theme-'+theme+' learning-palette-rpg"')
         self.client.post('/appearance/',{'theme':'not-a-theme'})
         self.user.profile.refresh_from_db();self.assertEqual(self.user.profile.theme,'night')
     def test_login_and_csrf_required_for_changes(self):

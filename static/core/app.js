@@ -11,6 +11,8 @@
  if(!form)return;
  const original=document.body.className,originalValue=form.dataset.savedTheme||'rpg';
  const apply=value=>{document.body.classList.remove('theme-rpg','theme-classic','theme-night');document.body.classList.add('theme-'+value);};
+ const palette=form.elements.learning_palette, savedPalette=palette.value;
+ palette.addEventListener('change',()=>{document.body.classList.remove('learning-palette-rpg','learning-palette-basic');document.body.classList.add('learning-palette-'+palette.value);});
  form.querySelectorAll('input[name="theme"]').forEach(input=>input.addEventListener('change',()=>apply(input.value)));
- document.getElementById('reset-theme').addEventListener('click',()=>{document.body.className=original;form.querySelectorAll('input[name="theme"]').forEach(input=>input.checked=input.value===originalValue);document.dispatchEvent(new Event('appearance-reset'));});
+ document.getElementById('reset-theme').addEventListener('click',()=>{document.body.className=original;palette.value=savedPalette;form.querySelectorAll('input[name="theme"]').forEach(input=>input.checked=input.value===originalValue);document.dispatchEvent(new Event('appearance-reset'));});
 })();

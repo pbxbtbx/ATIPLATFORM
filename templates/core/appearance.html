@@ -15,6 +15,7 @@
       </label>
       {% endfor %}
     </fieldset>
+    <p>{{ form.learning_palette.label_tag }} {{ form.learning_palette }} {{ form.learning_palette.errors }}</p><p>{% translate "La paleta básica usa etiquetas educativas y colores suaves. No cambia los estados ni el tema general." %}</p>
     <div class="form-actions"><span data-save-state class="muted">{% translate "Estilo guardado en tu cuenta" %}</span><button class="button light" type="button" id="reset-theme">{% translate "Volver al estilo guardado" %}</button><button class="button">{% translate "Guardar mi estilo" %}</button></div>
   </form>
 </section>

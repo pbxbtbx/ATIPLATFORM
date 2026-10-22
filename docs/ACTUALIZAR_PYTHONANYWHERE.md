@@ -1,6 +1,6 @@
-# Actualizar PythonAnywhere: notificaciones, idiomas y módulos (0.3.0)
+# Actualizar PythonAnywhere: importaciones y paleta básica (0.4.0)
 
-Esta entrega añade Notificaciones, avisos de cambios pendientes, selector español/inglés, decoración maker y reorganización modular. La nueva migración guarda el idioma por usuario. No cambia los flujos de clase ni transforma los registros educativos.
+Esta entrega añade importación revisable de fichas Word y CSV, alta de varios alumnos y una paleta básica independiente del tema. Incluye también las mejoras anteriores de notificaciones e idiomas. No transforma los registros educativos existentes.
 
 ## 1. Copia de seguridad previa
 
@@ -21,13 +21,13 @@ git pull --ff-only
 
 Si Git indica cambios locales o no puede avanzar, detente y revisa el mensaje. No uses reset, clean ni fuerces la actualización. El archivo WSGI y la clave privada se configuraron fuera del checkout y no se sustituyen con estos comandos.
 
-## 3. Guardar la preferencia de idioma en la base de datos
+## 3. Actualizar la estructura de la base de datos
 
 ```sh
 APP_ENV=demo .venv/bin/python manage.py migrate --noinput
 ```
 
-La migración nueva se llama `0004_profile_language`. Añade la columna de idioma a los perfiles de usuario; las preferencias de estilo y los datos educativos se conservan. No recargues la web antes de completar la migración. Si aparece un error, detente y conserva la copia anterior.
+La migración nueva se llama `0005_profile_learning_palette_importdraft`. Añade la preferencia de colores y la tabla de borradores privados de importación. Si falta `0004_profile_language`, también se aplica. Las preferencias de estilo y los datos educativos se conservan. No recargues la web antes de completar la migración. Si aparece un error, detente y conserva la copia anterior.
 
 ## 4. Actualizar los archivos de diseño
 
@@ -42,7 +42,8 @@ Actualiza `staticfiles/`. No borra la base de datos ni los archivos privados. No
 1. Entra en la pestaña **Web** de PythonAnywhere.
 2. Pulsa el botón verde **Reload**.
 3. Abre la plataforma con HTTPS y pulsa **Ctrl+F5**.
-4. Comprueba que aparece **Notificaciones**, la campana y el selector de idioma.
+4. Comprueba que el pie muestra **v0.4.0**, que Calendario muestra **Importar sesiones / Word** y que Personalización permite **Básicos** o **RPG**.
+5. Sigue [la prueba de importación de tu Word](IMPORTACIONES.md). No se crea ninguna clase hasta confirmar.
 
 ## 6. Comprobar y continuar la prueba
 

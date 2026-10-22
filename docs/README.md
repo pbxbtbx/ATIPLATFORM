@@ -2,9 +2,10 @@
 
 | Documento | Para qué sirve |
 | --- | --- |
+| [Importar Word, CSV y alumnado en lote](IMPORTACIONES.md) | Preparar, revisar y confirmar clases o matrículas sin modificar registros anteriores. |
 | [Notificaciones e idiomas](NOTIFICACIONES_IDIOMAS.md) | Recordatorios privados, cambios sin guardar, selector español/inglés y decoración maker. |
 | [Personalización y colores](PERSONALIZACION.md) | Elegir estilo por cuenta, interpretar la escala y conservar los estados educativos. |
-| [Actualizar PythonAnywhere](ACTUALIZAR_PYTHONANYWHERE.md) | Copia previa, descargar cambios, migrar idioma, actualizar estáticos y recargar sin perder la prueba. |
+| [Actualizar PythonAnywhere](ACTUALIZAR_PYTHONANYWHERE.md) | Copia previa, descargar cambios, aplicar migraciones, actualizar estáticos y recargar sin perder la prueba. |
 | [Acceder a la plataforma](ACCESO.md) | Distinguir servidor local y cloud, preparar la demo, elegir contraseña y entrar. |
 | [Prueba guiada con dos alumnos](PRUEBA_DOS_ALUMNOS.md) | Registrar una clase, observar ritmos distintos, comprobar historial y preparar informes. |
 | [Instalación general](../README.md) | Dependencias, migraciones, primera cuenta y comandos habituales. |

@@ -1,0 +1,6 @@
+{% extends 'core/base.html' %}{% load i18n %}{% block content %}
+<div class="page-heading"><h1>{% translate "Importar y añadir en lote" %}</h1></div>
+<section class="card form-card"><p>{% translate "Sube una ficha DOCX para preparar una sesión, un CSV de sesiones o alumnado, o escribe varios nombres. Primero revisarás los datos; nada se crea al subir el archivo." %}</p>
+<p><a href="{% url 'import_template' 'sessions' %}">{% translate "Plantilla CSV de sesiones" %}</a>{% if is_admin %} · <a href="{% url 'import_template' 'students' %}">{% translate "Plantilla CSV de alumnado" %}</a>{% endif %}</p>
+<p>{% translate "CSV: UTF-8, separado por punto y coma o coma. Fechas AAAA-MM-DD; inicio de sesión AAAA-MM-DDTHH:MM, hora de Madrid. Máximo 200 filas y 2 MB. No incluyas información restringida." %}</p>
+<form method="post" enctype="multipart/form-data" data-dirty>{% csrf_token %}{{ form.as_p }}<button class="button">{% translate "Preparar importación" %}</button></form></section>{% endblock %}

@@ -2,6 +2,7 @@ from django.urls import path
 from django.contrib.auth import views as auth
 from core import views as v
 urlpatterns=[
+path('imports/',v.import_start,name='import_start'),path('imports/template/<str:kind>/',v.import_template,name='import_template'),path('imports/<uuid:pk>/',v.import_preview,name='import_preview'),
 path('notifications/',v.notifications,name='notifications'),path('notifications/<uuid:pk>/toggle/',v.task_toggle,name='task_toggle'),path('language/',v.set_language,name='set_language'),
 path('login/',auth.LoginView.as_view(template_name='core/login.html'),name='login'),path('logout/',auth.LogoutView.as_view(),name='logout'),
 path('',v.home,name='home'),path('appearance/',v.appearance,name='appearance'),path('groups/',v.group_list,name='groups'),path('groups/new/',v.group_edit,name='group_new'),path('groups/<uuid:pk>/',v.group_detail,name='group'),path('groups/<uuid:pk>/edit/',v.group_edit,name='group_edit'),

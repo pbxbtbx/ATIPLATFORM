@@ -39,3 +39,11 @@ La escala visual incluye los cinco colores, pero **no añade ni cambia los estad
 ## Validación
 
 37 pruebas correctas, incluidas autenticación, CSRF, persistencia de preferencias y aislamiento entre cuentas. Comprobación sobre una copia SQLite anterior a la migración: recuentos de alumnos, aprendizaje, asistencia, matrículas y perfiles conservados. Chromium: los tres estilos guardan y persisten, la vista previa no guarda por sí sola, su cancelación funciona, la leyenda muestra cinco colores y no hay desbordamiento en el historial a 768 px ni errores JavaScript. Contraste de texto de la leyenda: mínimo 5,40:1 en claro y 7,79:1 en ambos temas oscuros. Esto no sustituye una auditoría completa de accesibilidad.
+
+## Paleta básica o RPG (0.4.0)
+
+En **Personalización → Colores del aprendizaje**, elige **Básicos** o **RPG** y pulsa **Guardar mi estilo**. La vista previa permite probar la elección y volver a lo guardado. Se guarda por cuenta y puede combinarse con cualquiera de los tres temas generales.
+
+La paleta básica reduce la escala visual a gris (sin iniciar o pendiente de retomar), azul (en proceso o completado con apoyo) y verde (consolidado o autónomo). Conserva todas las etiquetas educativas: compartir color no fusiona estados. Oculta gemas y el subtítulo «Legendario». La paleta RPG mantiene la escala anterior. La elección no modifica registros, rúbricas, permisos ni aprendizaje demostrado. Los colores se reservan al aprendizaje; las notificaciones mantienen su estilo operativo.
+
+Implementación: `Profile.learning_palette`, formulario/vista de apariencia y `static/core/basic.css`, cargado después de los temas. La migración `0005` mantiene RPG para las cuentas existentes.

@@ -88,4 +88,5 @@ class EditUserForm(forms.Form):
 
 
 class AppearanceForm(forms.Form):
+    learning_palette=forms.ChoiceField(label=_("Colores del aprendizaje"),choices=Profile._meta.get_field("learning_palette").choices,required=False)
     theme=forms.ChoiceField(label=_('Elige tu estilo'),choices=Profile._meta.get_field('theme').choices,widget=forms.RadioSelect)

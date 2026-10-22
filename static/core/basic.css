@@ -1,0 +1,16 @@
+/* Preferencia independiente del tema; solo afecta al aprendizaje. */
+body.learning-palette-basic .rarity-gem {display:none}
+body.learning-palette-basic [class*="rarity-"] {text-shadow:none;box-shadow:none;background-image:none}
+body.learning-palette-basic .rarity-scale {display:none}
+.basic-legend {display:none}
+body.learning-palette-basic .basic-legend {display:block}
+body.learning-palette-basic .rpg-explanation {display:none}
+.import-source {white-space:pre-wrap;overflow-wrap:anywhere;max-height:30rem;overflow:auto}
+.import-table {width:100%;border-collapse:collapse}.import-table td,.import-table th {padding:12px;border-bottom:1px solid #8995a344;text-align:left}
+body.learning-palette-basic .rarity-common,body.learning-palette-basic .rarity-paused {--progress-color:#526070;--progress-bg:#f0f3f7;--progress-border:#aab4c2}
+body.learning-palette-basic .rarity-uncommon,body.learning-palette-basic .rarity-rare {--progress-color:#245c78;--progress-bg:#edf5fa;--progress-border:#8badc0}
+body.learning-palette-basic .rarity-epic,body.learning-palette-basic .rarity-legendary {--progress-color:#28633e;--progress-bg:#edf7f0;--progress-border:#8ab79a}
+body.learning-palette-basic .legendary-caption {display:none}
+body.learning-palette-basic select[data-rarity] {color:#245c78;background:#edf5fa;border-color:#8badc0}
+body.learning-palette-basic select[data-rarity="common"],body.learning-palette-basic select[data-rarity="paused"] {color:#526070;background:#f0f3f7;border-color:#aab4c2}
+body.learning-palette-basic select[data-rarity="epic"],body.learning-palette-basic select[data-rarity="legendary"] {color:#28633e;background:#edf7f0;border-color:#8ab79a}

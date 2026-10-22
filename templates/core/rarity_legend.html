@@ -1,5 +1,6 @@
 {% load i18n %}<aside class="rarity-guide" aria-label="{% translate "Colores del aprendizaje por objetivo" %}">
   <div class="rarity-guide-heading"><span aria-hidden="true">◇</span><strong>{% translate "Colores del aprendizaje" %}</strong><small>{% translate "Por objetivo, a tu propio ritmo" %}</small></div>
   <ol class="rarity-scale">{% for tier in learning_rarities %}<li class="rarity-{{ tier.key }}"><span class="rarity-gem" aria-hidden="true">◆</span><span><strong>{{ tier.name }}</strong><small>{{ tier.color }}</small></span></li>{% endfor %}</ol>
-  <p>{% translate "«Legendario» se refiere al objetivo de ese registro, no a todo el curso. Los estados los registra el docente." %}</p>
+  <p class="basic-legend">{% translate "Gris: sin iniciar. Azul: en proceso o completado con apoyo. Verde: aprendizaje consolidado o autónomo. Consulta siempre la etiqueta del estado." %}</p>
+  <p class="rpg-explanation">{% translate "«Legendario» se refiere al objetivo de ese registro, no a todo el curso. Los estados los registra el docente." %}</p>
 </aside>

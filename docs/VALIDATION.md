@@ -1,3 +1,16 @@
+# Validación de importaciones y paleta · 0.4.0
+
+- Suite completa: 54 pruebas, todas correctas. Incluye las pruebas anteriores y nueve nuevas de importación/paleta.
+- Lotes de alumnado: subida sin crear registros, revisión, matrícula de dos personas, capacidad insuficiente y duplicados, revalidación al confirmar y confirmación repetida sin duplicar.
+- Sesiones: extracción DOCX, copia del contenido, estado planificado sin asistencia, campos obligatorios, conflictos entre filas y rechazo completo del lote.
+- Seguridad: borradores ajenos inaccesibles, caducidad, grupos ajenos, desarrollo sin acceso educativo, CSV malformados y DOCX inválidos/DTD rechazados.
+- Prueba en Chromium con la ficha Word aportada: duración 90 minutos, retos R1–R8 conservados, revisión y creación de sesión en un grupo demo con fecha y horario ficticios elegidos para la prueba. No se han creado sesiones en PythonAnywhere.
+- Navegador: alta y matrícula de dos alumnos ficticios; paleta básica guardada y previsualizada; interfaz de importación en español e inglés; ancho de tablet 768 px sin desbordamiento; sin errores JavaScript.
+- Migración `0005` aplicada sobre la base demo existente después de copia verificada. Configuración básica y datos previos conservados.
+- Comprobación Django, ausencia de migraciones pendientes por generar y compilación de traducciones incluidas en la validación final.
+
+## Validaciones anteriores
+
 # Validación realizada · 22 de octubre de 2026
 
 - Suite completa de la versión 0.3.0: 45 pruebas ejecutadas, 45 correctas; ninguna omitida. Incluye subida de PDF privado, descarga autenticada y denegación a docente ajeno y desarrollador.

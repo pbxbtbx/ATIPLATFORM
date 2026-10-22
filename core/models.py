@@ -19,6 +19,7 @@ class Profile(models.Model):
     sensitive_access = models.BooleanField(default=False)
     development_access = models.BooleanField(default=False)
     language = models.CharField(_('Idioma'),max_length=2,choices=[('es',_('Español')),('en','English')],default='es')
+    learning_palette = models.CharField(_('Colores del aprendizaje'),max_length=12,choices=[('rpg',_('RPG')),('basic',_('Básicos'))],default='rpg')
     theme = models.CharField(_('Estilo visual'),max_length=16,choices=[('rpg',_('Fantasía RPG')),('classic',_('Atigra claro')),('night',_('Noche tranquila'))],default='rpg')
 
 class AcademicYear(Record):
@@ -233,3 +234,11 @@ class Release(Record):
 class TechnicalEvent(Record):
     code = models.CharField(max_length=40)
     reference = models.UUIDField(default=uuid.uuid4)
+
+
+class ImportDraft(Record):
+    author = models.ForeignKey(settings.AUTH_USER_MODEL,on_delete=models.CASCADE)
+    kind = models.CharField(max_length=12)
+    payload = models.JSONField(default=dict)
+    committed = models.BooleanField(default=False)
+    results = models.JSONField(default=list)

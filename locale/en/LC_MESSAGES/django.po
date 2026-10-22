@@ -2152,3 +2152,196 @@ msgid ""
 msgstr ""
 "Private notifications, unsaved changes, Spanish/English and modular "
 "organisation."
+
+msgid "Actividades previstas y apoyos"
+msgstr "Planned activities and support"
+
+msgid "Alta de varios alumnos: un nombre completo por línea"
+msgstr "Add several students: one full name per line"
+
+msgid "Alumnado · CSV o lista"
+msgstr "Students · CSV or list"
+
+msgid "Archivo (máximo 2 MB)"
+msgstr "File (maximum 2 MB)"
+
+msgid ""
+"Borrador privado: caduca en 24 horas. Las sesiones se crean como "
+"planificadas, sin asistencia ni aprendizajes completados."
+msgstr ""
+"Private draft: expires in 24 hours. Sessions are created as planned, without"
+" attendance or completed learning."
+
+msgid "Básicos"
+msgstr "Basic"
+
+msgid ""
+"CSV: UTF-8, separado por punto y coma o coma. Fechas AAAA-MM-DD; inicio de "
+"sesión AAAA-MM-DDTHH:MM, hora de Madrid. Máximo 200 filas y 2 MB. No "
+"incluyas información restringida."
+msgstr ""
+"CSV: UTF-8, semicolon or comma separated. Dates YYYY-MM-DD; session start "
+"YYYY-MM-DDTHH:MM, Madrid time. Maximum 200 rows and 2 MB. Do not include "
+"restricted information."
+
+msgid "Cabeceras no válidas. Utiliza la plantilla descargable."
+msgstr "Invalid headers. Use the downloadable template."
+
+msgid "Cada fila debe tener el mismo número de columnas."
+msgstr "Every row must have the same number of columns."
+
+msgid "Confirmar y crear registros"
+msgstr "Confirm and create records"
+
+msgid "Duración en minutos"
+msgstr "Duration in minutes"
+
+msgid "Duración o número de sesión fuera de rango."
+msgstr "Duration or session number out of range."
+
+msgid "El archivo no es un DOCX válido o excede los límites de seguridad."
+msgstr "The file is not a valid DOCX or exceeds security limits."
+
+msgid "El archivo supera el límite de 2 MB."
+msgstr "The file exceeds the 2 MB limit."
+
+msgid "El borrador ha caducado. Vuelve a importar el archivo."
+msgstr "The draft has expired. Import the file again."
+
+msgid "El documento no contiene texto legible."
+msgstr "The document contains no readable text."
+
+msgid "El límite es de 200 registros por importación."
+msgstr "The limit is 200 records per import."
+
+msgid "El nacimiento no puede ser posterior a la incorporación."
+msgstr "The date of birth cannot be later than the joining date."
+
+msgid ""
+"Estos registros ya están guardados. Repetir la confirmación no los duplica."
+msgstr ""
+"These records are already saved. Confirming again will not duplicate them."
+
+msgid "Fecha de nacimiento no válida: utiliza AAAA-MM-DD."
+msgstr "Invalid date of birth: use YYYY-MM-DD."
+
+msgid "Ficha de sesión · Word DOCX"
+msgstr "Session sheet · Word DOCX"
+
+msgid ""
+"Gris: sin iniciar. Azul: en proceso o completado con apoyo. Verde: "
+"aprendizaje consolidado o autónomo. Consulta siempre la etiqueta del estado."
+msgstr ""
+"Grey: not started. Blue: in progress or completed with support. Green: "
+"consolidated or independent learning. Always read the status label."
+
+msgid "Guarda el CSV con codificación UTF-8."
+msgstr "Save the CSV using UTF-8 encoding."
+
+msgid ""
+"Hay nombres vacíos o repetidos. Revisa la lista; no se fusionan alumnos "
+"automáticamente."
+msgstr ""
+"There are empty or duplicate names. Check the list; students are never "
+"merged automatically."
+
+msgid "Importación completada"
+msgstr "Import complete"
+
+msgid "Importación completada. No se han modificado registros anteriores."
+msgstr "Import complete. Existing records have not been modified."
+
+msgid "Importar / añadir varios"
+msgstr "Import / add several"
+
+msgid "Importar sesiones / Word"
+msgstr "Import sessions / Word"
+
+msgid "Importar y añadir en lote"
+msgstr "Import and add in bulk"
+
+msgid "Inicio · Europe/Madrid"
+msgstr "Start · Europe/Madrid"
+
+msgid "Inicio, duración o número no válidos en el CSV."
+msgstr "Invalid start, duration or number in the CSV."
+
+msgid "La lista de nombres solo permite añadir alumnado."
+msgstr "The name list can only be used to add students."
+
+msgid ""
+"La paleta básica usa etiquetas educativas y colores suaves. No cambia los "
+"estados ni el tema general."
+msgstr ""
+"The basic palette uses educational labels and soft colours. It does not "
+"change statuses or the overall theme."
+
+msgid "Las sesiones del archivo se solapan entre sí."
+msgstr "Sessions within the file overlap."
+
+msgid "No hay plazas suficientes para todo el lote."
+msgstr "There are not enough places for the entire batch."
+
+msgid "No hay registros para importar."
+msgstr "There are no records to import."
+
+msgid "Nueva importación"
+msgstr "New import"
+
+msgid "Plantilla CSV de alumnado"
+msgstr "Student CSV template"
+
+msgid "Plantilla CSV de sesiones"
+msgstr "Session CSV template"
+
+msgid "Preparar importación"
+msgstr "Prepare import"
+
+msgid "Qué quieres añadir"
+msgstr "What would you like to add"
+
+msgid "RPG"
+msgstr "RPG"
+
+msgid "Resultado previsto"
+msgstr "Expected result"
+
+msgid "Revisa la vista previa antes de confirmar."
+msgstr "Review the preview before confirming."
+
+msgid "Revisar importación"
+msgstr "Review import"
+
+msgid ""
+"Se crearán todos los registros del lote en el grupo seleccionado. Si hay un "
+"error, no se guardará ninguno."
+msgstr ""
+"All records in the batch will be created in the selected group. If an error "
+"occurs, none will be saved."
+
+msgid "Selecciona un archivo o escribe una lista, pero no ambos."
+msgstr "Select a file or enter a list, but not both."
+
+msgid "Sesiones · CSV"
+msgstr "Sessions · CSV"
+
+msgid ""
+"Sube una ficha DOCX para preparar una sesión, un CSV de sesiones o alumnado,"
+" o escribe varios nombres. Primero revisarás los datos; nada se crea al "
+"subir el archivo."
+msgstr ""
+"Upload a DOCX sheet to prepare a session, a CSV of sessions or students, or "
+"enter several names. You will review the data first; uploading a file "
+"creates no records."
+
+msgid "Texto extraído del documento original"
+msgstr "Text extracted from the original document"
+
+msgid "Usa un archivo DOCX para fichas de Word o CSV para los otros tipos."
+msgstr "Use a DOCX file for Word sheets or CSV for the other types."
+
+msgid "Validar y ver resultado"
+msgstr "Validate and see result"
+
+msgid "v0.4.0 ·"
+msgstr "v0.4.0 ·"
