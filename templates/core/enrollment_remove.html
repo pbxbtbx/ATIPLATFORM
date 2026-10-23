@@ -1,0 +1,12 @@
+{% extends 'core/base.html' %}{% load i18n %}{% block content %}
+<div class="page-heading"><h1>{% translate "Retirar matrícula errónea" %}</h1></div>
+<section class="card form-card">
+<p><strong>{{ enrollment.student.name }}</strong></p>
+<p>{% translate "Grupo del que se retirará:" %} <strong>{{ enrollment.group.name }}</strong></p>
+<p>{% translate "Fecha de matrícula:" %} {{ enrollment.starts|date:'d/m/Y' }}</p>
+<div class="notice">{% translate "Esta corrección elimina únicamente la matrícula equivocada. La alumna o alumno dejará de aparecer en este grupo y sus docentes perderán el acceso que dependía de esta matrícula. Se conservan la ficha, los responsables, otras matrículas y los registros educativos. No se asigna automáticamente otro grupo. La acción queda auditada." %}</div>
+<p>{% translate "Solo para errores de alta de las últimas 24 horas y sin asistencia, aprendizaje, retos ni evidencias de esta persona en el grupo. No es una baja ni un traslado real." %}</p>
+{% if error %}<div class="notice error" role="alert">{{ error }}</div>{% endif %}
+{% if not blocked %}<form method="post">{% csrf_token %}<input type="hidden" name="expected_version" value="{{ enrollment.version }}"><div class="field"><label for="confirm-remove">{% translate "Escribe RETIRAR para confirmar" %}</label><input id="confirm-remove" name="confirm" required pattern="RETIRAR" autocomplete="off"></div><button class="button">{% translate "Retirar solo esta matrícula" %}</button></form>{% endif %}
+<p><a href="{% url 'student' enrollment.student.pk %}">{% translate "Volver a la ficha sin cambiar nada" %}</a></p>
+</section>{% endblock %}

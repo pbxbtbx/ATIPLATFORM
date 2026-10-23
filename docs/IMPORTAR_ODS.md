@@ -68,3 +68,29 @@ El archivo del usuario no forma parte del repositorio ni de las demostraciones. 
 - `core/test_ods.py`: pruebas con archivos generados de datos ficticios, sin incluir el archivo original.
 
 Esta versión utiliza `ImportDraft`, `Student`, `Guardian`, `GuardianLink` y `Enrollment` existentes. No necesita nuevas migraciones ni dependencias de ofimática. Conserva una copia previa a actualizar; si falla una importación, corrige el borrador y vuelve a validar. Si hubo un error humano después de confirmar, revisa los registros concretos; no borres historiales ni restaures toda la base sobre cambios posteriores sin seguir el procedimiento de recuperación.
+
+## Corregir una matrícula añadida por error
+
+No borres la ficha del alumno ni simules un traslado para corregir una importación.
+Administración puede abrir la ficha → Resumen → Historial de matrículas →
+**Corregir matrícula errónea**, junto al grupo equivocado. Revisa alumno y grupo y
+escribe **RETIRAR** en la confirmación. Se elimina exclusivamente esa matrícula,
+no se asigna un destino ni se modifica la ficha, responsables u otros registros.
+La auditoría conserva actor, fecha, acción e identificadores del alumno y grupo,
+sin copiar nombres ni contactos.
+
+Esta corrección se limita a matrículas activas **creadas hace menos de 24 horas**
+(el plazo se refiere al alta en el sistema, no a la fecha de matrícula educativa).
+El servidor bloquea la operación si existe cualquier asistencia, aprendizaje, reto
+o evidencia de ese alumno en ese grupo, también de fechas anteriores. Matrículas
+finalizadas o antiguas requieren revisión administrativa; una baja real no debe
+borrarse como si fuera un error. Se revalida todo en transacción y se rechaza una
+versión obsoleta. Solo POST con CSRF y confirmación expresa modifica datos.
+
+Para el caso del piloto: tras retirar el alta equivocada de Martes Intermedio,
+se conserva la persona en Alumnado. Cuando se cree Miércoles Intermedio, selecciona
+su ficha existente al matricularla o importarla; no crees otra persona.
+
+Módulos: `core/enrollment_correction.py`, vista `enrollment_remove` en
+`core/views/students.py`, `templates/core/enrollment_remove.html` y
+`core/test_enrollment_correction.py`. No requiere migración nueva.

@@ -127,3 +127,29 @@ def support_plan_edit(request,pk):
     response=render(request,'core/form.html',{'title':_('Adaptación educativa y NEAE comunicada'),'form':form,'hint':_('Registra apoyos necesarios, fuente y revisión. Esta marca no genera un diagnóstico. Desmarca la adaptación para finalizarla conservando el historial. Solo es visible con permiso de información restringida.')})
     response['Cache-Control']='no-store'
     return response
+
+
+@login_required
+def enrollment_remove(request, pk):
+    from core.enrollment_correction import correction_error, remove_accidental_enrollment
+    require_admin(request.user)
+    obj = get_object_or_404(Enrollment.objects.select_related('student', 'group'), pk=pk)
+    error = correction_error(obj)
+    if request.method == 'POST':
+        try:
+            student_id = remove_accidental_enrollment(request.user, obj.pk,
+                request.POST.get('expected_version', ''), request.POST.get('confirm', ''))
+            messages.success(request, _('Matrícula errónea retirada. Se conservan la ficha, los responsables y el resto de registros.'))
+            return redirect('student', pk=student_id)
+        except ValidationError as exc:
+            error = ' '.join(exc.messages)
+        except Enrollment.DoesNotExist:
+            return HttpResponse(_('La matrícula ya no existe. Recarga la ficha.'), status=409)
+    elif request.method != 'GET':
+        return HttpResponse(status=405)
+    response = render(request, 'core/enrollment_remove.html', {
+        'title': _('Retirar matrícula errónea'), 'enrollment': obj, 'error': error,
+        'blocked': bool(correction_error(obj)),
+    }, status=422 if error and request.method == 'POST' else 200)
+    response['Cache-Control'] = 'private, no-store'
+    return response

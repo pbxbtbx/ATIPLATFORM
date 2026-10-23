@@ -84,3 +84,13 @@ Migración 0004 aplicada sobre una copia SQLite anterior: recuentos de todas las
 ### Rutas explícitas para el paso a producción
 
 `PRIVATE_MEDIA_ROOT` y `PRACTICE_DATABASE_PATH` permiten conservar adjuntos y práctica al cambiar APP_ENV, junto con DATABASE_PATH ya existente. Tres pruebas aisladas comprueban rutas conservadas, defaults anteriores y rechazo de la clave placeholder en producción. No se mueven bases ni archivos ni se modifican registros. La configuración WSGI y Bash deben coincidir: véase PASO_A_PRODUCCION.md.
+
+### 0.8.1 — corrección de matrícula errónea
+
+Cinco pruebas nuevas: retirada solo de la matrícula equivocada, preservación exacta
+de ficha/responsables/historial de otro grupo, auditoría sin nombres, GET de solo
+lectura y doble envío, confirmación y versión, bloqueo individual por asistencia,
+aprendizaje, retos y evidencias, matrículas anteriores a 24 horas/finalizadas,
+autorización administrativa y CSRF. No requiere nueva migración.
+
+Suite completa tras la corrección: **104 pruebas correctas**. Comprobaciones de Django, ausencia de migraciones nuevas y validación de diff correctas.

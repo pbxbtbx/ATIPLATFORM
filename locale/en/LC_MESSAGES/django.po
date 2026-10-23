@@ -3681,3 +3681,88 @@ msgstr "v0.8.0 ·"
 
 msgid "Último análisis vinculado al código actual:"
 msgstr "Latest analysis linked to the current code:"
+
+msgid "No se puede retirar una matrícula finalizada mediante esta corrección."
+msgstr "This correction cannot remove a completed enrollment."
+
+msgid ""
+"Esta corrección solo admite matrículas creadas en las últimas 24 horas. "
+"Solicita una revisión administrativa para matrículas anteriores."
+msgstr ""
+"This correction only accepts enrollments created within the last 24 hours. "
+"Request an administrative review for older enrollments."
+
+msgid ""
+"Hay asistencia, aprendizaje, retos o evidencias en este grupo. No se permite"
+" retirar la matrícula; revisa el historial antes de corregirla."
+msgstr ""
+"Attendance, learning, challenges or evidence exist in this group. Enrollment"
+" removal is blocked; review the history before correcting it."
+
+msgid ""
+"Confirma escribiendo RETIRAR. Solo se elimina la matrícula errónea, no la "
+"ficha del alumno."
+msgstr ""
+"Type RETIRAR to confirm. Only the incorrect enrollment is removed, not the "
+"student record."
+
+msgid ""
+"La matrícula ha cambiado. Recarga la página y revisa antes de continuar."
+msgstr ""
+"The enrollment has changed. Reload the page and review it before continuing."
+
+msgid ""
+"Matrícula errónea retirada. Se conservan la ficha, los responsables y el "
+"resto de registros."
+msgstr ""
+"Incorrect enrollment removed. The student record, guardians and other "
+"records are retained."
+
+msgid "La matrícula ya no existe. Recarga la ficha."
+msgstr "The enrollment no longer exists. Reload the student record."
+
+msgid "Retirar matrícula errónea"
+msgstr "Remove incorrect enrollment"
+
+msgid "Grupo del que se retirará:"
+msgstr "Group to remove the enrollment from:"
+
+msgid "Fecha de matrícula:"
+msgstr "Enrollment date:"
+
+msgid ""
+"Esta corrección elimina únicamente la matrícula equivocada. La alumna o "
+"alumno dejará de aparecer en este grupo y sus docentes perderán el acceso "
+"que dependía de esta matrícula. Se conservan la ficha, los responsables, "
+"otras matrículas y los registros educativos. No se asigna automáticamente "
+"otro grupo. La acción queda auditada."
+msgstr ""
+"This correction removes only the incorrect enrollment. The student will no "
+"longer appear in this group and its teachers will lose access that depended "
+"on this enrollment. The student record, guardians, other enrollments and "
+"educational records are retained. No other group is assigned automatically. "
+"The action is audited."
+
+msgid ""
+"Solo para errores de alta de las últimas 24 horas y sin asistencia, "
+"aprendizaje, retos ni evidencias de esta persona en el grupo. No es una baja"
+" ni un traslado real."
+msgstr ""
+"Only for enrollment errors from the last 24 hours, with no attendance, "
+"learning, challenges or evidence for this person in the group. This is not a"
+" withdrawal or a real transfer."
+
+msgid "Escribe RETIRAR para confirmar"
+msgstr "Type RETIRAR to confirm"
+
+msgid "Retirar solo esta matrícula"
+msgstr "Remove only this enrollment"
+
+msgid "Volver a la ficha sin cambiar nada"
+msgstr "Return to the student record without changes"
+
+msgid "Corregir matrícula errónea"
+msgstr "Correct incorrect enrollment"
+
+msgid "v0.8.1 ·"
+msgstr "v0.8.1 ·"
