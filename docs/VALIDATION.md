@@ -94,3 +94,10 @@ aprendizaje, retos y evidencias, matrículas anteriores a 24 horas/finalizadas,
 autorización administrativa y CSRF. No requiere nueva migración.
 
 Suite completa tras la corrección: **104 pruebas correctas**. Comprobaciones de Django, ausencia de migraciones nuevas y validación de diff correctas.
+
+### 0.8.2 — búsquedas de alumnado y grupos
+
+- Suite completa: **110 pruebas correctas**. Seis nuevas comprueban apellidos, nombre preferido, tildes/mayúsculas, combinación de filtros, matrículas abiertas, ausencia de duplicados, ordenación permitida, ámbito de docentes/desarrollo, opciones y recuentos sin datos ajenos, filtros manipulados, CSRF y respuestas sin caché.
+- Búsqueda y ordenación no modifican alumnado, matrículas ni grupos. Formulario POST para no incluir nombres en URLs.
+- Revisión en Chromium con datos ficticios y tema Noche: controles visibles y sin desbordamiento horizontal a **1024, 768 y 390 píxeles**, en ambas pantallas.
+- Sin nuevas dependencias ni migraciones. Módulos y límites de búsqueda documentados en BUSQUEDAS.md.

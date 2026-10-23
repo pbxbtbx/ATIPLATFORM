@@ -3,7 +3,24 @@ from .common import *
 
 @login_required
 def group_list(request):
-    return page(request,_('Grupos'),groups_list=groups(request.user).select_related('year').order_by('name'),section='groups')
+    from core.list_filters import GroupListFilters, text_search
+    allowed = groups(request.user)
+    data = request.POST if request.method == 'POST' else request.GET
+    form = GroupListFilters(data, allowed_groups=allowed)
+    qs = allowed.select_related('year')
+    if form.is_valid():
+        values = form.cleaned_data
+        for field in ('kind', 'year', 'location', 'status'):
+            if values[field]:
+                qs = qs.filter(**{field: values[field]})
+        qs = text_search(qs, values['q'], 'name', 'location', 'schedule')
+        qs = qs.order_by(values['order'] or 'name', 'name', 'pk')
+    else:
+        qs = qs.none()
+    response = page(request, _('Grupos'), groups_list=qs, section='groups', list_filters=form,
+                    result_count=qs.count(), has_list_filters=any(data.get(k) for k in form.fields if k != 'order'))
+    response['Cache-Control'] = 'private, no-store'
+    return response
 
 
 @login_required

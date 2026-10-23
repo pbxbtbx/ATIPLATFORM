@@ -26,3 +26,8 @@ body .notice,body.theme-rpg .notice,body.theme-night .notice{color:var(--ops-ink
 body .notification-tray>summary{color:var(--ops-ink)}
 .notification-popover{max-height:calc(100vh - var(--tray-top,100px) - 20px);overflow-y:auto}
 @media(max-width:900px){.notification-popover{top:var(--tray-top,85px)}}
+
+/* Búsquedas: controles con etiqueta, sin depender de colores de aprendizaje. */
+.list-filters{margin-bottom:22px}.list-filter-fields{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 18px}.list-filter-fields .field{min-width:0}.list-filter-fields .list-query{grid-column:1/-1}.list-filters input,.list-filters select{max-width:100%}.list-filters .actions [role=status]{font-size:13px;margin-left:auto}
+@media(max-width:850px){.list-filter-fields{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:550px){.list-filter-fields{grid-template-columns:1fr}.list-filters .actions [role=status]{margin-left:0;width:100%}}

@@ -149,3 +149,5 @@ Versiona tanto `django.po` como `django.mo`. El archivo compilado se entrega en 
 ### Ciberseguridad e integridad
 
 En **Desarrollador → Abrir panel de ciberseguridad** se comprueba configuración, integridad del código y evidencia reciente de análisis. [Guía, módulos y límites](docs/SECURITY.md). Los analizadores se ejecutan fuera de la web; no es una certificación de ausencia de vulnerabilidades.
+
+En **Alumnado** puedes buscar por nombre, apellidos o nombre preferido y filtrar por grupo/estado. **Grupos** incorpora búsqueda, filtros y ordenación: [guía y módulos](docs/BUSQUEDAS.md).

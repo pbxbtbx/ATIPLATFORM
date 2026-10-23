@@ -3766,3 +3766,60 @@ msgstr "Correct incorrect enrollment"
 
 msgid "v0.8.1 ·"
 msgstr "v0.8.1 ·"
+
+msgid "Buscar alumno por nombre o apellidos"
+msgstr "Search students by name or surname"
+
+msgid "Escribe un nombre, apellidos o nombre preferido"
+msgstr "Enter a name, surname or preferred name"
+
+msgid "Grupo con matrícula abierta"
+msgstr "Group with an open enrollment"
+
+msgid "Estado del alumno"
+msgstr "Student status"
+
+msgid "Todos los estados"
+msgstr "All statuses"
+
+msgid "Buscar grupos"
+msgstr "Search groups"
+
+msgid "Nombre, ubicación u horario"
+msgstr "Name, location or schedule"
+
+msgid "Estado del grupo"
+msgstr "Group status"
+
+msgid "Ordenar por"
+msgstr "Sort by"
+
+msgid "Todos los cursos"
+msgstr "All academic years"
+
+msgid "No hay grupos que coincidan con estos filtros."
+msgstr "No groups match these filters."
+
+msgid "Prueba otra búsqueda o limpia los filtros."
+msgstr "Try a different search or clear the filters."
+
+msgid "No hay alumnos que coincidan con estos filtros."
+msgstr "No students match these filters."
+
+msgid "Buscar y filtrar grupos"
+msgstr "Search and filter groups"
+
+msgid "Buscar y filtrar alumnado"
+msgstr "Search and filter students"
+
+msgid "Buscar y filtrar"
+msgstr "Search and filter"
+
+msgid "Limpiar filtros"
+msgstr "Clear filters"
+
+msgid "Resultados:"
+msgstr "Results:"
+
+msgid "v0.8.2 ·"
+msgstr "v0.8.2 ·"

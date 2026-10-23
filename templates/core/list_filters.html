@@ -1,0 +1,8 @@
+{% load i18n %}
+<form method="post" class="card list-filters" role="search" aria-label="{% if section == 'groups' %}{% translate 'Buscar y filtrar grupos' %}{% else %}{% translate 'Buscar y filtrar alumnado' %}{% endif %}">
+{% csrf_token %}
+<div class="list-filter-fields">
+{% for field in list_filters %}<div class="field{% if field.name == 'q' %} list-query{% endif %}">{{ field.label_tag }}{{ field }}{{ field.errors }}</div>{% endfor %}
+</div>
+<div class="actions"><button class="button" type="submit">{% translate "Buscar y filtrar" %}</button><a class="button light" href="{% if section == 'groups' %}{% url 'groups' %}{% else %}{% url 'students' %}{% endif %}">{% translate "Limpiar filtros" %}</a><span role="status">{% translate "Resultados:" %} {{ result_count }}</span></div>
+</form>
