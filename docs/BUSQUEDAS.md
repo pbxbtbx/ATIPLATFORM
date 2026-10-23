@@ -51,3 +51,37 @@ relajar permisos. Este cambio no requiere migración ni dependencias nuevas.
 - `templates/core/list_filters.html`: controles etiquetados y contador de resultados.
 - `static/core/operations.css`: distribución adaptable a tablet y móvil.
 - `core/test_list_filters.py`: búsqueda, permisos, filtros combinados, entrada inválida y privacidad.
+
+## Sugerencias y filtros plegables (0.8.3)
+
+Desde **dos caracteres** se solicitan hasta **8 sugerencias** privadas. En alumnado
+son nombres completos (también se puede encontrar por nombre preferido); en grupos,
+nombres de grupo que coincidan con el texto buscado en nombre, ubicación u horario.
+Se aplican los mismos filtros y permisos que en la lista. No se descargan todos los
+nombres para incluirlos en JavaScript ni se guardan consultas en el navegador.
+
+Pulsa una sugerencia para rellenar la barra y después **Buscar y filtrar** o Intro.
+Con teclado: flechas arriba/abajo recorren las sugerencias, Intro selecciona la
+resaltada y Escape cierra sin borrar el texto. Tab continúa la navegación normal.
+Los nombres iguales siguen siendo posibles: revisa las fichas, no presupongas que
+un nombre identifica de forma única a una persona.
+
+El botón **×** borra únicamente lo escrito y devuelve el foco al buscador. Conserva
+los demás filtros; para aplicar la búsqueda vacía pulsa Buscar y filtrar. **Limpiar
+filtros** reinicia toda la búsqueda. El panel de filtros empieza plegado; se puede
+abrir con su título. Se muestra abierto con contador si hay filtros adicionales
+activos, o si hay errores que corregir. La ordenación también está dentro del
+panel de Grupos. Cambiar el texto por sí solo no modifica los resultados de la
+lista hasta que se envía la búsqueda.
+
+Las solicitudes de sugerencias son POST con CSRF, autenticación, mínimo de dos
+caracteres, máximo de 150, respuesta sin caché y límite de 8 resultados. Hay una
+espera de 200 ms al escribir; las peticiones obsoletas se cancelan y sus respuestas
+no sustituyen a las actuales. Un error de conexión muestra una ayuda y permite
+seguir usando el botón de búsqueda. Sin JavaScript funcionan la búsqueda y el
+panel nativo de filtros, con el borrado nativo que ofrezca el navegador.
+
+Módulos añadidos: `core/views/suggestions.py` y `static/core/list_search.js`.
+La consulta por ámbito/filtros se comparte en `core/list_filters.py`, para evitar
+diferencias de permisos entre sugerencias y listados. No hay migración ni
+paquetes nuevos.

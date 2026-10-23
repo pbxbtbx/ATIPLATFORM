@@ -101,3 +101,10 @@ Suite completa tras la corrección: **104 pruebas correctas**. Comprobaciones de
 - Búsqueda y ordenación no modifican alumnado, matrículas ni grupos. Formulario POST para no incluir nombres en URLs.
 - Revisión en Chromium con datos ficticios y tema Noche: controles visibles y sin desbordamiento horizontal a **1024, 768 y 390 píxeles**, en ambas pantallas.
 - Sin nuevas dependencias ni migraciones. Módulos y límites de búsqueda documentados en BUSQUEDAS.md.
+
+### 0.8.3 — sugerencias, borrado de texto y filtros plegables
+
+- Suite completa: **113 pruebas correctas**. Nuevas comprobaciones de sugerencias con los mismos permisos/filtros que las listas, mínimo de 2 caracteres, máximo de 150 y límite de 8 nombres; CSRF/autenticación/POST, ausencia de datos ajenos, y filtros cerrados/abiertos según valores y errores.
+- Navegador Chromium contra servidor local y BD temporal **solo ficticia**: selección con flechas/Intro y clic, Escape conserva el texto, × borra sin enviar el formulario, búsqueda POST sin nombres en URL, filtros aplicados a sugerencias, error de red y funcionalidad sin JavaScript. Las respuestas antiguas no reemplazan las nuevas al escribir rápido.
+- Comprobación de ambas pantallas a 768 y 390 píxeles sin desbordamiento horizontal. Vista revisada en tema Noche. No se afirma certificación de accesibilidad.
+- Sin nuevas migraciones ni dependencias. Proceso de despliegue: actualizar repositorio, collectstatic y recarga; renovar análisis de seguridad del código desplegado.

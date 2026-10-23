@@ -48,3 +48,40 @@ class GroupListFilters(forms.Form):
         self.fields['year'].choices = [('', _('Todos los cursos')), *[(str(y.pk), y.name) for y in years]]
         self.fields['location'].choices = [('', _('Todas las ubicaciones')), *[(v, v) for v in allowed_groups.exclude(location='').order_by('location').values_list('location', flat=True).distinct()]]
         self.fields['order'].initial = 'name'
+
+
+def filtered_students(user, data):
+    from core.access import groups, students
+    form = StudentListFilters(data, allowed_groups=groups(user))
+    qs = students(user)
+    if form.is_valid():
+        values = form.cleaned_data
+        if values['group']:
+            qs = qs.filter(enrollments__group_id=values['group'], enrollments__ends__isnull=True)
+        if values['status']:
+            qs = qs.filter(status=values['status'])
+        qs = text_search(qs, values['q'], 'name', 'preferred_name')
+    else:
+        qs = qs.none()
+    return form, qs.distinct().order_by('name', 'pk')
+
+
+def filtered_groups(user, data):
+    from core.access import groups
+    allowed = groups(user)
+    form = GroupListFilters(data, allowed_groups=allowed)
+    qs = allowed.select_related('year')
+    if form.is_valid():
+        values = form.cleaned_data
+        for field in ('kind', 'year', 'location', 'status'):
+            if values[field]:
+                qs = qs.filter(**{field: values[field]})
+        qs = text_search(qs, values['q'], 'name', 'location', 'schedule')
+        qs = qs.order_by(values['order'] or 'name', 'name', 'pk')
+    else:
+        qs = qs.none()
+    return form, qs
+
+
+def active_extra_filters(data, fields):
+    return sum(bool(data.get(k)) for k in fields if k != 'q' and not (k == 'order' and data.get(k) == 'name'))

@@ -1,8 +1,15 @@
 {% load i18n %}
-<form method="post" class="card list-filters" role="search" aria-label="{% if section == 'groups' %}{% translate 'Buscar y filtrar grupos' %}{% else %}{% translate 'Buscar y filtrar alumnado' %}{% endif %}">
+<form method="post" class="card list-filters" role="search" aria-label="{% if section == 'groups' %}{% translate 'Buscar y filtrar grupos' %}{% else %}{% translate 'Buscar y filtrar alumnado' %}{% endif %}"
+ data-suggest-url="{% if section == 'groups' %}{% url 'group_suggestions' %}{% else %}{% url 'student_suggestions' %}{% endif %}"
+ data-no-results="{% translate 'Sin sugerencias con estos filtros.' %}" data-suggest-error="{% translate 'No se pudieron cargar las sugerencias. Puedes usar Buscar y filtrar.' %}" data-suggest-count="{% translate 'Sugerencias disponibles:' %}">
 {% csrf_token %}
-<div class="list-filter-fields">
-{% for field in list_filters %}<div class="field{% if field.name == 'q' %} list-query{% endif %}">{{ field.label_tag }}{{ field }}{{ field.errors }}</div>{% endfor %}
-</div>
+<div class="field list-query">{{ list_filters.q.label_tag }}<div class="suggest-search">
+{{ list_filters.q }}<button type="button" class="search-clear" aria-label="{% translate 'Borrar texto de búsqueda' %}" title="{% translate 'Borrar texto de búsqueda' %}" hidden><span aria-hidden="true">×</span></button>
+<ul class="search-suggestions" id="list-suggestions" role="listbox" aria-label="{% translate 'Sugerencias de búsqueda' %}" hidden></ul>
+</div>{{ list_filters.q.errors }}<small class="suggest-status" id="suggest-status" role="status" aria-live="polite"></small></div>
+<details class="list-filter-details" {% if extra_filter_count or list_filters.errors %}open{% endif %}>
+<summary>{% if section == 'groups' %}{% translate "Filtros y ordenación" %}{% else %}{% translate "Filtros" %}{% endif %}{% if extra_filter_count %} <span class="tag">{{ extra_filter_count }}</span>{% endif %}</summary>
+<div class="list-filter-fields">{% for field in list_filters %}{% if field.name != 'q' %}<div class="field">{{ field.label_tag }}{{ field }}{{ field.errors }}</div>{% endif %}{% endfor %}</div>
+</details>
 <div class="actions"><button class="button" type="submit">{% translate "Buscar y filtrar" %}</button><a class="button light" href="{% if section == 'groups' %}{% url 'groups' %}{% else %}{% url 'students' %}{% endif %}">{% translate "Limpiar filtros" %}</a><span role="status">{% translate "Resultados:" %} {{ result_count }}</span></div>
 </form>

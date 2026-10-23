@@ -91,3 +91,47 @@ class ListFilterTests(TestCase):
             self.assertEqual(self.ids(response, key), set())
             self.assertTrue(response.context['list_filters'].errors)
             self.assertEqual(response.context['list_filters']['q'].value(), 'x'*151)
+
+    def test_suggestions_respect_scope_filters_minimum_and_limit(self):
+        for name in ('Pablo Ficticio', 'Paola Ficticia', 'Paula Ficticia'):
+            person = Student.objects.create(name=name, joined=timezone.localdate())
+            Enrollment.objects.create(student=person, group=self.group, starts=timezone.localdate())
+        self.client.force_login(self.teacher)
+        response = self.client.post('/students/suggestions/', {'q': 'pa'})
+        self.assertEqual({i['label'] for i in response.json()['items']}, {'Pablo Ficticio', 'Paola Ficticia', 'Paula Ficticia'})
+        self.assertIn('no-store', response['Cache-Control'])
+        self.assertEqual(set(response.json()['items'][0]), {'label', 'value'})
+        self.assertEqual(self.client.post('/students/suggestions/', {'q': 'p'}).json()['items'], [])
+        self.assertEqual(self.client.post('/students/suggestions/', {'q': 'pa', 'status': 'temporary'}).json()['items'], [])
+        self.assertEqual(self.client.post('/students/suggestions/', {'q': 'persona'}).json()['items'], [])
+        self.assertEqual(self.client.post('/students/suggestions/', {'q': 'pa', 'group': str(self.foreign.pk)}).status_code, 400)
+        self.assertEqual(self.client.post('/groups/suggestions/', {'q': 'miercoles'}).json()['items'][0]['label'], self.group.name)
+        self.assertEqual(self.client.post('/groups/suggestions/', {'q': 'grupo'}).json()['items'], [])
+        self.assertEqual(self.client.post('/groups/suggestions/', {'q': 'mi', 'kind': 'intermediate'}).json()['items'], [])
+        self.assertEqual(self.client.post('/groups/suggestions/', {'q': 'mi', 'year': str(self.hidden_year.pk)}).status_code, 400)
+        self.client.force_login(self.admin)
+        for n in range(12): Student.objects.create(name=f'Pablo prueba {n}', joined=timezone.localdate())
+        self.assertEqual(len(self.client.post('/students/suggestions/', {'q': 'pa'}).json()['items']), 8)
+        self.assertEqual(self.client.post('/students/suggestions/', {'q': 'x'*151}).status_code, 400)
+        self.client.force_login(self.dev)
+        self.assertEqual(self.client.post('/students/suggestions/', {'q': 'pa'}).json()['items'], [])
+        self.assertEqual(self.client.post('/groups/suggestions/', {'q': 'mi'}).json()['items'], [])
+
+    def test_suggestions_require_post_login_and_csrf(self):
+        for url in ('/students/suggestions/', '/groups/suggestions/'):
+            self.assertEqual(self.client.get(url).status_code, 405)
+            csrf = Client(enforce_csrf_checks=True); csrf.force_login(self.admin)
+            self.assertEqual(csrf.post(url, {'q': 'mi'}).status_code, 403)
+            self.client.logout(); self.assertEqual(self.client.post(url, {'q': 'mi'}).status_code, 302)
+            self.client.force_login(self.admin)
+
+    def test_filters_collapsed_until_active_or_invalid(self):
+        for route in ('/students/', '/groups/'):
+            response = self.client.get(route)
+            self.assertNotContains(response, 'class="list-filter-details" open')
+            self.assertContains(response, 'Borrar texto de búsqueda')
+            response = self.client.post(route, {'status': 'active'})
+            self.assertContains(response, 'class="list-filter-details" open')
+            self.assertEqual(response.context['extra_filter_count'], 1)
+            response = self.client.post(route, {'status': 'invalid'})
+            self.assertContains(response, 'class="list-filter-details" open')

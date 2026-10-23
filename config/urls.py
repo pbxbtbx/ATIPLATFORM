@@ -2,6 +2,8 @@ from django.urls import path
 from django.contrib.auth import views as auth
 from core import views as v
 urlpatterns=[
+path('students/suggestions/',v.student_suggestions,name='student_suggestions'),
+path('groups/suggestions/',v.group_suggestions,name='group_suggestions'),
 path('enrollments/<uuid:pk>/remove-error/',v.enrollment_remove,name='enrollment_remove'),
 path('developer/security/',v.security_view,name='security'),
 path('accessibility/',v.accessibility_view,name='accessibility'),

@@ -3823,3 +3823,27 @@ msgstr "Results:"
 
 msgid "v0.8.2 ·"
 msgstr "v0.8.2 ·"
+
+msgid "Sin sugerencias con estos filtros."
+msgstr "No suggestions match these filters."
+
+msgid "No se pudieron cargar las sugerencias. Puedes usar Buscar y filtrar."
+msgstr "Suggestions could not be loaded. You can use Search and filter."
+
+msgid "Sugerencias disponibles:"
+msgstr "Suggestions available:"
+
+msgid "Borrar texto de búsqueda"
+msgstr "Clear search text"
+
+msgid "Sugerencias de búsqueda"
+msgstr "Search suggestions"
+
+msgid "Filtros y ordenación"
+msgstr "Filters and sorting"
+
+msgid "Filtros"
+msgstr "Filters"
+
+msgid "v0.8.3 ·"
+msgstr "v0.8.3 ·"

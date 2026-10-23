@@ -4,23 +4,12 @@ from django.views.decorators.cache import never_cache
 
 @login_required
 def student_list(request):
-    from core.list_filters import StudentListFilters, text_search
-    allowed = groups(request.user)
+    from core.list_filters import filtered_students, active_extra_filters
     data = request.POST if request.method == 'POST' else request.GET
-    form = StudentListFilters(data, allowed_groups=allowed)
-    qs = students(request.user)
-    if form.is_valid():
-        values = form.cleaned_data
-        if values['group']:
-            qs = qs.filter(enrollments__group_id=values['group'], enrollments__ends__isnull=True)
-        if values['status']:
-            qs = qs.filter(status=values['status'])
-        qs = text_search(qs, values['q'], 'name', 'preferred_name')
-    else:
-        qs = qs.none()
-    qs = qs.distinct().order_by('name', 'pk')
+    form, qs = filtered_students(request.user, data)
     response = page(request, _('Alumnado'), students_list=qs, section='students',
-                    list_filters=form, result_count=qs.count(), has_list_filters=any(data.get(k) for k in form.fields))
+                    list_filters=form, result_count=qs.count(), has_list_filters=any(data.get(k) for k in form.fields),
+                    extra_filter_count=active_extra_filters(data, form.fields))
     response['Cache-Control'] = 'private, no-store'
     return response
 
