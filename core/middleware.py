@@ -5,7 +5,7 @@ class MaintenanceMiddleware:
     def __call__(self,request):
         from .configuration import current
         from .access import developer
-        if request.user.is_authenticated and not request.path.startswith(('/developer/','/logout/','/static/')):
+        if request.user.is_authenticated and not request.path.startswith(('/developer/','/privacy/erasure/','/logout/','/static/')):
             if current()['maintenance'] and not developer(request.user):
                 return HttpResponse(_('Atigra Makers está en mantenimiento. Inténtalo más tarde.'),status=503)
         return self.get_response(request)
@@ -42,3 +42,20 @@ class UserLanguageMiddleware:
             response.headers.setdefault('Content-Language',language)
         patch_vary_headers(response,('Cookie',))
         return response
+
+
+class ErasureOnlyMiddleware:
+    def __init__(self, get_response): self.get_response = get_response
+    def __call__(self, request):
+        from django.conf import settings
+        from django.shortcuts import redirect
+        from .access import admin, profile
+        if not settings.ERASURE_ONLY or request.path.startswith(('/login/', '/logout/', '/static/')):
+            return self.get_response(request)
+        if not request.user.is_authenticated:
+            return redirect(settings.LOGIN_URL)
+        if not admin(request.user) or not profile(request.user).sensitive_access:
+            return HttpResponse(_('Acceso temporalmente restringido para retirar datos del piloto.'), status=403)
+        if not request.path.startswith('/privacy/erasure/'):
+            return redirect('erasure_select')
+        return self.get_response(request)

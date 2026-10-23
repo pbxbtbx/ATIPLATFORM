@@ -27,3 +27,5 @@ from .security import security_view
 from .students import enrollment_remove
 
 from .suggestions import student_suggestions, group_suggestions
+
+from .data_erasure import erasure_select, erasure_receipt

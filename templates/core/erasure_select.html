@@ -1,0 +1,11 @@
+{% extends 'core/base.html' %}{% load i18n %}{% block content %}
+<div class="page-heading"><h1>{% translate "Retirada de datos personales" %}</h1></div>
+<div class="notice error">{% translate "Solo para una retirada expresamente autorizada. El borrado es irreversible y no equivale a una baja de matrícula. No se crea una copia nueva. La plataforma no distingue automáticamente alumnado real y ficticio: revisa tu selección." %}</div>
+{% if error %}<div class="notice error" role="alert">{{ error }}</div>{% endif %}
+<section class="card"><h2>{% translate "Seleccionar alumnos para eliminar" %}</h2><p>{% translate "Puedes seleccionar varias fichas o todas. Primero verás el alcance; todavía no se borra nada." %}</p>
+<form method="post">{% csrf_token %}<input type="hidden" name="action" value="preview">
+<div class="actions"><button type="button" class="button light" data-erasure-select="all" hidden>{% translate "Seleccionar todos" %}</button><button type="button" class="button light" data-erasure-select="none" hidden>{% translate "Desmarcar todos" %}</button><span role="status" aria-live="polite">{% translate "Seleccionados:" %} <span data-erasure-count>0</span></span></div>
+<div class="erasure-selection">{% for student in students %}<label class="check-label"><input type="checkbox" name="student" value="{{ student.pk }}">{{ student.name }}</label>{% empty %}<p>{% translate "No quedan fichas de alumnado en esta base de datos." %}</p>{% endfor %}</div>
+<button class="button">{% translate "Revisar selección y alcance" %}</button></form></section>
+<p>{% translate "Requiere Administración y permiso específico de información restringida. Se mantiene un justificante con recuentos, sin nombres ni contactos." %}</p>
+<section class="card spaced"><h2>{% translate "Comprobaciones anteriores" %}</h2>{% for receipt in receipts %}<p><a href="{% url 'erasure_receipt' receipt.pk %}">{{ receipt.created_at|date:'d/m/Y H:i' }} · {{ receipt.counts.students }}</a></p>{% empty %}<p>—</p>{% endfor %}</section>{% endblock %}

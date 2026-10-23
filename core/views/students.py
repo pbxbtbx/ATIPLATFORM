@@ -9,7 +9,8 @@ def student_list(request):
     form, qs = filtered_students(request.user, data)
     response = page(request, _('Alumnado'), students_list=qs, section='students',
                     list_filters=form, result_count=qs.count(), has_list_filters=any(data.get(k) for k in form.fields),
-                    extra_filter_count=active_extra_filters(data, form.fields))
+                    extra_filter_count=active_extra_filters(data, form.fields),
+                    can_erase=admin(request.user) and profile(request.user).sensitive_access)
     response['Cache-Control'] = 'private, no-store'
     return response
 

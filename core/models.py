@@ -276,3 +276,11 @@ class SupportPlan(Record):
     support = models.TextField(_('Apoyos acordados'))
     review = models.DateField(_('Fecha de revisión'))
     supersedes = models.ForeignKey('self',null=True,blank=True,on_delete=models.PROTECT)
+
+
+class DataErasure(Record):
+    """Minimal operator receipt: no names, selected IDs, notes or contact contents."""
+    author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.PROTECT)
+    counts = models.JSONField(default=dict)
+    checks = models.JSONField(default=dict)
+    pending_files = models.JSONField(default=list)

@@ -13,7 +13,7 @@ if ENVIRONMENT == 'production' and SECRET_KEY == 'local-development-only-do-not-
     raise RuntimeError('Configure DJANGO_SECRET_KEY antes de producción')
 ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', 'localhost,127.0.0.1,testserver').split(',')
 INSTALLED_APPS = ['django.contrib.auth','django.contrib.contenttypes','django.contrib.sessions','django.contrib.messages','django.contrib.staticfiles','core']
-MIDDLEWARE = ['django.middleware.security.SecurityMiddleware','django.contrib.sessions.middleware.SessionMiddleware','django.middleware.common.CommonMiddleware','django.middleware.csrf.CsrfViewMiddleware','django.contrib.auth.middleware.AuthenticationMiddleware','core.middleware.UserLanguageMiddleware','django.contrib.messages.middleware.MessageMiddleware','django.middleware.clickjacking.XFrameOptionsMiddleware','core.middleware.MaintenanceMiddleware','core.middleware.SafeErrorMiddleware']
+MIDDLEWARE = ['django.middleware.security.SecurityMiddleware','django.contrib.sessions.middleware.SessionMiddleware','django.middleware.common.CommonMiddleware','django.middleware.csrf.CsrfViewMiddleware','django.contrib.auth.middleware.AuthenticationMiddleware','core.middleware.ErasureOnlyMiddleware','core.middleware.UserLanguageMiddleware','django.contrib.messages.middleware.MessageMiddleware','django.middleware.clickjacking.XFrameOptionsMiddleware','core.middleware.MaintenanceMiddleware','core.middleware.SafeErrorMiddleware']
 ROOT_URLCONF = 'config.urls'
 TEMPLATES = [{'BACKEND':'django.template.backends.django.DjangoTemplates','DIRS':[BASE_DIR/'templates'],'APP_DIRS':True,'OPTIONS':{'context_processors':['django.template.context_processors.request','django.contrib.auth.context_processors.auth','django.contrib.messages.context_processors.messages','core.context.navigation']}}]
 WSGI_APPLICATION = 'config.wsgi.application'
@@ -56,3 +56,6 @@ DATA_UPLOAD_MAX_NUMBER_FIELDS = 6000
 
 # Prácticas ficticias: archivo independiente; nunca apunta a la base educativa.
 PRACTICE_DATABASE_PATH = Path(os.getenv('PRACTICE_DATABASE_PATH', str(BASE_DIR/'var'/'practice'/(ENVIRONMENT+'.sqlite3'))))
+
+# Restricted access while withdrawing pilot data; set before re-enabling the website.
+ERASURE_ONLY = os.getenv('ERASURE_ONLY', '0') == '1'

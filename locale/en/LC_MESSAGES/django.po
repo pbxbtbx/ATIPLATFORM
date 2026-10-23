@@ -3847,3 +3847,231 @@ msgstr "Filters"
 
 msgid "v0.8.3 ·"
 msgstr "v0.8.3 ·"
+
+msgid ""
+"1. Base de datos: fichas y registros relacionados, responsables exclusivos y"
+" borradores de importación."
+msgstr ""
+"1. Database: student records and related entries, exclusive guardians and "
+"import drafts."
+
+msgid ""
+"2. Archivos privados: eliminación y comprobación de ausencia de los archivos"
+" propios seleccionados."
+msgstr ""
+"2. Private files: deletion and absence checks for selected students' own "
+"files."
+
+msgid "Acceso temporalmente restringido para retirar datos del piloto."
+msgstr "Access temporarily restricted to withdraw pilot data."
+
+msgid "Alumnos seleccionados:"
+msgstr "Selected students:"
+
+msgid "Ambas comprobaciones del alcance seleccionado están superadas."
+msgstr "Both checks for the selected scope have passed."
+
+msgid "Archivos de copias locales detectados:"
+msgstr "Local backup files detected:"
+
+msgid "Cancelar y volver a seleccionar"
+msgstr "Cancel and select again"
+
+msgid "Confirma el alcance y escribe la frase exacta de eliminación."
+msgstr "Confirm the scope and enter the exact deletion phrase."
+
+msgid "Desmarcar todos"
+msgstr "Uncheck all"
+
+msgid "Doble comprobación del alcance seleccionado"
+msgstr "Double check of the selected scope"
+
+msgid "Eliminar selección y verificar"
+msgstr "Delete selection and verify"
+
+msgid "Escribe la frase exacta:"
+msgstr "Enter the exact phrase:"
+
+msgid "Fichas retiradas:"
+msgstr "Student records removed:"
+
+msgid ""
+"Hay referencias protegidas fuera de la selección. No se ha confirmado el "
+"borrado; requiere revisión."
+msgstr ""
+"Protected references exist outside the selection. Deletion was not "
+"committed; review is required."
+
+msgid ""
+"He revisado la selección y autorizo eliminar estos registros, archivos "
+"propios y todos los borradores. Entiendo las exclusiones y que no se crea "
+"una copia."
+msgstr ""
+"I have reviewed the selection and authorize deletion of these records, their"
+" own files and all drafts. I understand the exclusions and that no backup is"
+" created."
+
+msgid ""
+"La comprobación de registros ha fallado. La transacción no se ha confirmado."
+msgstr "Record verification failed. The transaction was not committed."
+
+msgid "La contraseña actual no es correcta. No se ha iniciado el borrado."
+msgstr "The current password is incorrect. Deletion has not started."
+
+msgid "La revisión ha caducado o no es válida. Prepara una selección nueva."
+msgstr "The review has expired or is invalid. Prepare a new selection."
+
+msgid ""
+"Las copias de seguridad locales, otras bases, descargas, logs y copias del "
+"proveedor NO se borran desde este botón. Aunque pasen las dos "
+"comprobaciones, la retirada completa quedará pendiente de revisar esas "
+"ubicaciones y los posibles restos físicos de SQLite."
+msgstr ""
+"Local backups, other databases, downloads, logs and provider copies are NOT "
+"deleted by this button. Even if both checks pass, full withdrawal still "
+"requires reviewing those locations and possible physical SQLite remnants."
+
+msgid ""
+"Los datos han cambiado desde la revisión. No se ha borrado nada; revisa otra"
+" vez."
+msgstr ""
+"The data has changed since review. Nothing has been deleted; review again."
+
+msgid ""
+"Los grupos, sesiones, biblioteca, usuarios y otros alumnos se conservan. Los"
+" textos libres generales y archivos compartidos requieren revisión: no es "
+"posible localizar automáticamente todas las menciones personales."
+msgstr ""
+"Groups, sessions, library, users and other students are retained. General "
+"free text and shared files require review: not every personal mention can be"
+" located automatically."
+
+msgid "No quedan fichas de alumnado en esta base de datos."
+msgstr "No student records remain in this database."
+
+msgid "Otras bases SQLite detectadas:"
+msgstr "Other SQLite databases detected:"
+
+msgid ""
+"Puedes seleccionar varias fichas o todas. Primero verás el alcance; todavía "
+"no se borra nada."
+msgstr ""
+"You can select multiple records or all of them. You will review the scope "
+"first; nothing is deleted yet."
+
+msgid "Referencia:"
+msgstr "Reference:"
+
+msgid "Reintentar archivos pendientes y verificar"
+msgstr "Retry pending files and verify"
+
+msgid ""
+"Requiere Administración y permiso específico de información restringida. Se "
+"mantiene un justificante con recuentos, sin nombres ni contactos."
+msgstr ""
+"Requires Administration and the specific restricted information permission. "
+"A receipt with counts is retained, without names or contacts."
+
+msgid "Responsables compartidos que se conservarán:"
+msgstr "Shared guardians to be retained:"
+
+msgid "Responsables sin otros alumnos vinculados:"
+msgstr "Guardians without other linked students:"
+
+msgid "Retirada completa: pendiente de revisión externa"
+msgstr "Full withdrawal: external review pending"
+
+msgid "Retirada de datos personales"
+msgstr "Personal data withdrawal"
+
+msgid ""
+"Retirada incompleta. Hay archivos pendientes o compartidos que requieren "
+"revisión. No se afirma que esté todo borrado."
+msgstr ""
+"Withdrawal is incomplete. Pending or shared files require review. This does "
+"not claim that everything is deleted."
+
+msgid "Retirar datos personales"
+msgstr "Withdraw personal data"
+
+msgid ""
+"Revisa copias de seguridad, otras bases, notas generales, archivos "
+"compartidos, logs, descargas y copias del proveedor. El borrado lógico no "
+"acredita borrado físico del disco. Este informe no es un certificado legal "
+"ni prueba de eliminación de todas las copias."
+msgstr ""
+"Review backups, other databases, general notes, shared files, logs, "
+"downloads and provider copies. Logical deletion does not prove physical disk"
+" erasure. This report is not a legal certificate or proof that every copy "
+"has been deleted."
+
+msgid "Revisar antes de eliminar"
+msgstr "Review before deleting"
+
+msgid "Revisar selección y alcance"
+msgstr "Review selection and scope"
+
+msgid ""
+"Se eliminarán sus fichas, matrículas, asistencias, avances y revisiones, "
+"retos, apoyos, notas restringidas, autorizaciones y evidencias. Se retirarán"
+" sus archivos privados propios."
+msgstr ""
+"Their records, enrollments, attendance, progress and revisions, challenges, "
+"support plans, restricted notes, authorizations and evidence will be "
+"deleted. Their own private files will be removed."
+
+msgid "Selecciona entre 1 y 300 alumnos existentes."
+msgstr "Select between 1 and 300 existing students."
+
+msgid "Seleccionar alumnos para eliminar"
+msgstr "Select students to delete"
+
+msgid "Seleccionar todos"
+msgstr "Select all"
+
+msgid "Seleccionados:"
+msgstr "Selected:"
+
+msgid "Selección no válida."
+msgstr "Invalid selection."
+
+msgid ""
+"Solo para una retirada expresamente autorizada. El borrado es irreversible y"
+" no equivale a una baja de matrícula. No se crea una copia nueva. La "
+"plataforma no distingue automáticamente alumnado real y ficticio: revisa tu "
+"selección."
+msgstr ""
+"Only for an expressly authorized withdrawal. Deletion is irreversible and is"
+" not an enrollment withdrawal. No new backup is created. The platform does "
+"not automatically distinguish real and fictional students: review your "
+"selection."
+
+msgid ""
+"También se eliminan TODOS los borradores de importación, de cualquier "
+"usuario, porque pueden contener copias de los mismos contactos:"
+msgstr ""
+"ALL import drafts from every user are also deleted, as they may contain "
+"copies of the same contacts:"
+
+msgid "Tu contraseña actual"
+msgstr "Your current password"
+
+msgid ""
+"Un valor negativo significa que no se ha podido comprobar. No se han "
+"inspeccionado contenidos ni se ha demostrado ausencia de datos en otras "
+"ubicaciones."
+msgstr ""
+"A negative value means the check could not be performed. Contents have not "
+"been inspected and absence of data elsewhere has not been demonstrated."
+
+msgid "Verificación de retirada"
+msgstr "Withdrawal verification"
+
+msgid "Volver a la selección"
+msgstr "Return to selection"
+
+msgid "Comprobaciones anteriores"
+msgstr "Previous checks"
+
+msgid "v0.9.0 ·"
+msgstr "v0.9.0 ·"

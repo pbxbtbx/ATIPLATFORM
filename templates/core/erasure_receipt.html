@@ -1,0 +1,15 @@
+{% extends 'core/base.html' %}{% load i18n %}{% block content %}
+<div class="page-heading"><h1>{% translate "Verificación de retirada" %}</h1></div>
+<section class="card"><p>{% translate "Referencia:" %} {{ receipt.pk }} · {{ receipt.created_at|date:'d/m/Y H:i' }}</p><p>{% translate "Fichas retiradas:" %} {{ receipt.counts.students }}</p>
+<h2>{% translate "Doble comprobación del alcance seleccionado" %}</h2>
+<p>{% if receipt.checks.database %}✓{% else %}⚠{% endif %} {% translate "1. Base de datos: fichas y registros relacionados, responsables exclusivos y borradores de importación." %}</p>
+<p>{% if receipt.checks.files %}✓{% else %}⚠{% endif %} {% translate "2. Archivos privados: eliminación y comprobación de ausencia de los archivos propios seleccionados." %}</p>
+{% if passed %}<p><strong>{% translate "Ambas comprobaciones del alcance seleccionado están superadas." %}</strong></p>{% else %}<p role="alert">{% translate "Retirada incompleta. Hay archivos pendientes o compartidos que requieren revisión. No se afirma que esté todo borrado." %}</p>{% endif %}
+{% if error %}<div class="notice error" role="alert">{{ error }}</div>{% endif %}
+{% if receipt.pending_files %}<form method="post">{% csrf_token %}<div class="field"><label for="retry-password">{% translate "Tu contraseña actual" %}</label><input id="retry-password" type="password" name="password" required autocomplete="current-password"></div><button class="button">{% translate "Reintentar archivos pendientes y verificar" %}</button></form>{% endif %}</section>
+<section class="card spaced"><h2>{% translate "Retirada completa: pendiente de revisión externa" %}</h2>
+<p>{% translate "Archivos de copias locales detectados:" %} {{ copies.backup_files }} · {% translate "Otras bases SQLite detectadas:" %} {{ copies.other_databases }}</p>
+<p>{% translate "Un valor negativo significa que no se ha podido comprobar. No se han inspeccionado contenidos ni se ha demostrado ausencia de datos en otras ubicaciones." %}</p>
+<p>{% translate "Revisa copias de seguridad, otras bases, notas generales, archivos compartidos, logs, descargas y copias del proveedor. El borrado lógico no acredita borrado físico del disco. Este informe no es un certificado legal ni prueba de eliminación de todas las copias." %}</p>
+<p><code>docs/RETIRAR_DATOS_REALES.md</code></p><a class="button light" href="{% url 'erasure_select' %}">{% translate "Volver a la selección" %}</a></section>
+{% endblock %}

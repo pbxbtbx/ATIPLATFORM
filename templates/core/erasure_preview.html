@@ -1,0 +1,14 @@
+{% extends 'core/base.html' %}{% load i18n %}{% block content %}
+<div class="page-heading"><h1>{% translate "Revisar antes de eliminar" %}</h1></div>
+<section class="card"><h2>{% translate "Alumnos seleccionados:" %} {{ counts.students }}</h2><ul>{% for student in selected %}<li>{{ student.name }}</li>{% endfor %}</ul>
+<p>{% translate "Se eliminarán sus fichas, matrículas, asistencias, avances y revisiones, retos, apoyos, notas restringidas, autorizaciones y evidencias. Se retirarán sus archivos privados propios." %}</p>
+<p>{% translate "Responsables sin otros alumnos vinculados:" %} {{ counts.guardians }} · {% translate "Responsables compartidos que se conservarán:" %} {{ counts.shared_guardians }}</p>
+<p>{% translate "También se eliminan TODOS los borradores de importación, de cualquier usuario, porque pueden contener copias de los mismos contactos:" %} {{ counts.drafts }}</p>
+<p>{% translate "Los grupos, sesiones, biblioteca, usuarios y otros alumnos se conservan. Los textos libres generales y archivos compartidos requieren revisión: no es posible localizar automáticamente todas las menciones personales." %}</p>
+<div class="notice error">{% translate "Las copias de seguridad locales, otras bases, descargas, logs y copias del proveedor NO se borran desde este botón. Aunque pasen las dos comprobaciones, la retirada completa quedará pendiente de revisar esas ubicaciones y los posibles restos físicos de SQLite." %}</div>
+<form method="post" autocomplete="off">{% csrf_token %}<input type="hidden" name="action" value="erase"><input type="hidden" name="token" value="{{ token }}">
+<label class="check-label"><input type="checkbox" name="accept" required>{% translate "He revisado la selección y autorizo eliminar estos registros, archivos propios y todos los borradores. Entiendo las exclusiones y que no se crea una copia." %}</label>
+<div class="field"><label for="erase-confirm">{% translate "Escribe la frase exacta:" %} <strong>ELIMINAR {{ counts.students }} ALUMNOS</strong></label><input id="erase-confirm" name="confirmation" required autocomplete="off"></div>
+<div class="field"><label for="erase-password">{% translate "Tu contraseña actual" %}</label><input id="erase-password" type="password" name="password" required autocomplete="current-password"></div>
+<button class="button">{% translate "Eliminar selección y verificar" %}</button><a class="button light" href="{% url 'erasure_select' %}">{% translate "Cancelar y volver a seleccionar" %}</a></form></section>
+{% endblock %}

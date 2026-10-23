@@ -24,3 +24,5 @@ Las guías de prueba usan únicamente registros ficticios en `APP_ENV=demo`. Las
 - [Paso seguro de demo a producción conservando rutas](PASO_A_PRODUCCION.md)
 
 - [Búsqueda de alumnado y filtros de grupos](BUSQUEDAS.md)
+
+- [Retirada de datos reales: selección múltiple, comprobaciones y límites](RETIRAR_DATOS_REALES.md)

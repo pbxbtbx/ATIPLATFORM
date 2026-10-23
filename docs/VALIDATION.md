@@ -108,3 +108,14 @@ Suite completa tras la corrección: **104 pruebas correctas**. Comprobaciones de
 - Navegador Chromium contra servidor local y BD temporal **solo ficticia**: selección con flechas/Intro y clic, Escape conserva el texto, × borra sin enviar el formulario, búsqueda POST sin nombres en URL, filtros aplicados a sugerencias, error de red y funcionalidad sin JavaScript. Las respuestas antiguas no reemplazan las nuevas al escribir rápido.
 - Comprobación de ambas pantallas a 768 y 390 píxeles sin desbordamiento horizontal. Vista revisada en tema Noche. No se afirma certificación de accesibilidad.
 - Sin nuevas migraciones ni dependencias. Proceso de despliegue: actualizar repositorio, collectstatic y recarga; renovar análisis de seguridad del código desplegado.
+
+### 0.9.0 — retirada múltiple y verificaciones
+
+- Suite completa: **129 pruebas correctas**. Datos y archivos exclusivamente ficticios.
+- Selección múltiple y total, alcance firmado por usuario/entorno, caducidad y manipulación de planes, contraseña/confirmación, rechazo de cambios concurrentes y referencias protegidas con rollback.
+- Eliminación de ficha y relaciones, cadenas de revisiones, notas restringidas, apoyos y evidencias; responsables exclusivos y compartidos; preservación exacta del historial ajeno. Borradores de todos los usuarios eliminados según alcance expreso.
+- Fallo de filesystem queda pendiente; reintento verificable, archivos compartidos conservados y enlaces simbólicos exteriores rechazados. Justificante sin nombres/IDs de alumnos, acceso solo de su autor autorizado y aviso permanente de copias externas pendientes.
+- Acceso exclusivamente administrativo con permiso restringido, CSRF y modo ERASURE_ONLY que bloquea el resto del sitio y a usuarios no autorizados.
+- Pruebas del operador CLI en directorios temporales: inventario sin cambios, retirada de todo el runtime, conservación de código/secreto externo, confirmación requerida, rechazo de rutas externas/symlinks y directorio inexistente seguro. No se ha ejecutado sobre PythonAnywhere ni sobre datos reales.
+- Navegador Chromium con servidor y BD temporal ficticia: seleccionar todo/desmarcar, cancelar sin cambios, confirmación con contraseña, borrado, dos comprobaciones y aviso de alcance pendiente, modo restringido, y vistas a 768/390 px sin desbordamiento.
+- Migración aditiva `0009_dataerasure`. No implica certificado de eliminación de todas las copias ni borrado físico del almacenamiento.
